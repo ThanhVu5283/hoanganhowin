@@ -1,0 +1,2923 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0">
+    <meta name="description"
+        content="Cửa Kính Nhôm Hoàng Anh Owin - Chuyên sản xuất và lắp đặt cửa nhôm kính cao cấp với hơn 10 năm kinh nghiệm">
+    <meta name="keywords" content="cửa nhôm kính, cửa kính, nhôm kính, Hoàng Anh Owin, cửa chính, cửa phụ, cửa sổ">
+    <meta name="author" content="Hoàng Anh Owin">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Cửa Kính Nhôm Hoàng Anh Owin">
+    <meta property="og:description"
+        content="Chuyên sản xuất và lắp đặt cửa nhôm kính cao cấp với hơn 10 năm kinh nghiệm">
+    <meta property="og:type" content="website">
+
+    <!-- Mobile Web App Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Hoàng Anh Owin">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#8b5a3c">
+    <meta name="msapplication-navbutton-color" content="#8b5a3c">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>Cửa Kính Nhôm Hoàng Anh Owin - Chuyên Sản Xuất & Lắp Đặt</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            /* Modern Color Palette - Muted Red Theme for Elderly */
+            --primary-color: #b91c1c;
+            --primary-dark: #991b1b;
+            --primary-light: #dc2626;
+            --secondary-color: #f59e0b;
+            --accent-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --success-color: #22c55e;
+
+            /* Neutral Colors */
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+
+            /* Typography */
+            --font-primary: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            --font-heading: 'Poppins', 'Inter', sans-serif;
+
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            --radius-full: 9999px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+            /* Transitions */
+            --transition-fast: 0.15s ease-in-out;
+            --transition-normal: 0.3s ease-in-out;
+            --transition-slow: 0.5s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        /* Header Styles */
+        .main-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-200);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: var(--transition-normal);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-md) var(--space-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-full);
+            padding: var(--space-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            margin-left: auto;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box:focus-within {
+            background: white;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--primary-color);
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        .search-box:hover:not(:focus-within) {
+            background: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transform: translateY(-1px);
+        }
+
+        #search-input {
+            border: none;
+            background: transparent;
+            padding: var(--space-sm) var(--space-md);
+            font-size: 14px;
+            outline: none;
+            width: 250px;
+            transition: all 0.3s ease;
+            color: var(--gray-800);
+        }
+
+        #search-input::placeholder {
+            color: var(--gray-400);
+            transition: all 0.3s ease;
+        }
+
+        #search-input:focus {
+            width: 280px;
+        }
+
+        #search-input:focus::placeholder {
+            color: var(--gray-300);
+            transform: translateX(4px);
+        }
+
+        .search-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border: none;
+            border-radius: var(--radius-full);
+            padding: var(--space-sm) var(--space-md);
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 50px;
+            height: 36px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: var(--font-primary);
+        }
+
+        .search-btn:hover {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-btn:active {
+            transform: scale(0.95) rotate(-2deg);
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-xl);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+            margin-top: 8px;
+            animation: searchResultsSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive search box */
+        @media (max-width: 768px) {
+            .search-box {
+                margin: 0 auto;
+            }
+
+            #search-input {
+                width: 200px;
+            }
+
+            #search-input:focus {
+                width: 220px;
+            }
+        }
+
+        @keyframes searchResultsSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #8b5a3c 0%, #6b4423 50%, #4a2c17 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,800 1000,1000"/></svg>');
+            background-size: cover;
+            background-position: bottom;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: var(--space-2xl);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            margin-bottom: var(--space-2xl);
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: var(--space-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-md);
+            padding: var(--space-xl) var(--space-3xl);
+            border: 3px solid white;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: var(--transition-normal);
+            background: transparent;
+            cursor: pointer;
+            min-height: 60px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-btn.primary {
+            background: white;
+            color: #8b5a3c;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-btn.primary:hover {
+            background: var(--gray-100);
+        }
+
+        /* Company Info Boxes Section */
+        .company-info-boxes {
+            padding: var(--space-3xl) 0;
+            background: linear-gradient(135deg, var(--gray-50) 0%, white 50%, var(--gray-50) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .company-info-boxes::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .info-boxes-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            margin-top: var(--space-xl);
+            position: relative;
+            z-index: 2;
+        }
+
+        .info-box {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: 0;
+            box-shadow:
+                0 25px 50px -12px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+        }
+
+        .info-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #8b5a3c, #6b4423);
+            background-size: 200% 100%;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        .info-box:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow:
+                0 35px 70px -12px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.9);
+        }
+
+        .box-image {
+            width: 100%;
+            height: 250px;
+            border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+        }
+
+        .box-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .info-box:hover .box-image img {
+            transform: scale(1.1);
+        }
+
+        .box-header {
+            padding: var(--space-xl) var(--space-xl) var(--space-lg);
+            position: relative;
+        }
+
+        .box-header h3 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--gray-800);
+            margin: 0;
+            position: relative;
+            background: linear-gradient(135deg, var(--gray-800), #8b5a3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .box-content {
+            padding: 0 var(--space-xl) var(--space-xl);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .box-content p {
+            color: var(--gray-700);
+            line-height: 1.7;
+            font-size: 1rem;
+            margin: 0;
+            flex: 1;
+        }
+
+        .box-features {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            padding: var(--space-md) var(--space-lg);
+            background: linear-gradient(135deg, var(--gray-50), var(--gray-100));
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-item:hover {
+            transform: translateX(8px);
+            background: linear-gradient(135deg, white, var(--gray-50));
+            box-shadow:
+                0 10px 25px -5px rgba(0, 0, 0, 0.1),
+                0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #8b5a3c, #6b4423);
+            color: white;
+            border-radius: var(--radius-full);
+            box-shadow: 0 4px 12px rgba(139, 90, 60, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 6px 20px rgba(139, 90, 60, 0.4);
+        }
+
+        .feature-item span:last-child {
+            font-weight: 600;
+            color: var(--gray-800);
+            font-size: 0.95rem;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+            color: var(--gray-800);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #8b5a3c, #6b4423);
+            border-radius: var(--radius-full);
+        }
+
+        /* Products Section */
+        .products {
+            padding: var(--space-3xl) 0;
+            background: var(--gray-50);
+        }
+
+        /* Product Category Sections */
+        .product-category-section {
+            margin-bottom: var(--space-3xl);
+            padding: var(--space-xl) 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .product-category-section:last-child {
+            border-bottom: none;
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: #8b5a3c;
+            margin-bottom: var(--space-xl);
+            text-align: center;
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #8b5a3c, #6b4423);
+            border-radius: var(--radius-full);
+        }
+
+        /* NEW: Enhanced Category Products Layout */
+        .category-products-container {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+            position: relative;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* NEW: Side Navigation Buttons */
+        .category-nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #8b5a3c, #6b4423);
+            color: white;
+            border: none;
+            border-radius: var(--radius-full);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(139, 90, 60, 0.3);
+            z-index: 10;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .category-nav-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #6b4423, #8b5a3c);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(139, 90, 60, 0.4);
+        }
+
+        .category-nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: 0 2px 4px rgba(139, 90, 60, 0.2);
+        }
+
+        .category-nav-btn:active:not(:disabled) {
+            transform: scale(0.95);
+        }
+
+        /* NEW: Products Wrapper */
+        .category-products-wrapper {
+            flex: 1;
+            max-width: 960px;
+            overflow: hidden;
+            border-radius: var(--radius-xl);
+            position: relative;
+        }
+
+        /* NEW: Single Row Grid */
+        .category-products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+            padding: var(--space-lg);
+            width: 100%;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* NEW: Page Info Bottom */
+        .page-info-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: var(--space-xl);
+            gap: var(--space-md);
+        }
+
+        .page-indicator {
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: 1rem;
+            padding: var(--space-sm) var(--space-lg);
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 2px solid #8b5a3c;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .page-dots {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
+        .page-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: var(--radius-full);
+            background: var(--gray-300);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .page-dot.active {
+            background: #8b5a3c;
+            transform: scale(1.2);
+        }
+
+        .page-dot:hover {
+            background: #6b4423;
+            transform: scale(1.1);
+        }
+
+        /* Product Cards */
+        .product-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            /* Enhanced transition */
+            cursor: pointer;
+            border: 2px solid #8b5a3c;
+            position: relative;
+            animation: fadeInUp 0.6s ease-out;
+            animation-fill-mode: both;
+            transform: translateY(0) scale(1);
+            /* Initial state */
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            /* Enhanced jump effect with scale */
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.15),
+                0 0 0 3px rgba(139, 90, 60, 0.3);
+            /* Enhanced shadow with border glow */
+        }
+
+        /* Add bounce effect on click */
+        .product-card:active {
+            transform: translateY(-12px) scale(1.02);
+            transition-duration: 0.1s;
+        }
+
+        .product-image {
+            height: 200px;
+            background: var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: var(--space-lg);
+        }
+
+        .product-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: var(--space-sm);
+            color: var(--gray-800);
+        }
+
+        .product-price {
+            margin-bottom: var(--space-md);
+        }
+
+        .current-price {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #8b5a3c;
+            display: block;
+        }
+
+        .product-description {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Contact Floating Button */
+        .contact-floating {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .contact-main-btn {
+            width: 70px;
+            height: 70px;
+            border: none;
+            background: var(--primary-color);
+            color: white;
+            border-radius: var(--radius-full);
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-normal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-primary);
+            border: 3px solid white;
+        }
+
+        .contact-main-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+
+        .contact-menu {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            padding: var(--space-md);
+            min-width: 150px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition-normal);
+        }
+
+        .contact-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md);
+            text-decoration: none;
+            color: var(--gray-700);
+            border-radius: var(--radius-md);
+            transition: var(--transition-fast);
+            margin-bottom: var(--space-sm);
+        }
+
+        .contact-item:hover {
+            background: var(--gray-100);
+            transform: translateX(5px);
+        }
+
+        .contact-item.zalo:hover {
+            background: #0068ff;
+            color: white;
+        }
+
+        .contact-item.phone:hover {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .contact-item.facebook:hover {
+            background: #1877f2;
+            color: white;
+        }
+
+        /* Enhanced Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            animation: modalFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .modal-container {
+            background: white;
+            border-radius: var(--radius-2xl);
+            width: 95%;
+            max-width: 1100px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow:
+                0 25px 50px -12px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            animation: modalSlideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 2001;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #8b5a3c 0%, #6b4423 50%, #4a2c17 100%);
+            color: white;
+            padding: var(--space-xl) var(--space-2xl);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-close {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-full);
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: white;
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.1) rotate(90deg);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-body {
+            padding: 0;
+            overflow-y: auto;
+            max-height: calc(90vh - 100px);
+        }
+
+        .modal-content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            min-height: 500px;
+        }
+
+        .modal-image-section {
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+            padding: var(--space-2xl);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+            position: relative;
+        }
+
+        .modal-product-image {
+            background: white;
+            border-radius: var(--radius-2xl);
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            box-shadow:
+                0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-info-section {
+            padding: var(--space-2xl);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+            background: white;
+            position: relative;
+        }
+
+        .modal-product-header h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--gray-800);
+            margin-bottom: var(--space-lg);
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--gray-800), #8b5a3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .modal-price-section {
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+            padding: var(--space-xl);
+            border-radius: var(--radius-2xl);
+            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-main {
+            margin-bottom: var(--space-lg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .price-main .current-price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #8b5a3c, #6b4423);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+
+        .modal-description-section,
+        .modal-specs-section {
+            background: var(--gray-50);
+            padding: var(--space-xl);
+            border-radius: var(--radius-2xl);
+            border: 1px solid var(--gray-200);
+        }
+
+        .modal-description-section h4,
+        .modal-specs-section h4 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: var(--space-lg);
+            position: relative;
+            padding-left: var(--space-lg);
+        }
+
+        .modal-description-section h4::before,
+        .modal-specs-section h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(135deg, #8b5a3c, #6b4423);
+            border-radius: var(--radius-full);
+        }
+
+        .modal-description-section p {
+            color: var(--gray-700);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .spec-item {
+            background: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .spec-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .spec-label {
+            font-weight: 700;
+            color: var(--gray-800);
+            font-size: 0.95rem;
+            margin-bottom: var(--space-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .spec-value {
+            color: var(--gray-600);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* ENHANCED: Professional Contact Button for Middle-aged Users */
+        .modal-actions {
+            display: flex;
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .btn-primary {
+            flex: 1;
+            background: linear-gradient(135deg, #8b5a3c 0%, #6b4423 50%, #4a2c17 100%);
+            color: white;
+            border: none;
+            padding: var(--space-xl) var(--space-2xl);
+            border-radius: var(--radius-xl);
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-md);
+            text-transform: none;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(139, 90, 60, 0.3);
+            min-height: 60px;
+            font-family: var(--font-heading);
+            text-decoration: none;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 15px 35px rgba(139, 90, 60, 0.4),
+                0 5px 15px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #6b4423 0%, #8b5a3c 50%, #a0693d 100%);
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:active {
+            transform: translateY(-1px);
+            transition-duration: 0.1s;
+        }
+
+        .btn-icon {
+            font-size: 1.4rem;
+            margin-right: var(--space-sm);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .btn-text {
+            font-weight: 700;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhanced Contact Info Section */
+        .modal-contact-info {
+            background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
+            padding: var(--space-xl);
+            border-radius: var(--radius-2xl);
+            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+            margin-top: var(--space-lg);
+        }
+
+        .modal-contact-info .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+            padding: var(--space-lg) 0;
+            border-bottom: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .modal-contact-info .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .modal-contact-info .contact-item:hover {
+            transform: translateX(8px);
+            padding-left: var(--space-md);
+        }
+
+        .modal-contact-info .contact-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #8b5a3c, #6b4423);
+            color: white;
+            border-radius: var(--radius-full);
+            box-shadow: 0 4px 12px rgba(139, 90, 60, 0.3);
+        }
+
+        .modal-contact-info strong {
+            color: var(--gray-800);
+            margin-right: var(--space-sm);
+            font-weight: 700;
+        }
+
+        .modal-contact-info span {
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gray-800);
+            color: white;
+            padding: var(--space-3xl) 0 var(--space-xl);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .footer-section h3,
+        .footer-section h4 {
+            margin-bottom: var(--space-lg);
+            color: var(--primary-light);
+        }
+
+        .footer-section p {
+            margin-bottom: var(--space-sm);
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes modalSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: var(--space-sm) var(--space-md);
+            }
+
+            #search-input {
+                width: 150px;
+            }
+
+            .hero-content {
+                padding: var(--space-xl);
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-boxes-container {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+
+            .category-products-container {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+
+            .category-nav-btn {
+                display: none;
+            }
+
+            .category-products-grid {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+
+            .product-card {
+                max-width: 350px;
+                width: 100%;
+            }
+
+            .modal-content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-container {
+                width: 98%;
+                max-height: 95vh;
+                margin: var(--space-md);
+            }
+
+            .contact-floating {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .contact-main-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .page-info-bottom {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--space-md);
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-btn {
+                padding: var(--space-md) var(--space-lg);
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .product-card {
+                min-width: 250px;
+                max-width: 250px;
+            }
+        }
+
+        .accessories-section {
+            margin: var(--space-lg) 0;
+            padding: var(--space-lg);
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+
+        .accessories-section .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: var(--space-md);
+            text-align: center;
+        }
+
+        .accessories-section .section-title::after {
+            width: 40px;
+            height: 2px;
+            bottom: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header (Simplified - No Menu) -->
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.jpg" alt="Hoàng Anh Owin"
+                    style="height: 80px; width: auto; object-fit: contain;">
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." id="search-input">
+                <button class="search-btn" id="search-btn">
+                    <span style="font-weight: bold; font-size: 14px;">TÌM</span>
+                </button>
+                <div class="search-results" id="search-results"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <div id="home" class="page-section">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>CỬA KÍNH NHÔM HOÀNG ANH OWIN</h1>
+                <p>Nhà thầu nhôm kính với hơn 10 năm kinh nghiệm thi công những công trình quy mô và chất lượng nhất</p>
+                <div class="hero-cta">
+                    <button class="hero-btn primary" onclick="scrollToProducts()">
+                        <span class="hero-btn-icon">🏠</span>
+                        <span style="font-size: 18px; font-weight: 700;">XEM SẢN PHẨM</span>
+                    </button>
+                    <a href="https://zalo.me/0799040616" target="_blank" class="hero-btn">
+                        <span class="hero-btn-icon">💬</span>
+                        <span style="font-size: 18px; font-weight: 700;">LIÊN HỆ ZALO</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Info Section (Two Boxes) -->
+        <section class="company-info-boxes">
+            <div class="container">
+                <h2 class="section-title">VỀ HOÀNG ANH OWIN</h2>
+                <div class="info-boxes-container">
+                    <div class="info-box">
+                        <div class="box-image">
+                            <img src="assets/images/nha.jpg" alt="Nhà Hoàng Anh Owin"
+                                style="width:100%;height:250px;object-fit:cover;">
+                        </div>
+                        <div class="box-header">
+                            <h3>Kinh Nghiệm & Chất Lượng</h3>
+                        </div>
+                        <div class="box-content">
+                            <p>Với hơn 10 năm kinh nghiệm trong ngành, Hoàng Anh Owin tự hào là đơn vị hàng đầu trong
+                                lĩnh vực thiết kế, sản xuất và lắp đặt các loại cửa kính nhôm cao cấp.</p>
+                            <div class="box-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">💰</span>
+                                    <span>Bảng giá chuẩn nhất</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🚚</span>
+                                    <span>Hỗ trợ vận chuyển</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="box-image">
+                            <img src="assets/images/logo.jpg" alt="Logo Hoàng Anh Owin"
+                                style="width:100%;height:250px;object-fit:cover;">
+                        </div>
+                        <div class="box-header">
+                            <h3>Dịch Vụ & Cam Kết</h3>
+                        </div>
+                        <div class="box-content">
+                            <p>Chúng tôi cam kết mang đến cho khách hàng những sản phẩm chất lượng nhất với giá cả cạnh
+                                tranh nhất trên thị trường. Đội ngũ kỹ thuật viên chuyên nghiệp luôn sẵn sàng hỗ trợ.
+                            </p>
+                            <div class="box-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">📞</span>
+                                    <span>Tư vấn 24/24</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🔧</span>
+                                    <span>Bảo hành & Bảo trì</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Products Section -->
+    <div id="products" class="page-section products">
+        <div class="container">
+            <h2 class="section-title">SẢN PHẨM CỦA CHÚNG TÔI</h2>
+
+            <!-- Category: Cửa Chính -->
+            <div class="product-category-section" data-category="cua-chinh">
+                <h3 class="category-title">Cửa Chính</h3>
+                <div class="category-products-container">
+                    <button class="category-nav-btn prev" onclick="changePage('cua-chinh', -1)" id="cua-chinh-prev">
+                        ‹
+                    </button>
+                    <div class="category-products-wrapper">
+                        <div class="category-products-grid" id="cua-chinh-grid">
+                            <!-- Products will be loaded here -->
+                        </div>
+                    </div>
+                    <button class="category-nav-btn next" onclick="changePage('cua-chinh', 1)" id="cua-chinh-next">
+                        ›
+                    </button>
+                </div>
+                <div class="page-info-bottom">
+                    <div class="page-indicator" id="cua-chinh-page-info">Trang 1 / 1</div>
+                    <div class="page-dots" id="tu-dots">
+                        <!-- Dots will be generated -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Contact Floating Button -->
+    <div class="contact-floating">
+        <button class="contact-main-btn" onclick="toggleContactMenu()">
+            <span style="font-weight: bold; font-size: 12px;">GỌI</span>
+        </button>
+        <div class="contact-menu" id="contact-menu">
+            <a href="https://zalo.me/0799040616" target="_blank" class="contact-item zalo">
+                <span class="contact-item-icon">💬</span>
+                <span>Zalo</span>
+            </a>
+            <a href="tel:0799040616" class="contact-item phone">
+                <span class="contact-item-icon">📞</span>
+                <span>Gọi ngay</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100063558679717" target="_blank"
+                class="contact-item facebook">
+                <span class="contact-item-icon">📘</span>
+                <span>Facebook</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="modal-title">Chi Tiết Sản Phẩm</h2>
+                <button class="modal-close" onclick="closeModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-content-grid">
+                    <div class="modal-image-section">
+                        <div class="modal-product-image" id="modal-image">🚪</div>
+
+                        <div class="modal-price-section">
+                            <div class="price-main">
+                                <span class="current-price" id="modal-price">0 VNĐ</span>
+                            </div>
+                        </div>
+
+                        <!-- ADD ACCESSORIES SECTION HERE - RIGHT AFTER PRICE -->
+                        <div id="modal-accessories-section" class="modal-specs-section" style="display: none;">
+                            <h4>Phụ kiện đi kèm</h4>
+                            <div class="specs-grid" id="modal-accessories">
+                                <!-- Accessories will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-info-section">
+                        <div class="modal-product-header">
+                            <h3 id="modal-product-name">Tên Sản Phẩm</h3>
+                        </div>
+
+                        <div class="modal-description-section">
+                            <h4>Mô Tả Sản Phẩm</h4>
+                            <p id="modal-description">Mô tả chi tiết sản phẩm...</p>
+                        </div>
+
+                        <div class="modal-specs-section">
+                            <h4>Thông Số Kỹ Thuật</h4>
+                            <div class="specs-grid" id="modal-specs">
+                            </div>
+                        </div>
+                        <div class="modal-actions">
+                            <a href="https://zalo.me/0799040616" target="_blank" class="btn-primary">
+                                <span class="btn-icon">📞</span>
+                                <span class="btn-text">Liên Hệ Đặt Hàng</span>
+                            </a>
+                        </div>
+
+                        <div class="modal-contact-info">
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <div>
+                                    <strong>Hotline:</strong>
+                                    <span>0799.040.616</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">💬</span>
+                                <div>
+                                    <strong>Zalo:</strong>
+                                    <span>Tư vấn 24/7</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">🚚</span>
+                                <div>
+                                    <strong>Giao hàng:</strong>
+                                    <span>Miễn phí nội thành</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hoàng Anh Owin</h3>
+                    <p>Chuyên gia về cửa kính nhôm</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên Hệ</h4>
+                    <p>📞 0799.040.616</p>
+                    <p>📍 Thôn Đông Thành, Xã Đông Thành, Huyện Yên Phong, Tỉnh Bắc Ninh</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Dịch Vụ</h4>
+                    <p>Thiết kế & Thi công</p>
+                    <p>Bảo hành & Bảo trì</p>
+                    <p>Tư vấn miễn phí</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced Product data with detailed specifications
+        const productsData = {
+            'cua-chinh': [
+                {
+                    id: 'cc001',
+                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
+                    price: '55,600,000',
+                    image: 'assets/images/cc/cc001.jpg',
+                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '2.8m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Phào': 'Biệt thự + mặt trong',
+                        'Phào trong cánh': 'Có',
+                        'Bảo hành': '5 năm'
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                    }
+                },
+                {
+                    id: 'cc002',
+                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
+                    price: '54,600,000',
+                    image: 'assets/images/cc/cc002.jpg',
+                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    specs: {
+                        'Chất liệu phụ': 'Tấm liền nguyên khối + kính cl 10mm',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '2.8m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Phào': 'Biệt thự + mặt trong',
+                        'Phào trong cánh': 'Có',
+                        'Bảo hành': '5 năm'
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                    }
+                },
+                {
+                    id: 'cc003',
+                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
+                    price: '41,000,000',
+                    image: 'assets/images/cc/cc003.jpg',
+                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính cl 10mm',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '3m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Phào': '2 mặt',
+                        'Phào trong cánh': 'Có',
+                        'Bảo hành': '5 năm'
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ', 'Góc đồng cá chép'],
+                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                    }
+                },
+                {
+                    id: 'cc004',
+                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
+                    price: '49,700,000',
+                    image: 'assets/images/cc/cc004.jpg',
+                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '2.4m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Phào': 'Biệt thự + mặt trong',
+                        'Phào trong cánh': 'Có',
+                        'Bảo hành': '5 năm'
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                    }
+                },
+                {
+                    id: 'cc005',
+                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
+                    price: '44,200,000',
+                    image: 'assets/images/cc/cc005.jpg',
+                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    specs: {
+                        'Chất liệu phụ': 'Tấm liền nguyên khối',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '2.7m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Phào': '2 mặt',
+                        'Phào trong cánh': 'Có',
+                        'Bảo hành': '5 năm'
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                    }
+                },
+                {
+                    id: 'cc006',
+                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
+                    price: '49,200,000',
+                    image: 'assets/images/cc/cc006.jpg',
+                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    specs: {
+                        'Chất liệu phụ': 'Tấm liền nguyên khối',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '2.4m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Phào': 'Biệt thự + mặt trong',
+                        'Phào trong cánh': 'Có',
+                        'Bảo hành': '5 năm'
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                    }
+                },
+                {
+                    id: 'cc007',
+                    name: 'Cửa 2 Cánh Nhôm OWIN hệ khuôn phào kép',
+                    price: '55,700,000',
+                    image: 'assets/images/cc/cc007.jpg',
+                    description: 'Cửa nhôm OWIN hệ khuôn phào kép cao cấp với thiết kế sang trọng, chắc chắn, phù hợp cho biệt thự và công trình cao cấp. Sản phẩm sử dụng kính cường lực và phụ kiện Daishin chính hãng, đảm bảo an toàn và độ bền vượt trội.',
+                    specs: {
+                        'Chất liệu phụ': 'Tấm liền nguyên khối + kính cl 8mm',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '3m x 2.8m',
+                        'Khung bao': 'Ôm tường 23',
+                        'Bản cánh': '160',
+                        'Phào': '2 mặt',
+                        'Phào trong cánh': 'Có',
+                        'Bảo hành': '5 năm'
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Khóa đa điểm', 'Bản lề bi đũa x12', 'Chốt cánh phụ'],
+                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                    }
+                },
+                {
+                    id: 'cc008',
+                    name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
+                    price: '42,200,000',
+                    image: 'assets/images/cc/cc008.jpg',
+                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp hoa nan mạ đồng',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '2.8m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Phào': '2 mặt',
+                        'Bảo hành': '5 năm'
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ', 'Gôc đồng cá chép'],
+                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                    },
+                    id: 'cc009',
+                    name: 'Cửa 2 Cánh Nhôm OWIN hệ khuôn phào kép',
+                    price: '57.900.000',
+                    image: 'assets/images/cc/cc009.jpg',
+                    description: 'Cửa nhôm OWIN hệ khuôn phào kép, sử dụng kính hộp hoa văn mạ đồng, mang đến sự khác biệt và nổi bật cho công trình. Bộ phụ kiện Daishin chính hãng đảm bảo vận hành êm ái, khóa an toàn và độ bền cao.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp hoa nan mạ đồng',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '3m x 2.8m',
+                        'Khung bao': 'Ôm tường 23',
+                        'Bản cánh': '160',
+                        'Phào': '2 mặt',
+                        'Bảo hành': '5 năm'
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bi đũa x20'],
+                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                    }
+                },
+                {
+                    id: 'cc010',
+                    name: 'Cửa 2 Cánh Nhôm OWIN hệ khuôn phào kép',
+                    price: '47.700.000',
+                    image: 'assets/images/cc/cc010.jpg',
+                    description: 'Cửa nhôm OWIN hệ khuôn phào kép kết hợp kính cường lực 10mm, thiết kế mạnh mẽ, bản cánh lớn và phụ kiện cao cấp, phù hợp với các không gian rộng, cần sự chắc chắn và tính thẩm mỹ cao.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính cl 10mm',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '3m x 2.8m',
+                        'Khung bao': 'Ôm tường 23',
+                        'Bản cánh': '160',
+                        'Phào': '2 mặt',
+                        'Phào trong cánh': 'Có',
+                        'Bảo hành': '5 năm'
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bi đũa x20'],
+                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                    }
+                },
+                {
+                    id: 'cc011',
+                    name: 'Cửa 2 Cánh Nhôm OWIN hệ khuôn phào kép',
+                    price: '39.000.000',
+                    image: 'assets/images/cc/cc011.jpg',
+                    description: 'Cửa nhôm OWIN hệ khuôn phào kép thiết kế hiện đại, chắc chắn, sử dụng kính cường lực 8mm và phụ kiện cao cấp Daishin.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính cl 8mm',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '2.7m x 2.7m',
+                        'Khung bao': 'Ôm tường 23',
+                        'Bản cánh': '160',
+                        'Độ dày': '1.4mm – 2 mm',
+                        'Phào': '2 mặt',
+                        'Phào trong cánh': 'Có',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bản lề bi đũa x8', 'Vật tư phụ'],
+                        'Tính năng': ['An toàn', 'Cách âm, cách nhiệt', 'Daishin chính hãng']
+                    }
+                },
+                {
+                    id: 'cc012',
+                    name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
+                    price: '50.200.000',
+                    image: 'assets/images/cc/cc012.jpg',
+                    description: 'Cửa thủy lực hiện đại tích hợp khóa thông minh, mang đến trải nghiệm an toàn, tiện lợi và đẳng cấp.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '2.8m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Phào': '2 mặt',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Khóa vân tay, nhận diện khuôn mặt', 'Chốt cánh phụ'],
+                        'Tính năng': ['Bảo mật cao', 'Khóa thông minh', 'Thiết kế sang trọng']
+                    }
+                },
+                {
+                    id: 'cc013',
+                    name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
+                    price: '35.200.000',
+                    image: 'assets/images/cc/cc013.jpg',
+                    description: 'Cửa thiết kế gọn gàng, phù hợp không gian vừa và nhỏ, đảm bảo an toàn và tính thẩm mỹ.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '2.2m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Phào': '2 mặt',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['Bền bỉ', 'Chống va đập', 'Thẩm mỹ']
+                    }
+                },
+                {
+                    id: 'cc014',
+                    name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
+                    price: '55.200.000',
+                    image: 'assets/images/cc/cc014.jpg',
+                    description: 'Cửa tấm liền cao cấp, tích hợp phụ kiện đồng bộ, tôn vinh đẳng cấp và sự sang trọng cho không gian.',
+                    specs: {
+                        'Chất liệu phụ': 'Tấm liền nguyên khối',
+                        'Màu sắc': 'Vân gỗ trắc',
+                        'Kích thước': '2.8m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Phào': 'Biệt thự + mặt trong',
+                        'Phào trong cánh': 'Có',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['Sang trọng', 'Chống ồn', 'Độ bền cao']
+                    }
+                },
+                {
+                    id: 'cc015',
+                    name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
+                    price: '56.000.000',
+                    image: 'assets/images/cc/cc015.jpg',
+                    description: 'Cửa thủy lực cao cấp màu vân gỗ lim, tăng sự sang trọng và đồng bộ phụ kiện chất lượng cao.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
+                        'Màu sắc': 'Vân gỗ lim',
+                        'Kích thước': '2.8m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Độ dày': '1.4mm - 2mm',
+                        'Phào': 'Biệt thự + mặt trong',
+                        'Phào trong cánh': 'Có',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['Chống ồn', 'Bền đẹp', 'Phù hợp biệt thự']
+                    }
+                },
+                {
+                    id: 'cc016',
+                    name: 'Cửa 4 Cánh Nhôm OWIN hệ khuôn phào kép',
+                    price: '57.900.000',
+                    image: 'assets/images/cc/cc016.jpg',
+                    description: 'Cửa nhôm OWIN màu vân gỗ lim, sử dụng kính hộp trang trí và phụ kiện Daishin chính hãng cao cấp.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
+                        'Màu sắc': 'Vân gỗ lim',
+                        'Kích thước': '3m x 2.8m',
+                        'Khung bao': 'Ôm tường 23',
+                        'Bản cánh': '160',
+                        'Độ dày': '1.4mm - 2mm',
+                        'Phào': '2 mặt',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bản lề bi đũa x20', 'Vật tư phụ'],
+                        'Tính năng': ['Chắc chắn', 'Khóa an toàn', 'Đồng bộ Daishin']
+                    }
+                },
+                {
+                    id: 'cc017',
+                    name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
+                    price: '52.200.000',
+                    image: 'assets/images/cc/cc017.jpg',
+                    description: 'Cửa thủy lực màu ghi tinh tế, kết hợp kính hộp nan hoa giúp tăng tính thẩm mỹ và sang trọng.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '2.8m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Độ dày': '1.4mm - 2mm',
+                        'Phào': 'Biệt thự + mặt trong',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['Thẩm mỹ hiện đại', 'Chống va đập', 'Cách âm tốt']
+                    }
+                },
+                {
+                    id: 'cc018',
+                    name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
+                    price: '48.200.000',
+                    image: 'assets/images/cc/cc018.jpg',
+                    description: 'Phiên bản cửa nhỏ gọn nhưng vẫn đảm bảo chất lượng và phụ kiện cao cấp đầy đủ.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '2.4m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Độ dày': '1.4mm - 2mm',
+                        'Phào': 'Biệt thự + mặt trong',
+                        'Phào trong cánh': 'Có',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['Cách nhiệt', 'Thiết kế nhỏ gọn', 'Đầy đủ phụ kiện']
+                    }
+                },
+                {
+                    id: 'cc019',
+                    name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
+                    price: '50.800.000',
+                    image: 'assets/images/cc/cc019.jpg',
+                    description: 'Cửa kính cường lực dày, khổ lớn phù hợp không gian rộng với thiết kế vững chắc, cao cấp.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính cl 10mm',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '3.2m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Độ dày': '1.4mm - 2mm',
+                        'Phào': 'Biệt thự + mặt trong',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['Khung to bản', 'Chịu lực cao', 'Thẩm mỹ mạnh mẽ']
+                    }
+                },
+                {
+                    id: 'cc020',
+                    name: 'Cửa thủy lực 1 Cánh Nhôm OWIN',
+                    price: '29.200.000',
+                    image: 'assets/images/cc/cc020.jpg',
+                    description: 'Mẫu cửa nhỏ gọn, phù hợp cho lối đi riêng hoặc không gian hạn chế nhưng vẫn đảm bảo tính năng và an toàn.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính cl 10mm',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '1.2m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Độ dày': '1.4mm - 2mm',
+                        'Phào': 'Biệt thự + mặt trong',
+                        'Phào trong cánh': 'Có',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x1', 'Ngỗng trên dưới', 'Tay nắm KOLN x1', 'Khóa đồng Owin'],
+                        'Tính năng': ['Thiết kế nhỏ', 'Giá tốt', 'Phù hợp nhà phố']
+                    }
+                },
+                {
+                    id: 'cc021',
+                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
+                    price: '40.500.000',
+                    image: 'assets/images/cc/cc021.jpg',
+                    description: 'Thiết kế nguyên khối sang trọng, phù hợp với các công trình cao cấp cần độ an toàn và tính thẩm mỹ cao.',
+                    specs: {
+                        'Chất liệu phụ': 'Tấm liền nguyên khối',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '2.6m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Độ dày': '1.4mm - 2mm',
+                        'Phào': '2 mặt',
+                        'Phào trong cánh': 'Có',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['Cánh lớn nguyên khối', 'Vững chắc và thẩm mỹ', 'Phong cách hiện đại']
+                    }
+                },
+                {
+                    id: 'cc022',
+                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
+                    price: '43.000.000',
+                    image: 'assets/images/cc/cc022.jpg',
+                    description: 'Cửa thủy lực sử dụng kính hộp nan hoa mạ đồng nổi bật, kết hợp góc đồng cá chép tạo điểm nhấn nghệ thuật.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '2.8m x 2.8m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Độ dày': '1.4mm - 2mm',
+                        'Phào': '2 mặt',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ', 'Góc đồng cá chép'],
+                        'Tính năng': ['Trang trí độc đáo', 'Cách âm tốt', 'Tăng tính nghệ thuật cho mặt tiền']
+                    }
+                },
+                {
+                    id: 'cc023',
+                    name: 'Cửa 4 Cánh Nhôm OWIN hệ khuôn phào kép',
+                    price: '43.200.000',
+                    image: 'assets/images/cc/cc023.jpg',
+                    description: 'Cửa hệ khuôn phào kép giúp tạo khung viền nổi bật, cùng kính cường lực mang lại độ bền cao và an toàn.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính cl 8mm',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '3m x 2.8m',
+                        'Khung bao': 'Ôm tường 23',
+                        'Bản cánh': '140',
+                        'Độ dày': '1.4mm - 2mm',
+                        'Phào': '2 mặt',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bản lề bi đũa x12', 'Vật tư phụ'],
+                        'Tính năng': ['Kiểu dáng truyền thống', 'Tăng độ kín khít', 'Phù hợp biệt thự']
+                    }
+                },
+                {
+                    id: 'cc024',
+                    name: 'Cửa 2 Cánh Nhôm OWIN hệ xingfa',
+                    price: '19.400.000',
+                    image: 'assets/images/cc/cc024.jpg',
+                    description: 'Cửa nhôm Xingfa phù hợp với nhà phố, văn phòng có yêu cầu chi phí hợp lý mà vẫn đảm bảo chất lượng.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính cl 8mm',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '2.8m x 2.8m',
+                        'Khung bao': '55',
+                        'Bản cánh': '100',
+                        'Độ dày': '1.4mm - 1.6mm',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bản lề bi đũa x6', 'Vật tư phụ'],
+                        'Tính năng': ['Tiết kiệm chi phí', 'Mở rộng không gian', 'Chống va đập tốt']
+                    }
+                },
+                {
+                    id: 'cc025',
+                    name: 'Cửa 4 Cánh Nhôm OWIN hệ trượt quay',
+                    price: '36.000.000',
+                    image: 'assets/images/cc/cc025.jpg',
+                    description: 'Cửa trượt quay đa năng giúp mở rộng tối đa không gian đi lại, thiết kế 4 cánh phù hợp mặt tiền rộng.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính cl 8mm',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '3m x 2.8m',
+                        'Khung bao': 'Ôm tường 23',
+                        'Bản cánh': '140',
+                        'Độ dày': '1.6mm - 3mm',
+                        'Phào': '2 mặt',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bộ chuyển đổi OWIN', 'Chốt cánh phụ OWIN', 'Bản lề OWIN', 'Bánh xe OWIN', 'Khóa OWIN', 'Vật tư phụ'],
+                        'Tính năng': ['Kết hợp trượt & mở quay', 'Tiết kiệm không gian', 'Di chuyển êm ái']
+                    }
+                },
+                {
+                    id: 'cc026',
+                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
+                    price: '34.600.000',
+                    image: 'assets/images/cc/cc026.jpg',
+                    description: 'Cửa thiết kế nhỏ gọn với kính hộp trang trí, phù hợp với công trình cần tính cách âm và độ thẩm mỹ cao.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '2.2m x 2.6m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Độ dày': '1.4mm - 2mm',
+                        'Phào': '2 mặt',
+                        'Phào trong cánh': 'Có',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['Cách âm tốt', 'Kiểu dáng sang trọng', 'Dễ lắp đặt']
+                    }
+                },
+                {
+                    id: 'cc027',
+                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
+                    price: '33.500.000',
+                    image: 'assets/images/cc/cc027.jpg',
+                    description: 'Cửa sử dụng kính cường lực 10mm giúp tăng độ cứng, độ bền và khả năng chịu lực, thích hợp cho nhiều không gian.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính cl 10mm',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '2.7m x 2.7m',
+                        'Khung bao': '55 x 200',
+                        'Bản cánh': '60 x 180',
+                        'Độ dày': '1.4mm - 2mm',
+                        'Phào': '2 mặt',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
+                        'Tính năng': ['Độ dày kính cao', 'Tăng độ cách âm', 'Tối giản mà mạnh mẽ']
+                    }
+                },
+                {
+                    id: 'cc028',
+                    name: 'Cửa 4 Cánh Nhôm OWIN hệ vát cạnh',
+                    price: '10.000.000',
+                    image: 'assets/images/cc/cc028.jpg',
+                    description: 'Cửa quay 4 cánh với kính an toàn, thích hợp nhà cấp 4, khu dân cư hoặc công trình cần lối đi rộng.',
+                    specs: {
+                        'Chất liệu phụ': 'Kính an toàn 6.38 xanh đen',
+                        'Màu sắc': 'Ghi',
+                        'Kích thước': '2m x 2.8m',
+                        'Bản cánh': '87',
+                        'Độ dày': '1mm - 1.2mm',
+                    },
+                    accessories: {
+                        'Phụ kiện': ['Khóa đơn điểm', 'Bản lề x12', 'Vật tư phụ'],
+                        'Tính năng': ['Giá rẻ', 'Phù hợp dân dụng', 'Kiểu dáng đơn giản']
+                    }
+                }
+
+            ]
+        };
+
+        // Pagination state for each category
+        const paginationState = {};
+
+        // Initialize pagination for all categories
+        Object.keys(productsData).forEach(category => {
+            paginationState[category] = {
+                currentPage: 1,
+                itemsPerPage: 3,
+                totalItems: productsData[category].length,
+                totalPages: Math.ceil(productsData[category].length / 3)
+            };
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            initializeWebsite();
+        });
+
+        function initializeWebsite() {
+            // Load products for each category
+            loadAllCategoryProducts();
+
+            // Initialize search functionality
+            initializeSearch();
+
+            // Add scroll effects
+            addScrollEffects();
+
+            // Initialize contact menu
+            initializeContactMenu();
+
+            // Initialize responsive features
+            initializeResponsiveFeatures();
+        }
+
+        function loadAllCategoryProducts() {
+            // Load products for all categories using pagination
+            Object.keys(productsData).forEach(category => {
+                loadCategoryProducts(category);
+                generatePageDots(category);
+            });
+        }
+
+        function loadCategoryProducts(category) {
+            const products = productsData[category] || [];
+            const categoryGrid = document.querySelector(`#${category}-grid`);
+
+            if (!categoryGrid) return;
+
+            const state = paginationState[category];
+            const startIndex = (state.currentPage - 1) * state.itemsPerPage;
+            const endIndex = startIndex + state.itemsPerPage;
+            const currentProducts = products.slice(startIndex, endIndex);
+
+            categoryGrid.innerHTML = '';
+
+            currentProducts.forEach((product, index) => {
+                const productCard = createProductCard(product, index);
+                categoryGrid.appendChild(productCard);
+            });
+
+            // Update pagination controls
+            updatePaginationControls(category);
+            updatePageDots(category);
+
+            // Add animation with stagger effect
+            animateProductCards(categoryGrid);
+        }
+
+        function changePage(category, direction) {
+            const state = paginationState[category];
+            const newPage = state.currentPage + direction;
+
+            if (newPage >= 1 && newPage <= state.totalPages) {
+                state.currentPage = newPage;
+                loadCategoryProducts(category);
+            }
+        }
+
+        function goToPage(category, pageNumber) {
+            const state = paginationState[category];
+            if (pageNumber >= 1 && pageNumber <= state.totalPages) {
+                state.currentPage = pageNumber;
+                loadCategoryProducts(category);
+            }
+        }
+
+        function generatePageDots(category) {
+            const state = paginationState[category];
+            const dotsContainer = document.getElementById(`${category}-dots`);
+
+            if (!dotsContainer) return;
+
+            dotsContainer.innerHTML = '';
+
+            for (let i = 1; i <= state.totalPages; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'page-dot';
+                if (i === state.currentPage) {
+                    dot.classList.add('active');
+                }
+
+                dot.addEventListener('click', () => goToPage(category, i));
+
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updatePageDots(category) {
+            const state = paginationState[category];
+            const dotsContainer = document.getElementById(`${category}-dots`);
+
+            if (!dotsContainer) return;
+
+            const dots = dotsContainer.querySelectorAll('.page-dot');
+            dots.forEach((dot, index) => {
+                if (index + 1 === state.currentPage) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function updatePaginationControls(category) {
+            const state = paginationState[category];
+            const pageInfo = document.getElementById(`${category}-page-info`);
+            const prevBtn = document.getElementById(`${category}-prev`);
+            const nextBtn = document.getElementById(`${category}-next`);
+
+            if (pageInfo) {
+                pageInfo.textContent = `Trang ${state.currentPage} / ${state.totalPages}`;
+            }
+
+            if (prevBtn) {
+                prevBtn.disabled = state.currentPage === 1;
+            }
+
+            if (nextBtn) {
+                nextBtn.disabled = state.currentPage === state.totalPages;
+            }
+        }
+
+        function createProductCard(product, index) {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.onclick = () => openProductModal(product);
+
+            // Enhanced accessibility
+            card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-label', `Xem chi tiết ${product.name}`);
+
+            // Add keyboard support
+            card.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openProductModal(product);
+                }
+            });
+
+
+
+            card.innerHTML = `
+    <div class="product-image">
+        <span style="font-size: 4rem;" aria-hidden="true">
+            <img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">
+        </span>
+    </div>
+    <div class="product-info">
+        <h3 class="product-name">${product.name}</h3>
+        <div class="product-price">
+            <span class="current-price">${product.price} VNĐ</span>
+    </div>
+`;
+
+            return card;
+        }
+
+        function animateProductCards(container) {
+            const cards = container.querySelectorAll('.product-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease-out';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        }
+
+        function scrollToProducts() {
+            const productsSection = document.getElementById('products');
+
+            if (!productsSection) return;
+
+            // Enhanced smooth scroll with mobile support
+            const headerHeight = document.querySelector('.main-header').offsetHeight;
+            const targetPosition = productsSection.offsetTop - headerHeight - 20;
+
+            // Use smooth scroll with fallback for older browsers
+            if ('scrollBehavior' in document.documentElement.style) {
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            } else {
+                // Fallback smooth scroll for older browsers
+                smoothScrollTo(targetPosition, 800);
+            }
+        }
+
+        function smoothScrollTo(targetPosition, duration) {
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        function openProductModal(product) {
+            const modal = document.getElementById('productModal');
+
+            if (!modal) return;
+
+            // Populate modal content
+            document.getElementById('modal-product-name').textContent = product.name;
+            document.getElementById('modal-price').textContent = product.price + ' VNĐ';
+            document.getElementById('modal-image').innerHTML = `<span style="font-size: 6rem;"><img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;"></span>`;
+
+            // Populate specs
+            const specsContainer = document.getElementById('modal-specs');
+            specsContainer.innerHTML = '';
+            Object.entries(product.specs).forEach(([key, value]) => {
+                const specItem = document.createElement('div');
+                specItem.className = 'spec-item';
+                specItem.innerHTML = `
+            <div class="spec-label">${key}</div>
+            <div class="spec-value">${value}</div>
+        `;
+                specsContainer.appendChild(specItem);
+            });
+
+            // THÊM PHẦN NÀY - Populate accessories
+            const accessoriesContainer = document.getElementById('modal-accessories');
+            if (accessoriesContainer) {
+                accessoriesContainer.innerHTML = '';
+                if (product.accessories && Object.keys(product.accessories).length > 0) {
+                    Object.entries(product.accessories).forEach(([key, value]) => {
+                        const accessoryItem = document.createElement('div');
+                        accessoryItem.className = 'spec-item';
+                        accessoryItem.innerHTML = `
+                    <div class="spec-label">${key}</div>
+                    <div class="spec-value">${value}</div>
+                `;
+                        accessoriesContainer.appendChild(accessoryItem);
+                    });
+                    // Hiển thị section accessories
+                    const accessoriesSection = document.getElementById('modal-accessories-section');
+                    if (accessoriesSection) {
+                        accessoriesSection.style.display = 'block';
+                    }
+                } else {
+                    // Ẩn section accessories nếu không có data
+                    const accessoriesSection = document.getElementById('modal-accessories-section');
+                    if (accessoriesSection) {
+                        accessoriesSection.style.display = 'none';
+                    }
+                }
+            }
+
+            // Show description
+            document.getElementById('modal-description').textContent = product.description;
+
+            // Show modal with enhanced animation
+            modal.classList.add('active');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            // Focus management for accessibility
+            const closeButton = modal.querySelector('.modal-close');
+            if (closeButton) {
+                closeButton.focus();
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('productModal');
+            if (!modal) return;
+
+            const container = modal.querySelector('.modal-container');
+
+            // Add closing animation
+            if (container) {
+                container.style.transform = 'translateY(60px) scale(0.95)';
+            }
+
+            setTimeout(() => {
+                modal.classList.remove('active');
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        function toggleContactMenu() {
+            const menu = document.getElementById('contact-menu');
+            if (!menu) return;
+
+            menu.classList.toggle('active');
+        }
+
+        function initializeSearch() {
+            const searchInput = document.getElementById('search-input');
+            const searchBtn = document.getElementById('search-btn');
+            const searchResults = document.getElementById('search-results');
+
+            if (!searchInput || !searchBtn || !searchResults) return;
+
+            let searchTimeout;
+
+            searchInput.addEventListener('input', function () {
+                const query = this.value.trim();
+
+                clearTimeout(searchTimeout);
+
+                if (query.length >= 1) {
+                    searchResults.innerHTML = '<div style="padding: 10px; text-align: center; color: #6b7280;">Đang tìm kiếm...</div>';
+                    searchResults.style.display = 'block';
+
+                    searchTimeout = setTimeout(() => {
+                        performSearch(query);
+                    }, 300);
+                } else {
+                    searchResults.innerHTML = '';
+                    searchResults.style.display = 'none';
+                }
+            });
+
+            searchBtn.addEventListener('click', function () {
+                const query = searchInput.value.trim();
+                if (query) {
+                    performSearch(query);
+                }
+            });
+
+            // Close search results when clicking outside
+            document.addEventListener('click', function (event) {
+                const searchBox = document.querySelector('.search-box');
+                if (!searchBox.contains(event.target)) {
+                    searchResults.style.display = 'none';
+                }
+            });
+
+            // Handle keyboard navigation
+            searchInput.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    searchResults.style.display = 'none';
+                    this.blur();
+                }
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    const query = this.value.trim();
+                    if (query) {
+                        performSearch(query);
+                    }
+                }
+            });
+        }
+
+        function performSearch(query) {
+            const allProducts = Object.values(productsData).flat();
+            const searchResults = document.getElementById('search-results');
+
+            // Normalize Vietnamese text for better search
+            function normalizeVietnamese(str) {
+                return str.toLowerCase()
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+                    .replace(/đ/g, 'd')
+                    .replace(/Đ/g, 'd');
+            }
+
+            const normalizedQuery = normalizeVietnamese(query);
+
+            // Enhanced search algorithm
+            const results = allProducts.filter(product => {
+                const normalizedName = normalizeVietnamese(product.name);
+                const normalizedDesc = normalizeVietnamese(product.description);
+
+                // Search in name, description, and specs
+                const nameMatch = normalizedName.includes(normalizedQuery);
+                const descMatch = normalizedDesc.includes(normalizedQuery);
+
+                // Search in specs
+                const specsMatch = Object.values(product.specs).some(spec =>
+                    normalizeVietnamese(spec).includes(normalizedQuery)
+                );
+
+                return nameMatch || descMatch || specsMatch;
+            });
+
+            // Sort results by relevance
+            results.sort((a, b) => {
+                const aName = normalizeVietnamese(a.name);
+                const bName = normalizeVietnamese(b.name);
+
+                // Prioritize exact matches in name
+                const aExact = aName.includes(normalizedQuery);
+                const bExact = bName.includes(normalizedQuery);
+
+                if (aExact && !bExact) return -1;
+                if (!aExact && bExact) return 1;
+
+                // Then by name length (shorter names first)
+                return a.name.length - b.name.length;
+            });
+
+            searchResults.innerHTML = '';
+
+            if (results.length > 0) {
+                results.slice(0, 8).forEach(product => {
+                    const resultItem = document.createElement('div');
+                    resultItem.className = 'search-result-item';
+                    resultItem.style.cssText = `
+                        padding: 12px 16px;
+                        border-bottom: 1px solid #e5e7eb;
+                        cursor: pointer;
+                        transition: background-color 0.2s ease;
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        min-height: 48px;
+                    `;
+
+                    resultItem.innerHTML = `
+                        <span style="font-size: 1.5rem;"><img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;"></span>
+                        <div style="flex: 1;">
+                            <div style="font-weight: 500; color: #374151; margin-bottom: 4px;">${product.name}</div>
+                            <div style="font-size: 0.9rem; color: #6b7280;">${product.price} VNĐ</div>
+                        </div>
+                    `;
+
+                    resultItem.addEventListener('click', () => {
+                        openProductModal(product);
+                        searchResults.style.display = 'none';
+                    });
+
+                    resultItem.addEventListener('mouseenter', () => {
+                        resultItem.style.backgroundColor = '#f3f4f6';
+                    });
+
+                    resultItem.addEventListener('mouseleave', () => {
+                        resultItem.style.backgroundColor = '';
+                    });
+
+                    searchResults.appendChild(resultItem);
+                });
+
+                if (results.length > 8) {
+                    const moreItem = document.createElement('div');
+                    moreItem.style.cssText = 'padding: 12px 16px; text-align: center; color: #6b7280; font-size: 0.9rem;';
+                    moreItem.textContent = `Và ${results.length - 8} sản phẩm khác...`;
+                    searchResults.appendChild(moreItem);
+                }
+            } else {
+                const noResults = document.createElement('div');
+                noResults.style.cssText = 'padding: 20px; text-align: center; color: #6b7280;';
+                noResults.innerHTML = `
+                    <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
+                    <div>Không tìm thấy sản phẩm nào</div>
+                    <div style="font-size: 0.9rem; margin-top: 4px;">Thử tìm kiếm với từ khóa khác</div>
+                `;
+                searchResults.appendChild(noResults);
+            }
+
+            searchResults.style.display = 'block';
+        }
+
+        function addScrollEffects() {
+            // Enhanced scroll effects with mobile optimization
+            let ticking = false;
+
+            function updateScrollEffects() {
+                const scrollY = window.pageYOffset;
+                const header = document.querySelector('.main-header');
+
+                // Header background opacity based on scroll
+                if (header) {
+                    const opacity = Math.min(scrollY / 100, 1);
+                    header.style.background = `rgba(255, 255, 255, ${0.95 + opacity * 0.05})`;
+                }
+
+                // Parallax effect for hero section (disabled on mobile for performance)
+                if (window.innerWidth > 768) {
+                    const hero = document.querySelector('.hero');
+                    if (hero && scrollY < window.innerHeight) {
+                        hero.style.transform = `translateY(${scrollY * 0.5}px)`;
+                    }
+                }
+
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    requestAnimationFrame(updateScrollEffects);
+                    ticking = true;
+                }
+            }, { passive: true });
+        }
+
+        function initializeContactMenu() {
+            // Enhanced contact menu with better mobile support
+            const contactBtn = document.querySelector('.contact-main-btn');
+            const contactMenu = document.getElementById('contact-menu');
+
+            if (!contactBtn || !contactMenu) return;
+
+            // Add ARIA attributes for accessibility
+            contactBtn.setAttribute('aria-haspopup', 'true');
+            contactBtn.setAttribute('aria-expanded', 'false');
+            contactMenu.setAttribute('role', 'menu');
+
+            // Add keyboard support
+            contactBtn.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleContactMenu();
+                }
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && contactMenu.classList.contains('active')) {
+                    toggleContactMenu();
+                    contactBtn.focus();
+                }
+            });
+        }
+
+        function initializeResponsiveFeatures() {
+            const screenWidth = window.innerWidth;
+
+            // Adjust layout based on screen size
+            if (screenWidth < 768) {
+                // Mobile adjustments
+                adjustMobileLayout();
+            } else if (screenWidth < 1024) {
+                // Tablet adjustments
+                adjustTabletLayout();
+            } else {
+                // Desktop adjustments
+                adjustDesktopLayout();
+            }
+        }
+
+        function adjustMobileLayout() {
+            // Mobile-specific adjustments
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.padding = '1rem';
+            }
+
+            // Adjust search input for mobile
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) {
+                searchInput.style.fontSize = '16px'; // Prevent zoom on iOS
+            }
+
+            // Ensure touch targets are at least 44px
+            const buttons = document.querySelectorAll('button, .hero-btn, .contact-item');
+            buttons.forEach(button => {
+                const computedStyle = window.getComputedStyle(button);
+                const height = parseInt(computedStyle.height);
+                if (height < 44) {
+                    button.style.minHeight = '44px';
+                }
+            });
+        }
+
+        function adjustTabletLayout() {
+            // Tablet-specific adjustments
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.padding = '2rem 1.5rem';
+            }
+        }
+
+        function adjustDesktopLayout() {
+            // Desktop-specific adjustments
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.padding = '3rem 2rem';
+            }
+        }
+
+        // Enhanced error handling and performance monitoring
+        window.addEventListener('error', function (event) {
+            console.error('JavaScript Error:', event.error);
+        });
+
+        // Performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                }, 0);
+            });
+        }
+
+        // Handle resize for responsive adjustments
+        let resizeTimeout;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function () {
+                initializeResponsiveFeatures();
+            }, 250);
+        });
+
+        // Modal keyboard support
+        document.addEventListener('keydown', function (event) {
+            const modal = document.getElementById('productModal');
+            if (modal && modal.classList.contains('active') && event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>
