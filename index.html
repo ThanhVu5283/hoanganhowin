@@ -658,10 +658,52 @@
         .category-products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            /* Desktop: 3 products */
             gap: var(--space-xl);
             padding: var(--space-lg);
             width: 100%;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Tablet: 2 products per row */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .category-products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .category-nav-btn {
+                display: flex;
+                /* Show navigation buttons on tablet */
+            }
+        }
+
+        /* Mobile: 1 product per row */
+        @media (max-width: 768px) {
+            .category-products-grid {
+                grid-template-columns: 1fr;
+                /* Single column */
+                justify-items: center;
+            }
+
+            .category-nav-btn {
+                display: flex;
+                /* Show navigation buttons on mobile */
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .category-products-container {
+                flex-direction: row;
+                /* Keep horizontal layout */
+                align-items: center;
+                gap: var(--space-md);
+            }
+
+            .category-products-wrapper {
+                max-width: 300px;
+                /* Limit width on mobile */
+            }
         }
 
         /* NEW: Page Info Bottom */
@@ -1352,15 +1394,6 @@
                 gap: var(--space-md);
             }
 
-            .category-nav-btn {
-                display: none;
-            }
-
-            .category-products-grid {
-                grid-template-columns: 1fr;
-                justify-items: center;
-            }
-
             .product-card {
                 max-width: 350px;
                 width: 100%;
@@ -1586,8 +1619,7 @@
                 <span class="contact-item-icon">📞</span>
                 <span>Gọi ngay</span>
             </a>
-            <a href="https://www.facebook.com/profile.php?id=100063558679717" target="_blank"
-                class="contact-item facebook">
+            <a href="https://www.facebook.com/hoang.anh.nhom.owin" target="_blank" class="contact-item facebook">
                 <span class="contact-item-icon">📘</span>
                 <span>Facebook</span>
             </a>
@@ -1711,7 +1743,7 @@
                     name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
                     price: '55,600,000',
                     image: 'assets/images/cc/cc001.jpg',
-                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    description: `Cửa thủy lực nhôm OWIN thiết kế tinh tế, bền bỉ với phụ kiện chất lượng, an toàn và sang trọng, phù hợp mọi không gian hiện đại.`,
                     specs: {
                         'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1723,16 +1755,20 @@
                         'Bảo hành': '5 năm'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Tay nắm': 'KOLN x2',
+                        'Khóa': 'Đồng Owin',
+                        'Chốt cánh phụ': 'Có sẵn'
                     }
                 },
+
                 {
                     id: 'cc002',
                     name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
                     price: '54,600,000',
                     image: 'assets/images/cc/cc002.jpg',
-                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    description: `Cửa thủy lực nhôm OWIN thiết kế tinh tế, bền bỉ với phụ kiện chất lượng gồm bản lề sàn alder, ngỗng trên dưới, tay nắm KOLN, khóa đồng Owin và chốt cánh phụ. Sản phẩm an toàn, chịu lực, sang trọng với 4 màu nhôm, phù hợp mọi không gian hiện đại.`,
                     specs: {
                         'Chất liệu phụ': 'Tấm liền nguyên khối + kính cl 10mm',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1744,8 +1780,11 @@
                         'Bảo hành': '5 năm'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Tay nắm': 'KOLN x2',
+                        'Khóa': 'Đồng Owin',
+                        'Chốt cánh phụ': 'Có sẵn'
                     }
                 },
                 {
@@ -1753,7 +1792,7 @@
                     name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
                     price: '41,000,000',
                     image: 'assets/images/cc/cc003.jpg',
-                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    description: `Cửa thủy lực nhôm OWIN thiết kế tinh tế, bền bỉ với phụ kiện chất lượng gồm bản lề sàn alder, ngỗng trên dưới, tay nắm KOLN, khóa đồng Owin, chốt cánh phụ và góc đồng cá chép. Sản phẩm an toàn, chịu lực, sang trọng với 4 màu nhôm, phù hợp mọi không gian hiện đại.`,
                     specs: {
                         'Chất liệu phụ': 'Kính cl 10mm',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1765,8 +1804,12 @@
                         'Bảo hành': '5 năm'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ', 'Góc đồng cá chép'],
-                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Tay nắm': 'KOLN x2',
+                        'Khóa': 'Đồng Owin',
+                        'Chốt cánh phụ': 'Có sẵn',
+                        'Góc đồng cá chép': 'Có sẵn'
                     }
                 },
                 {
@@ -1774,7 +1817,7 @@
                     name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
                     price: '49,700,000',
                     image: 'assets/images/cc/cc004.jpg',
-                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    description: `Cửa thủy lực nhôm OWIN thiết kế tinh tế, bền bỉ với phụ kiện chất lượng gồm bản lề sàn alder, ngỗng trên dưới, tay nắm KOLN, khóa đồng Owin và chốt cánh phụ. Sản phẩm an toàn, chịu lực, sang trọng với 4 màu nhôm, phù hợp mọi không gian hiện đại.`,
                     specs: {
                         'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1786,8 +1829,11 @@
                         'Bảo hành': '5 năm'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Tay nắm': 'KOLN x2',
+                        'Khóa': 'Đồng Owin',
+                        'Chốt cánh phụ': 'Có sẵn'
                     }
                 },
                 {
@@ -1795,7 +1841,7 @@
                     name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
                     price: '44,200,000',
                     image: 'assets/images/cc/cc005.jpg',
-                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    description: `Cửa thủy lực nhôm OWIN thiết kế tinh tế, bền bỉ với phụ kiện chất lượng gồm bản lề sàn alder, ngỗng trên dưới, tay nắm KOLN, khóa đồng Owin và chốt cánh phụ. Sản phẩm an toàn, chịu lực, sang trọng với 4 màu nhôm, phù hợp mọi không gian hiện đại.`,
                     specs: {
                         'Chất liệu phụ': 'Tấm liền nguyên khối',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1807,16 +1853,20 @@
                         'Bảo hành': '5 năm'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Tay nắm': 'KOLN x2',
+                        'Khóa': 'Đồng Owin',
+                        'Chốt cánh phụ': 'Có sẵn'
                     }
                 },
+
                 {
                     id: 'cc006',
                     name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
                     price: '49,200,000',
                     image: 'assets/images/cc/cc006.jpg',
-                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    description: `Cửa thủy lực nhôm OWIN thiết kế hiện đại, bền bỉ với phụ kiện chất lượng gồm bản lề sàn alder, ngỗng trên dưới, tay nắm KOLN, khóa đồng Owin và chốt cánh phụ. Sản phẩm an toàn, chịu lực, sang trọng với 4 màu nhôm đa dạng.`,
                     specs: {
                         'Chất liệu phụ': 'Tấm liền nguyên khối',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1828,8 +1878,11 @@
                         'Bảo hành': '5 năm'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Tay nắm': 'KOLN x2',
+                        'Khóa': 'Đồng Owin',
+                        'Chốt cánh phụ': 'Có sẵn'
                     }
                 },
                 {
@@ -1837,7 +1890,7 @@
                     name: 'Cửa 2 Cánh Nhôm OWIN hệ khuôn phào kép',
                     price: '55,700,000',
                     image: 'assets/images/cc/cc007.jpg',
-                    description: 'Cửa nhôm OWIN hệ khuôn phào kép cao cấp với thiết kế sang trọng, chắc chắn, phù hợp cho biệt thự và công trình cao cấp. Sản phẩm sử dụng kính cường lực và phụ kiện Daishin chính hãng, đảm bảo an toàn và độ bền vượt trội.',
+                    description: `Cửa nhôm OWIN hệ khuôn phào kép cao cấp, sử dụng kính cường lực và phụ kiện Daishin chính hãng, đảm bảo an toàn, bền bỉ và thẩm mỹ sang trọng với 4 màu nhôm.`,
                     specs: {
                         'Chất liệu phụ': 'Tấm liền nguyên khối + kính cl 8mm',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1849,8 +1902,9 @@
                         'Bảo hành': '5 năm'
                     },
                     accessories: {
-                        'Phụ kiện': ['Khóa đa điểm', 'Bản lề bi đũa x12', 'Chốt cánh phụ'],
-                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                        'Khóa đa điểm': '',
+                        'Bản lề bi đũa': 'x12',
+                        'Chốt cánh phụ': 'Có sẵn'
                     }
                 },
                 {
@@ -1858,7 +1912,7 @@
                     name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
                     price: '42,200,000',
                     image: 'assets/images/cc/cc008.jpg',
-                    description: 'Cửa thủy lực nhôm OWIN là sự kết hợp hoàn hảo giữa thẩm mỹ tinh tế và công năng vượt trội. Với thiết kế hiện đại, vật liệu chất lượng cao và hệ phụ kiện đồng bộ, sản phẩm mang đến trải nghiệm sử dụng êm ái, bền bỉ và sang trọng cho mọi không gian sống.',
+                    description: `Cửa thủy lực nhôm OWIN kết hợp kính hộp hoa nan mạ đồng, phụ kiện đồng bộ, an toàn, chịu lực, sang trọng và bền bỉ với 4 màu nhôm đa dạng.`,
                     specs: {
                         'Chất liệu phụ': 'Kính hộp hoa nan mạ đồng',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1869,14 +1923,20 @@
                         'Bảo hành': '5 năm'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ', 'Gôc đồng cá chép'],
-                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
-                    },
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Tay nắm': 'KOLN x2',
+                        'Khóa': 'Đồng Owin',
+                        'Chốt cánh phụ': 'Có sẵn',
+                        'Góc đồng cá chép': 'Có sẵn'
+                    }
+                },
+                {
                     id: 'cc009',
                     name: 'Cửa 2 Cánh Nhôm OWIN hệ khuôn phào kép',
-                    price: '57.900.000',
+                    price: '57,900,000',
                     image: 'assets/images/cc/cc009.jpg',
-                    description: 'Cửa nhôm OWIN hệ khuôn phào kép, sử dụng kính hộp hoa văn mạ đồng, mang đến sự khác biệt và nổi bật cho công trình. Bộ phụ kiện Daishin chính hãng đảm bảo vận hành êm ái, khóa an toàn và độ bền cao.',
+                    description: `Cửa nhôm OWIN hệ khuôn phào kép với kính hộp hoa nan mạ đồng, phụ kiện Daishin chính hãng, vận hành êm ái và khóa an toàn, bền đẹp với 4 màu nhôm.`,
                     specs: {
                         'Chất liệu phụ': 'Kính hộp hoa nan mạ đồng',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1887,16 +1947,17 @@
                         'Bảo hành': '5 năm'
                     },
                     accessories: {
-                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bi đũa x20'],
-                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                        'Khóa đa điểm': '',
+                        'Chốt cánh phụ': 'Có sẵn',
+                        'Bi đũa': 'x20'
                     }
                 },
                 {
                     id: 'cc010',
                     name: 'Cửa 2 Cánh Nhôm OWIN hệ khuôn phào kép',
-                    price: '47.700.000',
+                    price: '47,700,000',
                     image: 'assets/images/cc/cc010.jpg',
-                    description: 'Cửa nhôm OWIN hệ khuôn phào kép kết hợp kính cường lực 10mm, thiết kế mạnh mẽ, bản cánh lớn và phụ kiện cao cấp, phù hợp với các không gian rộng, cần sự chắc chắn và tính thẩm mỹ cao.',
+                    description: `Cửa nhôm OWIN hệ khuôn phào kép, kính cường lực 10mm, thiết kế mạnh mẽ, bản cánh lớn và phụ kiện cao cấp, phù hợp không gian rộng cần chắc chắn và thẩm mỹ.`,
                     specs: {
                         'Chất liệu phụ': 'Kính cl 10mm',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1908,16 +1969,17 @@
                         'Bảo hành': '5 năm'
                     },
                     accessories: {
-                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bi đũa x20'],
-                        'Tính năng': ['An toàn và bảo mật', 'Chịu lực và chống va đập', 'Thẫm mỹ sang trọng', 'Thẫm mỹ sang trọng', 'Có 4 màu nhôm']
+                        'Khóa đa điểm': '',
+                        'Chốt cánh phụ': 'Có sẵn',
+                        'Bi đũa': 'x20'
                     }
                 },
                 {
                     id: 'cc011',
                     name: 'Cửa 2 Cánh Nhôm OWIN hệ khuôn phào kép',
-                    price: '39.000.000',
+                    price: '39,000,000',
                     image: 'assets/images/cc/cc011.jpg',
-                    description: 'Cửa nhôm OWIN hệ khuôn phào kép thiết kế hiện đại, chắc chắn, sử dụng kính cường lực 8mm và phụ kiện cao cấp Daishin.',
+                    description: `Cửa nhôm OWIN hệ khuôn phào kép hiện đại, kính cường lực 8mm, phụ kiện Daishin cao cấp, an toàn, cách âm, bền đẹp.`,
                     specs: {
                         'Chất liệu phụ': 'Kính cl 8mm',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1926,57 +1988,64 @@
                         'Bản cánh': '160',
                         'Độ dày': '1.4mm – 2 mm',
                         'Phào': '2 mặt',
-                        'Phào trong cánh': 'Có',
+                        'Phào trong cánh': 'Có'
                     },
                     accessories: {
-                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bản lề bi đũa x8', 'Vật tư phụ'],
-                        'Tính năng': ['An toàn', 'Cách âm, cách nhiệt', 'Daishin chính hãng']
+                        'Khóa đa điểm': '',
+                        'Chốt cánh phụ': 'Có sẵn',
+                        'Bản lề bi đũa': 'x8',
+                        'Vật tư phụ': ''
                     }
                 },
                 {
                     id: 'cc012',
                     name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
-                    price: '50.200.000',
+                    price: '50,200,000',
                     image: 'assets/images/cc/cc012.jpg',
-                    description: 'Cửa thủy lực hiện đại tích hợp khóa thông minh, mang đến trải nghiệm an toàn, tiện lợi và đẳng cấp.',
+                    description: `Cửa thủy lực hiện đại tích hợp khóa thông minh, an toàn, tiện lợi và đẳng cấp với phụ kiện đồng bộ.`,
                     specs: {
                         'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
                         'Màu sắc': 'Vân gỗ trắc',
                         'Kích thước': '2.8m x 2.8m',
                         'Khung bao': '55 x 200',
                         'Bản cánh': '60 x 180',
-                        'Phào': '2 mặt',
+                        'Phào': '2 mặt'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Khóa vân tay, nhận diện khuôn mặt', 'Chốt cánh phụ'],
-                        'Tính năng': ['Bảo mật cao', 'Khóa thông minh', 'Thiết kế sang trọng']
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Khóa': 'Vân tay, nhận diện khuôn mặt',
+                        'Chốt cánh phụ': 'Có sẵn'
                     }
                 },
                 {
                     id: 'cc013',
                     name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
-                    price: '35.200.000',
+                    price: '35,200,000',
                     image: 'assets/images/cc/cc013.jpg',
-                    description: 'Cửa thiết kế gọn gàng, phù hợp không gian vừa và nhỏ, đảm bảo an toàn và tính thẩm mỹ.',
+                    description: `Cửa thiết kế gọn gàng, an toàn, thẩm mỹ, phù hợp không gian vừa và nhỏ với phụ kiện đồng bộ.`,
                     specs: {
                         'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
                         'Màu sắc': 'Vân gỗ trắc',
                         'Kích thước': '2.2m x 2.8m',
                         'Khung bao': '55 x 200',
                         'Bản cánh': '60 x 180',
-                        'Phào': '2 mặt',
+                        'Phào': '2 mặt'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['Bền bỉ', 'Chống va đập', 'Thẩm mỹ']
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Tay nắm': 'KOLN x2',
+                        'Khóa': 'Đồng Owin',
+                        'Chốt cánh phụ': 'Có sẵn'
                     }
                 },
                 {
                     id: 'cc014',
                     name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
-                    price: '55.200.000',
+                    price: '55,200,000',
                     image: 'assets/images/cc/cc014.jpg',
-                    description: 'Cửa tấm liền cao cấp, tích hợp phụ kiện đồng bộ, tôn vinh đẳng cấp và sự sang trọng cho không gian.',
+                    description: `Cửa tấm liền cao cấp, phụ kiện đồng bộ, đẳng cấp và sang trọng cho không gian biệt thự.`,
                     specs: {
                         'Chất liệu phụ': 'Tấm liền nguyên khối',
                         'Màu sắc': 'Vân gỗ trắc',
@@ -1984,19 +2053,22 @@
                         'Khung bao': '55 x 200',
                         'Bản cánh': '60 x 180',
                         'Phào': 'Biệt thự + mặt trong',
-                        'Phào trong cánh': 'Có',
+                        'Phào trong cánh': 'Có'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['Sang trọng', 'Chống ồn', 'Độ bền cao']
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Tay nắm': 'KOLN x2',
+                        'Khóa': 'Đồng Owin',
+                        'Chốt cánh phụ': 'Có sẵn'
                     }
                 },
                 {
                     id: 'cc015',
                     name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
-                    price: '56.000.000',
+                    price: '56,000,000',
                     image: 'assets/images/cc/cc015.jpg',
-                    description: 'Cửa thủy lực cao cấp màu vân gỗ lim, tăng sự sang trọng và đồng bộ phụ kiện chất lượng cao.',
+                    description: `Cửa thủy lực cao cấp màu vân gỗ lim, sang trọng, bền bỉ và đồng bộ phụ kiện chất lượng cao.`,
                     specs: {
                         'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
                         'Màu sắc': 'Vân gỗ lim',
@@ -2005,19 +2077,22 @@
                         'Bản cánh': '60 x 180',
                         'Độ dày': '1.4mm - 2mm',
                         'Phào': 'Biệt thự + mặt trong',
-                        'Phào trong cánh': 'Có',
+                        'Phào trong cánh': 'Có'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['Chống ồn', 'Bền đẹp', 'Phù hợp biệt thự']
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Tay nắm': 'KOLN x2',
+                        'Khóa': 'Đồng Owin',
+                        'Chốt cánh phụ': 'Có sẵn'
                     }
                 },
                 {
                     id: 'cc016',
                     name: 'Cửa 4 Cánh Nhôm OWIN hệ khuôn phào kép',
-                    price: '57.900.000',
+                    price: '57,900,000',
                     image: 'assets/images/cc/cc016.jpg',
-                    description: 'Cửa nhôm OWIN màu vân gỗ lim, sử dụng kính hộp trang trí và phụ kiện Daishin chính hãng cao cấp.',
+                    description: `Cửa nhôm OWIN màu vân gỗ lim, kính hộp trang trí, phụ kiện Daishin chính hãng, chắc chắn, khóa an toàn và đồng bộ.`,
                     specs: {
                         'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
                         'Màu sắc': 'Vân gỗ lim',
@@ -2025,19 +2100,21 @@
                         'Khung bao': 'Ôm tường 23',
                         'Bản cánh': '160',
                         'Độ dày': '1.4mm - 2mm',
-                        'Phào': '2 mặt',
+                        'Phào': '2 mặt'
                     },
                     accessories: {
-                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bản lề bi đũa x20', 'Vật tư phụ'],
-                        'Tính năng': ['Chắc chắn', 'Khóa an toàn', 'Đồng bộ Daishin']
+                        'Khóa đa điểm': '',
+                        'Chốt cánh phụ': 'Có sẵn',
+                        'Bản lề bi đũa': 'x20',
+                        'Vật tư phụ': ''
                     }
                 },
                 {
                     id: 'cc017',
                     name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
-                    price: '52.200.000',
+                    price: '52,200,000',
                     image: 'assets/images/cc/cc017.jpg',
-                    description: 'Cửa thủy lực màu ghi tinh tế, kết hợp kính hộp nan hoa giúp tăng tính thẩm mỹ và sang trọng.',
+                    description: `Cửa thủy lực màu ghi tinh tế, kính hộp nan hoa, thiết kế sang trọng, an toàn và cách âm tốt.`,
                     specs: {
                         'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
                         'Màu sắc': 'Ghi',
@@ -2045,251 +2122,315 @@
                         'Khung bao': '55 x 200',
                         'Bản cánh': '60 x 180',
                         'Độ dày': '1.4mm - 2mm',
-                        'Phào': 'Biệt thự + mặt trong',
+                        'Phào': 'Biệt thự + mặt trong'
                     },
                     accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['Thẩm mỹ hiện đại', 'Chống va đập', 'Cách âm tốt']
+                        'Bản lề sàn': 'Alder x2',
+                        'Ngỗng': 'Trên dưới',
+                        'Tay nắm': 'KOLN x2',
+                        'Khóa': 'Đồng Owin',
+                        'Chốt cánh phụ': 'Có sẵn'
                     }
                 },
                 {
-                    id: 'cc018',
-                    name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
-                    price: '48.200.000',
-                    image: 'assets/images/cc/cc018.jpg',
-                    description: 'Phiên bản cửa nhỏ gọn nhưng vẫn đảm bảo chất lượng và phụ kiện cao cấp đầy đủ.',
-                    specs: {
-                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
-                        'Màu sắc': 'Ghi',
-                        'Kích thước': '2.4m x 2.8m',
-                        'Khung bao': '55 x 200',
-                        'Bản cánh': '60 x 180',
-                        'Độ dày': '1.4mm - 2mm',
-                        'Phào': 'Biệt thự + mặt trong',
-                        'Phào trong cánh': 'Có',
+                    "id": "cc018",
+                    "name": "Cửa thủy lực 2 Cánh Nhôm OWIN",
+                    "price": "48.200.000",
+                    "image": "assets/images/cc/cc018.jpg",
+                    "description": "Phiên bản cửa nhỏ gọn với thiết kế tối ưu, đảm bảo chất lượng bền bỉ và trang bị đầy đủ phụ kiện cao cấp. Sản phẩm cách nhiệt hiệu quả, phù hợp không gian cần sự tiện nghi và thẩm mỹ cao.",
+                    "specs": {
+                        "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
+                        "Màu sắc": "Ghi",
+                        "Kích thước": "2.4m x 2.8m",
+                        "Khung bao": "55 x 200",
+                        "Bản cánh": "60 x 180",
+                        "Độ dày": "1.4mm - 2mm",
+                        "Phào": "Biệt thự + mặt trong",
+                        "Phào trong cánh": "Có"
                     },
-                    accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['Cách nhiệt', 'Thiết kế nhỏ gọn', 'Đầy đủ phụ kiện']
+                    "accessories": {
+                        "Bản lề sàn": "Alder x2",
+                        "Ngỗng": "Trên dưới",
+                        "Tay nắm": "KOLN x2",
+                        "Khóa": "Đồng Owin",
+                        "Chốt cánh phụ": "Có"
                     }
                 },
                 {
-                    id: 'cc019',
-                    name: 'Cửa thủy lực 2 Cánh Nhôm OWIN',
-                    price: '50.800.000',
-                    image: 'assets/images/cc/cc019.jpg',
-                    description: 'Cửa kính cường lực dày, khổ lớn phù hợp không gian rộng với thiết kế vững chắc, cao cấp.',
-                    specs: {
-                        'Chất liệu phụ': 'Kính cl 10mm',
-                        'Màu sắc': 'Ghi',
-                        'Kích thước': '3.2m x 2.8m',
-                        'Khung bao': '55 x 200',
-                        'Bản cánh': '60 x 180',
-                        'Độ dày': '1.4mm - 2mm',
-                        'Phào': 'Biệt thự + mặt trong',
+                    "id": "cc019",
+                    "name": "Cửa thủy lực 2 Cánh Nhôm OWIN",
+                    "price": "50.800.000",
+                    "image": "assets/images/cc/cc019.jpg",
+                    "description": "Cửa kính cường lực dày với khổ lớn, thiết kế vững chắc, mang đến không gian rộng rãi, chịu lực cao và thẩm mỹ ấn tượng cho mọi công trình.",
+                    "specs": {
+                        "Chất liệu phụ": "Kính cl 10mm",
+                        "Màu sắc": "Ghi",
+                        "Kích thước": "3.2m x 2.8m",
+                        "Khung bao": "55 x 200",
+                        "Bản cánh": "60 x 180",
+                        "Độ dày": "1.4mm - 2mm",
+                        "Phào": "Biệt thự + mặt trong"
                     },
-                    accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['Khung to bản', 'Chịu lực cao', 'Thẩm mỹ mạnh mẽ']
+                    "accessories": {
+                        "Bản lề sàn": "Alder x2",
+                        "Ngỗng": "Trên dưới",
+                        "Tay nắm": "KOLN x2",
+                        "Khóa": "Đồng Owin",
+                        "Chốt cánh phụ": "Có"
                     }
                 },
                 {
-                    id: 'cc020',
-                    name: 'Cửa thủy lực 1 Cánh Nhôm OWIN',
-                    price: '29.200.000',
-                    image: 'assets/images/cc/cc020.jpg',
-                    description: 'Mẫu cửa nhỏ gọn, phù hợp cho lối đi riêng hoặc không gian hạn chế nhưng vẫn đảm bảo tính năng và an toàn.',
-                    specs: {
-                        'Chất liệu phụ': 'Kính cl 10mm',
-                        'Màu sắc': 'Ghi',
-                        'Kích thước': '1.2m x 2.8m',
-                        'Khung bao': '55 x 200',
-                        'Bản cánh': '60 x 180',
-                        'Độ dày': '1.4mm - 2mm',
-                        'Phào': 'Biệt thự + mặt trong',
-                        'Phào trong cánh': 'Có',
+                    "id": "cc020",
+                    "name": "Cửa thủy lực 1 Cánh Nhôm OWIN",
+                    "price": "29.200.000",
+                    "image": "assets/images/cc/cc020.jpg",
+                    "description": "Mẫu cửa nhỏ gọn, thiết kế phù hợp cho lối đi riêng hoặc không gian hạn chế, đảm bảo tính năng an toàn và tiện nghi với phụ kiện đồng bộ.",
+                    "specs": {
+                        "Chất liệu phụ": "Kính cl 10mm",
+                        "Màu sắc": "Ghi",
+                        "Kích thước": "1.2m x 2.8m",
+                        "Khung bao": "55 x 200",
+                        "Bản cánh": "60 x 180",
+                        "Độ dày": "1.4mm - 2mm",
+                        "Phào": "Biệt thự + mặt trong",
+                        "Phào trong cánh": "Có"
                     },
-                    accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x1', 'Ngỗng trên dưới', 'Tay nắm KOLN x1', 'Khóa đồng Owin'],
-                        'Tính năng': ['Thiết kế nhỏ', 'Giá tốt', 'Phù hợp nhà phố']
+                    "accessories": {
+                        "Bản lề sàn": "Alder x1",
+                        "Ngỗng": "Trên dưới",
+                        "Tay nắm": "KOLN x1",
+                        "Khóa": "Đồng Owin"
                     }
                 },
                 {
-                    id: 'cc021',
-                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
-                    price: '40.500.000',
-                    image: 'assets/images/cc/cc021.jpg',
-                    description: 'Thiết kế nguyên khối sang trọng, phù hợp với các công trình cao cấp cần độ an toàn và tính thẩm mỹ cao.',
-                    specs: {
-                        'Chất liệu phụ': 'Tấm liền nguyên khối',
-                        'Màu sắc': 'Ghi',
-                        'Kích thước': '2.6m x 2.8m',
-                        'Khung bao': '55 x 200',
-                        'Bản cánh': '60 x 180',
-                        'Độ dày': '1.4mm - 2mm',
-                        'Phào': '2 mặt',
-                        'Phào trong cánh': 'Có',
+                    "id": "cc021",
+                    "name": "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
+                    "price": "40.500.000",
+                    "image": "assets/images/cc/cc021.jpg",
+                    "description": "Thiết kế nguyên khối sang trọng, đảm bảo độ an toàn và tính thẩm mỹ cao, phù hợp các công trình cao cấp với phụ kiện chất lượng đồng bộ.",
+                    "specs": {
+                        "Chất liệu phụ": "Tấm liền nguyên khối",
+                        "Màu sắc": "Ghi",
+                        "Kích thước": "2.6m x 2.8m",
+                        "Khung bao": "55 x 200",
+                        "Bản cánh": "60 x 180",
+                        "Độ dày": "1.4mm - 2mm",
+                        "Phào": "2 mặt",
+                        "Phào trong cánh": "Có"
                     },
-                    accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['Cánh lớn nguyên khối', 'Vững chắc và thẩm mỹ', 'Phong cách hiện đại']
+                    "accessories": {
+                        "Bản lề sàn": "Alder x2",
+                        "Ngỗng": "Trên dưới",
+                        "Tay nắm": "KOLN x2",
+                        "Khóa": "Đồng Owin",
+                        "Chốt cánh phụ": "Có"
                     }
                 },
                 {
-                    id: 'cc022',
-                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
-                    price: '43.000.000',
-                    image: 'assets/images/cc/cc022.jpg',
-                    description: 'Cửa thủy lực sử dụng kính hộp nan hoa mạ đồng nổi bật, kết hợp góc đồng cá chép tạo điểm nhấn nghệ thuật.',
-                    specs: {
-                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
-                        'Màu sắc': 'Ghi',
-                        'Kích thước': '2.8m x 2.8m',
-                        'Khung bao': '55 x 200',
-                        'Bản cánh': '60 x 180',
-                        'Độ dày': '1.4mm - 2mm',
-                        'Phào': '2 mặt',
+                    "id": "cc022",
+                    "name": "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
+                    "price": "43.000.000",
+                    "image": "assets/images/cc/cc022.jpg",
+                    "description": "Cửa thủy lực kính hộp nan hoa mạ đồng nổi bật, kết hợp góc đồng cá chép tạo điểm nhấn nghệ thuật, tăng thẩm mỹ và cách âm tốt cho mặt tiền.",
+                    "specs": {
+                        "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
+                        "Màu sắc": "Ghi",
+                        "Kích thước": "2.8m x 2.8m",
+                        "Khung bao": "55 x 200",
+                        "Bản cánh": "60 x 180",
+                        "Độ dày": "1.4mm - 2mm",
+                        "Phào": "2 mặt"
                     },
-                    accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ', 'Góc đồng cá chép'],
-                        'Tính năng': ['Trang trí độc đáo', 'Cách âm tốt', 'Tăng tính nghệ thuật cho mặt tiền']
+                    "accessories": {
+                        "Bản lề sàn": "Alder x2",
+                        "Ngỗng": "Trên dưới",
+                        "Tay nắm": "KOLN x2",
+                        "Khóa": "Đồng Owin",
+                        "Chốt cánh phụ": "Có",
+                        "Góc đồng cá chép": "Có"
                     }
                 },
                 {
-                    id: 'cc023',
-                    name: 'Cửa 4 Cánh Nhôm OWIN hệ khuôn phào kép',
-                    price: '43.200.000',
-                    image: 'assets/images/cc/cc023.jpg',
-                    description: 'Cửa hệ khuôn phào kép giúp tạo khung viền nổi bật, cùng kính cường lực mang lại độ bền cao và an toàn.',
-                    specs: {
-                        'Chất liệu phụ': 'Kính cl 8mm',
-                        'Màu sắc': 'Ghi',
-                        'Kích thước': '3m x 2.8m',
-                        'Khung bao': 'Ôm tường 23',
-                        'Bản cánh': '140',
-                        'Độ dày': '1.4mm - 2mm',
-                        'Phào': '2 mặt',
+                    "id": "cc023",
+                    "name": "Cửa 4 Cánh Nhôm OWIN hệ khuôn phào kép",
+                    "price": "43.200.000",
+                    "image": "assets/images/cc/cc023.jpg",
+                    "description": "Cửa hệ khuôn phào kép tạo khung viền nổi bật, kết hợp kính cường lực bền bỉ, an toàn và phù hợp cho biệt thự với phụ kiện chất lượng cao.",
+                    "specs": {
+                        "Chất liệu phụ": "Kính cl 8mm",
+                        "Màu sắc": "Ghi",
+                        "Kích thước": "3m x 2.8m",
+                        "Khung bao": "Ôm tường 23",
+                        "Bản cánh": "140",
+                        "Độ dày": "1.4mm - 2mm",
+                        "Phào": "2 mặt"
                     },
-                    accessories: {
-                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bản lề bi đũa x12', 'Vật tư phụ'],
-                        'Tính năng': ['Kiểu dáng truyền thống', 'Tăng độ kín khít', 'Phù hợp biệt thự']
+                    "accessories": {
+                        "Khóa đa điểm": "Có",
+                        "Chốt cánh phụ": "Có",
+                        "Bản lề bi đũa": "x12",
+                        "Vật tư phụ": "Có"
                     }
                 },
                 {
-                    id: 'cc024',
-                    name: 'Cửa 2 Cánh Nhôm OWIN hệ xingfa',
-                    price: '19.400.000',
-                    image: 'assets/images/cc/cc024.jpg',
-                    description: 'Cửa nhôm Xingfa phù hợp với nhà phố, văn phòng có yêu cầu chi phí hợp lý mà vẫn đảm bảo chất lượng.',
-                    specs: {
-                        'Chất liệu phụ': 'Kính cl 8mm',
-                        'Màu sắc': 'Ghi',
-                        'Kích thước': '2.8m x 2.8m',
-                        'Khung bao': '55',
-                        'Bản cánh': '100',
-                        'Độ dày': '1.4mm - 1.6mm',
+                    "id": "cc024",
+                    "name": "Cửa 2 Cánh Nhôm OWIN hệ xingfa",
+                    "price": "19.400.000",
+                    "image": "assets/images/cc/cc024.jpg",
+                    "description": "Cửa nhôm Xingfa với thiết kế hiện đại, phù hợp nhà phố và văn phòng, đảm bảo chất lượng với chi phí hợp lý, kết cấu chắc chắn và vận hành bền bỉ.",
+                    "specs": {
+                        "Chất liệu phụ": "Kính cl 8mm",
+                        "Màu sắc": "Ghi",
+                        "Kích thước": "2.8m x 2.8m",
+                        "Khung bao": "55",
+                        "Bản cánh": "100",
+                        "Độ dày": "1.4mm - 1.6mm"
                     },
-                    accessories: {
-                        'Phụ kiện': ['Khóa đa điểm', 'Chốt cánh phụ', 'Bản lề bi đũa x6', 'Vật tư phụ'],
-                        'Tính năng': ['Tiết kiệm chi phí', 'Mở rộng không gian', 'Chống va đập tốt']
+                    "accessories": {
+                        "Khóa đa điểm": "Có",
+                        "Chốt cánh phụ": "Có",
+                        "Bản lề bi đũa": "x6",
+                        "Vật tư phụ": "Có"
                     }
                 },
                 {
-                    id: 'cc025',
-                    name: 'Cửa 4 Cánh Nhôm OWIN hệ trượt quay',
-                    price: '36.000.000',
-                    image: 'assets/images/cc/cc025.jpg',
-                    description: 'Cửa trượt quay đa năng giúp mở rộng tối đa không gian đi lại, thiết kế 4 cánh phù hợp mặt tiền rộng.',
-                    specs: {
-                        'Chất liệu phụ': 'Kính cl 8mm',
-                        'Màu sắc': 'Ghi',
-                        'Kích thước': '3m x 2.8m',
-                        'Khung bao': 'Ôm tường 23',
-                        'Bản cánh': '140',
-                        'Độ dày': '1.6mm - 3mm',
-                        'Phào': '2 mặt',
+                    "id": "cc025",
+                    "name": "Cửa 4 Cánh Nhôm OWIN hệ trượt quay",
+                    "price": "36.000.000",
+                    "image": "assets/images/cc/cc025.jpg",
+                    "description": "Cửa trượt quay đa năng giúp mở rộng tối đa không gian đi lại với thiết kế 4 cánh, phù hợp mặt tiền rộng và vận hành êm ái, bền bỉ.",
+                    "specs": {
+                        "Chất liệu phụ": "Kính cl 8mm",
+                        "Màu sắc": "Ghi",
+                        "Kích thước": "3m x 2.8m",
+                        "Khung bao": "Ôm tường 23",
+                        "Bản cánh": "140",
+                        "Độ dày": "1.6mm - 3mm",
+                        "Phào": "2 mặt"
                     },
-                    accessories: {
-                        'Phụ kiện': ['Bộ chuyển đổi OWIN', 'Chốt cánh phụ OWIN', 'Bản lề OWIN', 'Bánh xe OWIN', 'Khóa OWIN', 'Vật tư phụ'],
-                        'Tính năng': ['Kết hợp trượt & mở quay', 'Tiết kiệm không gian', 'Di chuyển êm ái']
+                    "accessories": {
+                        "Bộ chuyển đổi": "OWIN",
+                        "Chốt cánh phụ": "OWIN",
+                        "Bản lề": "OWIN",
+                        "Bánh xe": "OWIN",
+                        "Khóa": "OWIN",
+                        "Vật tư phụ": "Có"
                     }
                 },
                 {
-                    id: 'cc026',
-                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
-                    price: '34.600.000',
-                    image: 'assets/images/cc/cc026.jpg',
-                    description: 'Cửa thiết kế nhỏ gọn với kính hộp trang trí, phù hợp với công trình cần tính cách âm và độ thẩm mỹ cao.',
-                    specs: {
-                        'Chất liệu phụ': 'Kính hộp nan hoa mạ đồng',
-                        'Màu sắc': 'Ghi',
-                        'Kích thước': '2.2m x 2.6m',
-                        'Khung bao': '55 x 200',
-                        'Bản cánh': '60 x 180',
-                        'Độ dày': '1.4mm - 2mm',
-                        'Phào': '2 mặt',
-                        'Phào trong cánh': 'Có',
+                    "id": "cc026",
+                    "name": "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
+                    "price": "34.600.000",
+                    "image": "assets/images/cc/cc026.jpg",
+                    "description": "Cửa thiết kế nhỏ gọn với kính hộp trang trí, thích hợp cho công trình yêu cầu cách âm tốt và thẩm mỹ cao, dễ dàng lắp đặt và sử dụng.",
+                    "specs": {
+                        "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
+                        "Màu sắc": "Ghi",
+                        "Kích thước": "2.2m x 2.6m",
+                        "Khung bao": "55 x 200",
+                        "Bản cánh": "60 x 180",
+                        "Độ dày": "1.4mm - 2mm",
+                        "Phào": "2 mặt",
+                        "Phào trong cánh": "Có"
                     },
-                    accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['Cách âm tốt', 'Kiểu dáng sang trọng', 'Dễ lắp đặt']
+                    "accessories": {
+                        "Bản lề sàn": "Alder x2",
+                        "Ngỗng": "Trên dưới",
+                        "Tay nắm": "KOLN x2",
+                        "Khóa": "Đồng Owin",
+                        "Chốt cánh phụ": "Có"
                     }
                 },
                 {
-                    id: 'cc027',
-                    name: 'Cửa Thủy Lực 2 Cánh Nhôm OWIN',
-                    price: '33.500.000',
-                    image: 'assets/images/cc/cc027.jpg',
-                    description: 'Cửa sử dụng kính cường lực 10mm giúp tăng độ cứng, độ bền và khả năng chịu lực, thích hợp cho nhiều không gian.',
-                    specs: {
-                        'Chất liệu phụ': 'Kính cl 10mm',
-                        'Màu sắc': 'Ghi',
-                        'Kích thước': '2.7m x 2.7m',
-                        'Khung bao': '55 x 200',
-                        'Bản cánh': '60 x 180',
-                        'Độ dày': '1.4mm - 2mm',
-                        'Phào': '2 mặt',
+                    "id": "cc027",
+                    "name": "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
+                    "price": "33.500.000",
+                    "image": "assets/images/cc/cc027.jpg",
+                    "description": "Cửa sử dụng kính cường lực 10mm giúp tăng độ cứng, bền chắc, khả năng chịu lực cao, thích hợp nhiều không gian với thiết kế hiện đại và tối giản.",
+                    "specs": {
+                        "Chất liệu phụ": "Kính cl 10mm",
+                        "Màu sắc": "Ghi",
+                        "Kích thước": "2.7m x 2.7m",
+                        "Khung bao": "55 x 200",
+                        "Bản cánh": "60 x 180",
+                        "Độ dày": "1.4mm - 2mm",
+                        "Phào": "2 mặt"
                     },
-                    accessories: {
-                        'Phụ kiện': ['Bản lề sàn alder x2', 'Ngỗng trên dưới', 'Tay nắm KOLN x2', 'Khóa đồng Owin', 'Chốt cánh phụ'],
-                        'Tính năng': ['Độ dày kính cao', 'Tăng độ cách âm', 'Tối giản mà mạnh mẽ']
+                    "accessories": {
+                        "Bản lề sàn": "Alder x2",
+                        "Ngỗng": "Trên dưới",
+                        "Tay nắm": "KOLN x2",
+                        "Khóa": "Đồng Owin",
+                        "Chốt cánh phụ": "Có"
                     }
                 },
                 {
-                    id: 'cc028',
-                    name: 'Cửa 4 Cánh Nhôm OWIN hệ vát cạnh',
-                    price: '10.000.000',
-                    image: 'assets/images/cc/cc028.jpg',
-                    description: 'Cửa quay 4 cánh với kính an toàn, thích hợp nhà cấp 4, khu dân cư hoặc công trình cần lối đi rộng.',
-                    specs: {
-                        'Chất liệu phụ': 'Kính an toàn 6.38 xanh đen',
-                        'Màu sắc': 'Ghi',
-                        'Kích thước': '2m x 2.8m',
-                        'Bản cánh': '87',
-                        'Độ dày': '1mm - 1.2mm',
+                    "id": "cc028",
+                    "name": "Cửa 4 Cánh Nhôm OWIN hệ vát cạnh",
+                    "price": "10.000.000",
+                    "image": "assets/images/cc/cc028.jpg",
+                    "description": "Cửa quay 4 cánh kính an toàn thích hợp nhà cấp 4 hoặc khu dân cư, mang lại không gian rộng rãi với thiết kế đơn giản, bền bỉ và giá thành hợp lý.",
+                    "specs": {
+                        "Chất liệu phụ": "Kính an toàn 6.38 xanh đen",
+                        "Màu sắc": "Ghi",
+                        "Kích thước": "2m x 2.8m",
+                        "Bản cánh": "87",
+                        "Độ dày": "1mm - 1.2mm"
                     },
-                    accessories: {
-                        'Phụ kiện': ['Khóa đơn điểm', 'Bản lề x12', 'Vật tư phụ'],
-                        'Tính năng': ['Giá rẻ', 'Phù hợp dân dụng', 'Kiểu dáng đơn giản']
+                    "accessories": {
+                        "Khóa đơn điểm": "Có",
+                        "Bản lề": "x12",
+                        "Vật tư phụ": "Có"
                     }
                 }
-
             ]
-        };
+                };
 
-        // Pagination state for each category
-        const paginationState = {};
+            // Pagination state for each category
+            const paginationState = {};
 
-        // Initialize pagination for all categories
+            // Initialize pagination for all categories
+            // Initialize pagination for all categories
+            Object.keys(productsData).forEach(category => {
+                const itemsPerPage = getItemsPerPage();
+                paginationState[category] = {
+                    currentPage: 1,
+                    itemsPerPage: itemsPerPage,
+                    totalItems: productsData[category].length,
+                    totalPages: Math.ceil(productsData[category].length / itemsPerPage)
+                };
+            });
+            // Update pagination when screen size changes
+            function updatePaginationForScreenSize() {
+                const newItemsPerPage = getItemsPerPage();
+
         Object.keys(productsData).forEach(category => {
-            paginationState[category] = {
-                currentPage: 1,
-                itemsPerPage: 3,
-                totalItems: productsData[category].length,
-                totalPages: Math.ceil(productsData[category].length / 3)
-            };
-        });
+            const state = paginationState[category];
+            if (state.itemsPerPage !== newItemsPerPage) {
+                state.itemsPerPage = newItemsPerPage;
+                state.totalPages = Math.ceil(state.totalItems / newItemsPerPage);
 
+                // Reset to page 1 if current page is beyond new total pages
+                if (state.currentPage > state.totalPages) {
+                    state.currentPage = 1;
+                }
+
+                loadCategoryProducts(category);
+                generatePageDots(category);
+            }
+        });
+        }
+        // Function to determine items per page based on screen size
+        function getItemsPerPage() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth <= 768) {
+                return 1; // Mobile: 1 product
+            } else if (screenWidth <= 1024) {
+                return 2; // Tablet: 2 products  
+            } else {
+                return 3; // Desktop: 3 products
+            }
+        }
         document.addEventListener('DOMContentLoaded', function () {
             initializeWebsite();
         });
@@ -2509,7 +2650,48 @@
 
             requestAnimationFrame(animation);
         }
+        function openFullscreen(img) {
+            // Tạo overlay full màn hình
+            const overlay = document.createElement('div');
+            overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        cursor: zoom-out;
+    `;
 
+            // Tạo ảnh full size
+            const fullImg = document.createElement('img');
+            fullImg.src = img.src;
+            fullImg.alt = img.alt;
+            fullImg.style.cssText = `
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 10px;
+    `;
+
+            overlay.appendChild(fullImg);
+            document.body.appendChild(overlay);
+
+            // Click để đóng
+            overlay.onclick = () => overlay.remove();
+
+            // ESC để đóng
+            document.addEventListener('keydown', function closeOnEsc(e) {
+                if (e.key === 'Escape') {
+                    overlay.remove();
+                    document.removeEventListener('keydown', closeOnEsc);
+                }
+            });
+        }
         function openProductModal(product) {
             const modal = document.getElementById('productModal');
 
@@ -2518,9 +2700,7 @@
             // Populate modal content
             document.getElementById('modal-product-name').textContent = product.name;
             document.getElementById('modal-price').textContent = product.price + ' VNĐ';
-            document.getElementById('modal-image').innerHTML = `<span style="font-size: 6rem;"><img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;"></span>`;
-
-            // Populate specs
+            document.getElementById('modal-image').innerHTML = `<span style="font-size: 6rem;"><img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px; transition: transform 0.3s ease; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="openFullscreen(this)"></span>`;         // Populate specs
             const specsContainer = document.getElementById('modal-specs');
             specsContainer.innerHTML = '';
             Object.entries(product.specs).forEach(([key, value]) => {
@@ -2902,11 +3082,13 @@
         }
 
         // Handle resize for responsive adjustments
+        // Handle resize for responsive adjustments
         let resizeTimeout;
         window.addEventListener('resize', function () {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(function () {
                 initializeResponsiveFeatures();
+                updatePaginationForScreenSize(); // Add this line
             }, 250);
         });
 
