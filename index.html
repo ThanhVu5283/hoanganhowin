@@ -1013,11 +1013,203 @@
             max-height: calc(90vh - 100px);
         }
 
-        .modal-content-grid {
+         .modal-content-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0;
             min-height: 500px;
+        }
+
+        /* NEW: Mobile-specific modal layout */
+        @media (max-width: 768px) {
+            .modal-content-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                min-height: auto;
+            }
+
+            /* Hide the original sections on mobile */
+            .modal-image-section,
+            .modal-info-section {
+                display: none;
+            }
+
+            /* NEW: Mobile modal content container */
+            .modal-mobile-content {
+                display: flex;
+                flex-direction: column;
+                padding: var(--space-lg);
+                gap: var(--space-lg);
+                background: white;
+            }
+
+            /* Mobile-specific styling for each section */
+            .mobile-product-header h3 {
+                font-family: var(--font-heading);
+                font-size: 1.5rem;
+                font-weight: 800;
+                color: var(--gray-800);
+                margin-bottom: var(--space-lg);
+                line-height: 1.2;
+                background: linear-gradient(135deg, var(--gray-800), #8b5a3c);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-align: center;
+            }
+
+            .mobile-product-image {
+                background: white;
+                border-radius: var(--radius-2xl);
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.8);
+                margin-bottom: var(--space-md);
+            }
+
+            .mobile-price-section {
+                background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+                padding: var(--space-lg);
+                border-radius: var(--radius-2xl);
+                border: 1px solid var(--gray-200);
+                text-align: center;
+                margin-bottom: var(--space-md);
+            }
+
+            .mobile-price-section .current-price {
+                font-size: 2rem;
+                font-weight: 900;
+                background: linear-gradient(135deg, #8b5a3c, #6b4423);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                display: block;
+            }
+
+            .mobile-description-section,
+            .mobile-specs-section,
+            .mobile-accessories-section {
+                background: var(--gray-50);
+                padding: var(--space-lg);
+                border-radius: var(--radius-2xl);
+                border: 1px solid var(--gray-200);
+                margin-bottom: var(--space-md);
+            }
+
+            .mobile-description-section h4,
+            .mobile-specs-section h4,
+            .mobile-accessories-section h4 {
+                font-family: var(--font-heading);
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: var(--gray-800);
+                margin-bottom: var(--space-md);
+                position: relative;
+                padding-left: var(--space-lg);
+            }
+
+            .mobile-description-section h4::before,
+            .mobile-specs-section h4::before,
+            .mobile-accessories-section h4::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 20px;
+                background: linear-gradient(135deg, #8b5a3c, #6b4423);
+                border-radius: var(--radius-full);
+            }
+
+            .mobile-description-section p {
+                color: var(--gray-700);
+                line-height: 1.6;
+                font-size: 0.95rem;
+            }
+
+            .mobile-specs-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: var(--space-sm);
+            }
+
+            .mobile-spec-item {
+                background: white;
+                padding: var(--space-md);
+                border-radius: var(--radius-lg);
+                border: 1px solid var(--gray-200);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .mobile-spec-label {
+                font-weight: 700;
+                color: var(--gray-800);
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 0.3px;
+            }
+
+            .mobile-spec-value {
+                color: var(--gray-600);
+                font-size: 0.9rem;
+                font-weight: 500;
+                text-align: right;
+                flex: 1;
+                margin-left: var(--space-sm);
+            }
+
+            .mobile-actions {
+                display: flex;
+                gap: var(--space-md);
+                margin: var(--space-lg) 0;
+            }
+
+            .mobile-contact-info {
+                background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
+                padding: var(--space-lg);
+                border-radius: var(--radius-2xl);
+                border: 1px solid var(--gray-200);
+                margin-top: var(--space-md);
+            }
+
+            .mobile-contact-info .contact-item {
+                display: flex;
+                align-items: center;
+                gap: var(--space-md);
+                padding: var(--space-md) 0;
+                border-bottom: 1px solid var(--gray-200);
+            }
+
+            .mobile-contact-info .contact-item:last-child {
+                border-bottom: none;
+            }
+
+            .mobile-contact-info .contact-icon {
+                font-size: 1.2rem;
+                width: 35px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg, #8b5a3c, #6b4423);
+                color: white;
+                border-radius: var(--radius-full);
+            }
+        }
+
+        /* Desktop styles remain the same */
+        @media (min-width: 769px) {
+            .modal-mobile-content {
+                display: none;
+            }
         }
 
         .modal-image-section {
@@ -1641,22 +1833,18 @@
             </div>
 
             <div class="modal-body">
+                <!-- Desktop/Tablet Layout (2 columns) -->
                 <div class="modal-content-grid">
                     <div class="modal-image-section">
                         <div class="modal-product-image" id="modal-image">🚪</div>
-
                         <div class="modal-price-section">
                             <div class="price-main">
                                 <span class="current-price" id="modal-price">0 VNĐ</span>
                             </div>
                         </div>
-
-                        <!-- ADD ACCESSORIES SECTION HERE - RIGHT AFTER PRICE -->
                         <div id="modal-accessories-section" class="modal-specs-section" style="display: none;">
                             <h4>Phụ kiện đi kèm</h4>
-                            <div class="specs-grid" id="modal-accessories">
-                                <!-- Accessories will be populated by JavaScript -->
-                            </div>
+                            <div class="specs-grid" id="modal-accessories"></div>
                         </div>
                     </div>
 
@@ -1664,16 +1852,13 @@
                         <div class="modal-product-header">
                             <h3 id="modal-product-name">Tên Sản Phẩm</h3>
                         </div>
-
                         <div class="modal-description-section">
                             <h4>Mô Tả Sản Phẩm</h4>
                             <p id="modal-description">Mô tả chi tiết sản phẩm...</p>
                         </div>
-
                         <div class="modal-specs-section">
                             <h4>Thông Số Kỹ Thuật</h4>
-                            <div class="specs-grid" id="modal-specs">
-                            </div>
+                            <div class="specs-grid" id="modal-specs"></div>
                         </div>
                         <div class="modal-actions">
                             <a href="https://zalo.me/0799040616" target="_blank" class="btn-primary">
@@ -1681,29 +1866,77 @@
                                 <span class="btn-text">Liên Hệ Đặt Hàng</span>
                             </a>
                         </div>
-
                         <div class="modal-contact-info">
                             <div class="contact-item">
                                 <span class="contact-icon">📞</span>
-                                <div>
-                                    <strong>Hotline:</strong>
-                                    <span>0799.040.616</span>
-                                </div>
+                                <div><strong>Hotline:</strong> <span>0799.040.616</span></div>
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">💬</span>
-                                <div>
-                                    <strong>Zalo:</strong>
-                                    <span>Tư vấn 24/7</span>
-                                </div>
+                                <div><strong>Zalo:</strong> <span>Tư vấn 24/7</span></div>
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">🚚</span>
-                                <div>
-                                    <strong>Giao hàng:</strong>
-                                    <span>Miễn phí nội thành</span>
-                                </div>
+                                <div><strong>Giao hàng:</strong> <span>Miễn phí nội thành</span></div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW: Mobile Layout (1 column with custom order) -->
+                <div class="modal-mobile-content">
+                    <!-- 1. Product Name -->
+                    <div class="mobile-product-header">
+                        <h3 id="mobile-product-name">Tên Sản Phẩm</h3>
+                    </div>
+
+                    <!-- 2. Product Image -->
+                    <div class="mobile-product-image" id="mobile-image">🚪</div>
+
+                    <!-- 3. Price -->
+                    <div class="mobile-price-section">
+                        <span class="current-price" id="mobile-price">0 VNĐ</span>
+                    </div>
+
+                    <!-- 4. Description -->
+                    <div class="mobile-description-section">
+                        <h4>Mô Tả Sản Phẩm</h4>
+                        <p id="mobile-description">Mô tả chi tiết sản phẩm...</p>
+                    </div>
+
+                    <!-- 5. Specifications -->
+                    <div class="mobile-specs-section">
+                        <h4>Thông Số Kỹ Thuật</h4>
+                        <div class="mobile-specs-grid" id="mobile-specs"></div>
+                    </div>
+
+                    <!-- 6. Accessories -->
+                    <div id="mobile-accessories-section" class="mobile-accessories-section" style="display: none;">
+                        <h4>Phụ kiện đi kèm</h4>
+                        <div class="mobile-specs-grid" id="mobile-accessories"></div>
+                    </div>
+
+                    <!-- Contact Button (remains in same position) -->
+                    <div class="mobile-actions">
+                        <a href="https://zalo.me/0799040616" target="_blank" class="btn-primary">
+                            <span class="btn-icon">📞</span>
+                            <span class="btn-text">Liên Hệ Đặt Hàng</span>
+                        </a>
+                    </div>
+
+                    <!-- Contact Info (remains at bottom) -->
+                    <div class="mobile-contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div><strong>Hotline:</strong> <span>0799.040.616</span></div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💬</span>
+                            <div><strong>Zalo:</strong> <span>Tư vấn 24/7</span></div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🚚</span>
+                            <div><strong>Giao hàng:</strong> <span>Miễn phí nội thành</span></div>
                         </div>
                     </div>
                 </div>
@@ -2692,6 +2925,8 @@
                 }
             });
         }
+let isModalOpen = false;
+
         function openProductModal(product) {
             const modal = document.getElementById('productModal');
 
@@ -2755,8 +2990,13 @@
                 closeButton.focus();
             }
         }
-
+    isModalOpen = true;
+    if (window.history && window.history.pushState) {
+        window.history.pushState({modal: true}, '', '');
+    }
+        
         function closeModal() {
+
             const modal = document.getElementById('productModal');
             if (!modal) return;
 
@@ -2773,7 +3013,18 @@
                 document.body.style.overflow = 'auto';
             }, 300);
         }
-
+    isModalOpen = false;
+    if (window.history && window.history.state && window.history.state.modal) {
+        window.history.back();
+    }
+window.addEventListener('popstate', function(event) {
+    if (isModalOpen) {
+        closeModal();
+        // Prevent default back behavior
+        event.preventDefault();
+        return false;
+    }
+});
         function toggleContactMenu() {
             const menu = document.getElementById('contact-menu');
             if (!menu) return;
