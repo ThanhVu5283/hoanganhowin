@@ -1814,31 +1814,79 @@
         <div class="container">
             <h2 class="section-title">SẢN PHẨM CỦA CHÚNG TÔI</h2>
 
-            <!-- Category: Cửa Chính -->
+            <!-- Danh mục sản phẩm, bạn có thể copy đoạn này cho mỗi loại cửa -->
             <div class="product-category-section" data-category="cua-chinh">
                 <h3 class="category-title">Cửa Chính</h3>
                 <div class="category-products-container">
-                    <button class="category-nav-btn prev" onclick="changePage('cua-chinh', -1)" id="cua-chinh-prev">
-                        ‹
-                    </button>
+                    <button class="category-nav-btn prev" onclick="changePage('cua-chinh', -1)"
+                        id="cua-chinh-prev">‹</button>
                     <div class="category-products-wrapper">
                         <div class="category-products-grid" id="cua-chinh-grid">
-                            <!-- Products will be loaded here -->
+                            <!-- Sản phẩm sẽ được load vào đây -->
                         </div>
                     </div>
-                    <button class="category-nav-btn next" onclick="changePage('cua-chinh', 1)" id="cua-chinh-next">
-                        ›
-                    </button>
+                    <button class="category-nav-btn next" onclick="changePage('cua-chinh', 1)"
+                        id="cua-chinh-next">›</button>
                 </div>
                 <div class="page-info-bottom">
-                    <div class="page-indicator" id="cua-chinh-page-info">
-                        Trang 1 / 1
-                    </div>
-                    <div class="page-dots" id="tu-dots">
-                        <!-- Dots will be generated -->
-                    </div>
+                    <div class="page-indicator" id="cua-chinh-page-info">Trang 1 / 1</div>
+                    <div class="page-dots" id="cua-chinh-dots"></div>
                 </div>
             </div>
+
+            <div class="product-category-section" data-category="cua-so">
+                <h3 class="category-title">Cửa Sổ</h3>
+                <div class="category-products-container">
+                    <button class="category-nav-btn prev" onclick="changePage('cua-so', -1)" id="cua-so-prev">‹</button>
+                    <div class="category-products-wrapper">
+                        <div class="category-products-grid" id="cua-so-grid">
+                            <!-- Load sản phẩm cửa sổ -->
+                        </div>
+                    </div>
+                    <button class="category-nav-btn next" onclick="changePage('cua-so', 1)" id="cua-so-next">›</button>
+                </div>
+                <div class="page-info-bottom">
+                    <div class="page-indicator" id="cua-so-page-info">Trang 1 / 1</div>
+                    <div class="page-dots" id="cua-so-dots"></div>
+                </div>
+            </div>
+
+            <div class="product-category-section" data-category="cua-phu">
+                <h3 class="category-title">Cửa Phụ</h3>
+                <div class="category-products-container">
+                    <button class="category-nav-btn prev" onclick="changePage('cua-phu', -1)"
+                        id="cua-phu-prev">‹</button>
+                    <div class="category-products-wrapper">
+                        <div class="category-products-grid" id="cua-phu-grid">
+                            <!-- Load sản phẩm cửa phụ -->
+                        </div>
+                    </div>
+                    <button class="category-nav-btn next" onclick="changePage('cua-phu', 1)"
+                        id="cua-phu-next">›</button>
+                </div>
+                <div class="page-info-bottom">
+                    <div class="page-indicator" id="cua-phu-page-info">Trang 1 / 1</div>
+                    <div class="page-dots" id="cua-phu-dots"></div>
+                </div>
+            </div>
+
+            <div class="product-category-section" data-category="tu">
+                <h3 class="category-title">Tủ</h3>
+                <div class="category-products-container">
+                    <button class="category-nav-btn prev" onclick="changePage('tu', -1)" id="tu-prev">‹</button>
+                    <div class="category-products-wrapper">
+                        <div class="category-products-grid" id="tu-grid">
+                            <!-- Load sản phẩm tủ -->
+                        </div>
+                    </div>
+                    <button class="category-nav-btn next" onclick="changePage('tu', 1)" id="tu-next">›</button>
+                </div>
+                <div class="page-info-bottom">
+                    <div class="page-indicator" id="tu-page-info">Trang 1 / 1</div>
+                    <div class="page-dots" id="tu-dots"></div>
+                </div>
+            </div>
+
         </div>
     </div>
 
