@@ -257,18 +257,82 @@
 
         /* Responsive search box */
         @media (max-width: 768px) {
+            .nav-container {
+                justify-content: space-between;
+                padding: var(--space-sm) var(--space-md);
+                padding-right: 50px;
+                /* thêm padding trái 25px */
+                padding-right: 50px;
+                /* thêm padding phải 25px nếu cần */
+                display: flex;
+                align-items: center;
+            }
+
+            .logo {
+                position: static;
+                transform: none;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                flex-shrink: 0;
+                /*Có thể giữ hoặc bỏ */
+            }
+
+            .logo img {
+                height: 25px;
+                width: auto;
+                display: block;
+            }
+
             .search-box {
-                margin: 0 auto;
+                position: relative;
+                width: 150px;
+                flex-shrink: 0;
+                transition: width 0.3s ease;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: var(--radius-full);
+                padding: var(--space-sm);
+                border: 2px solid transparent;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(10px);
+                display: flex;
+                align-items: center;
+
+                transform-origin: right center;
+            }
+
+            .search-box:focus-within {
+                width: 175px;
+                background: white;
+                border-color: var(--primary-color);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                transform-origin: right center;
             }
 
             #search-input {
-                width: 200px;
+                width: 100% !important;
+                border: none;
+                background: transparent;
+                padding: var(--space-sm) var(--space-md);
+                font-size: 14px;
+                outline: none;
+                color: var(--gray-800);
+                transition: all 0.3s ease;
             }
 
-            #search-input:focus {
-                width: 220px;
+            #search-input::placeholder {
+                color: var(--gray-400);
+                transition: all 0.3s ease;
+            }
+
+            #search-input:focus::placeholder {
+                color: var(--gray-300);
+                transform: translateX(4px);
             }
         }
+
+
 
         @keyframes searchResultsSlideIn {
             from {
@@ -2090,6 +2154,30 @@
                         "Chốt cánh phụ": "Có sẵn",
                     },
                 },
+                {
+                    id: "cc001",
+                    name: "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
+                    price: "55,600,000",
+                    image: "assets/images/cc/cc001.jpg",
+                    description: `Cửa thủy lực nhôm OWIN thiết kế tinh tế, bền bỉ với phụ kiện chất lượng, an toàn và sang trọng, phù hợp mọi không gian hiện đại.`,
+                    specs: {
+                        "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
+                        "Màu sắc": "Vân gỗ trắc",
+                        "Kích thước": "2.8m x 2.8m",
+                        "Khung bao": "55 x 200",
+                        "Bản cánh": "60 x 180",
+                        "Phào": "Biệt thự + mặt trong",
+                        "Phào trong cánh": "Có",
+                        "Bảo hành": "5 năm",
+                    },
+                    accessories: {
+                        "Bản lề sàn": "Alder x2",
+                        "Ngỗng": "Trên dưới",
+                        "Tay nắm": "KOLN x2",
+                        "Khóa": "Đồng Owin",
+                        "Chốt cánh phụ": "Có sẵn",
+                    },
+                },
 
                 {
                     id: "cc002",
@@ -2791,6 +2879,7 @@
             ],
             "cua-phu": [],
             tu: [],
+
         };
 
         // Pagination state for each category
