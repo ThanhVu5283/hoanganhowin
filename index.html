@@ -144,7 +144,8 @@
         .nav-container {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            /* Thêm dòng này */
             padding: var(--space-md) var(--space-lg);
             max-width: 1200px;
             margin: 0 auto;
@@ -152,9 +153,9 @@
         }
 
         .logo {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            /* Bỏ hết position absolute */
+            flex-shrink: 0;
+            /* Thêm để logo không bị co lại */
         }
 
         .logo img {
@@ -172,9 +173,9 @@
             padding: var(--space-sm);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid transparent;
-            margin-left: auto;
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            /* KHÔNG CÓ margin-left: auto; nữa */
         }
 
         .search-box:focus-within {
@@ -270,6 +271,7 @@
         /* Mobile search trigger button */
         .mobile-search-trigger {
             display: none;
+            /* Bỏ position absolute và right */
             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             border: none;
             border-radius: var(--radius-full);
@@ -421,6 +423,16 @@
 
         /* Responsive styles */
         @media (max-width: 768px) {
+            .nav-container {
+                padding: var(--space-md) var(--space-lg);
+                justify-content: space-between;
+                /* Thêm dòng này */
+            }
+
+            .logo {
+                /* Không cần thay đổi gì thêm */
+            }
+
             .search-box {
                 display: none;
             }
