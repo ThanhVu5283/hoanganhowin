@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="description"
         content="Cửa Kính Nhôm Hoàng Anh Owin - Chuyên sản xuất và lắp đặt cửa nhôm kính cao cấp với hơn 10 năm kinh nghiệm" />
     <meta name="keywords" content="cửa nhôm kính, cửa kính, nhôm kính, Hoàng Anh Owin, cửa chính, cửa phụ, cửa sổ" />
@@ -33,12 +33,12 @@
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap");
 
         :root {
-            --primary-color: #3B82F6;
-            --primary-dark: #2563EB;
-            --gray-200: #E5E7EB;
-            --gray-300: #D1D5DB;
-            --gray-400: #9CA3AF;
-            --gray-800: #1F2937;
+            --primary-color: #3b82f6;
+            --primary-dark: #2563eb;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-800: #1f2937;
             --space-sm: 8px;
             --space-md: 16px;
             --space-lg: 24px;
@@ -304,7 +304,9 @@
         .mobile-search-trigger {
             display: none;
             /* Bỏ position absolute và right */
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            background: linear-gradient(135deg,
+                    var(--primary-color),
+                    var(--primary-dark));
             border: none;
             border-radius: var(--radius-full);
             width: 44px;
@@ -434,7 +436,9 @@
         }
 
         .mobile-search-btn {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            background: linear-gradient(135deg,
+                    var(--primary-color),
+                    var(--primary-dark));
             border: none;
             border-radius: var(--radius-full);
             padding: var(--space-md);
@@ -497,7 +501,6 @@
                 transform: translateY(0);
             }
         }
-
 
         /* Hero Section */
         .hero {
@@ -1316,7 +1319,9 @@
         }
 
         .mobile-price-section {
-            background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+            background: linear-gradient(135deg,
+                    var(--gray-50) 0%,
+                    var(--gray-100) 100%);
             padding: var(--space-lg);
             border-radius: var(--radius-2xl);
             border: 1px solid var(--gray-200);
@@ -1964,7 +1969,7 @@
 
         <div class="mobile-search-box">
             <input type="text" class="mobile-search-input" placeholder="Nhập từ khóa tìm kiếm..."
-                id="mobileSearchInput">
+                id="mobileSearchInput" />
             <button class="mobile-search-btn" type="button" id="mobileSearchBtn">
                 <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -2069,18 +2074,22 @@
             <div class="product-category-section" data-category="cua-chinh">
                 <h3 class="category-title">Cửa Chính</h3>
                 <div class="category-products-container">
-                    <button class="category-nav-btn prev" onclick="changePage('cua-chinh', -1)"
-                        id="cua-chinh-prev">‹</button>
+                    <button class="category-nav-btn prev" onclick="changePage('cua-chinh', -1)" id="cua-chinh-prev">
+                        ‹
+                    </button>
                     <div class="category-products-wrapper">
                         <div class="category-products-grid" id="cua-chinh-grid">
                             <!-- Sản phẩm sẽ được load vào đây -->
                         </div>
                     </div>
-                    <button class="category-nav-btn next" onclick="changePage('cua-chinh', 1)"
-                        id="cua-chinh-next">›</button>
+                    <button class="category-nav-btn next" onclick="changePage('cua-chinh', 1)" id="cua-chinh-next">
+                        ›
+                    </button>
                 </div>
                 <div class="page-info-bottom">
-                    <div class="page-indicator" id="cua-chinh-page-info">Trang 1 / 1</div>
+                    <div class="page-indicator" id="cua-chinh-page-info">
+                        Trang 1 / 1
+                    </div>
                     <div class="page-dots" id="cua-chinh-dots"></div>
                 </div>
             </div>
@@ -2088,13 +2097,17 @@
             <div class="product-category-section" data-category="cua-so">
                 <h3 class="category-title">Cửa Sổ</h3>
                 <div class="category-products-container">
-                    <button class="category-nav-btn prev" onclick="changePage('cua-so', -1)" id="cua-so-prev">‹</button>
+                    <button class="category-nav-btn prev" onclick="changePage('cua-so', -1)" id="cua-so-prev">
+                        ‹
+                    </button>
                     <div class="category-products-wrapper">
                         <div class="category-products-grid" id="cua-so-grid">
                             <!-- Load sản phẩm cửa sổ -->
                         </div>
                     </div>
-                    <button class="category-nav-btn next" onclick="changePage('cua-so', 1)" id="cua-so-next">›</button>
+                    <button class="category-nav-btn next" onclick="changePage('cua-so', 1)" id="cua-so-next">
+                        ›
+                    </button>
                 </div>
                 <div class="page-info-bottom">
                     <div class="page-indicator" id="cua-so-page-info">Trang 1 / 1</div>
@@ -2105,15 +2118,17 @@
             <div class="product-category-section" data-category="cua-phu">
                 <h3 class="category-title">Cửa Phụ</h3>
                 <div class="category-products-container">
-                    <button class="category-nav-btn prev" onclick="changePage('cua-phu', -1)"
-                        id="cua-phu-prev">‹</button>
+                    <button class="category-nav-btn prev" onclick="changePage('cua-phu', -1)" id="cua-phu-prev">
+                        ‹
+                    </button>
                     <div class="category-products-wrapper">
                         <div class="category-products-grid" id="cua-phu-grid">
                             <!-- Load sản phẩm cửa phụ -->
                         </div>
                     </div>
-                    <button class="category-nav-btn next" onclick="changePage('cua-phu', 1)"
-                        id="cua-phu-next">›</button>
+                    <button class="category-nav-btn next" onclick="changePage('cua-phu', 1)" id="cua-phu-next">
+                        ›
+                    </button>
                 </div>
                 <div class="page-info-bottom">
                     <div class="page-indicator" id="cua-phu-page-info">Trang 1 / 1</div>
@@ -2124,20 +2139,23 @@
             <div class="product-category-section" data-category="tu">
                 <h3 class="category-title">Tủ</h3>
                 <div class="category-products-container">
-                    <button class="category-nav-btn prev" onclick="changePage('tu', -1)" id="tu-prev">‹</button>
+                    <button class="category-nav-btn prev" onclick="changePage('tu', -1)" id="tu-prev">
+                        ‹
+                    </button>
                     <div class="category-products-wrapper">
                         <div class="category-products-grid" id="tu-grid">
                             <!-- Load sản phẩm tủ -->
                         </div>
                     </div>
-                    <button class="category-nav-btn next" onclick="changePage('tu', 1)" id="tu-next">›</button>
+                    <button class="category-nav-btn next" onclick="changePage('tu', 1)" id="tu-next">
+                        ›
+                    </button>
                 </div>
                 <div class="page-info-bottom">
                     <div class="page-indicator" id="tu-page-info">Trang 1 / 1</div>
                     <div class="page-dots" id="tu-dots"></div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -2221,7 +2239,9 @@
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">🚚</span>
-                                <div><strong>Giao hàng:</strong> <span>Miễn phí nội thành</span></div>
+                                <div>
+                                    <strong>Giao hàng:</strong> <span>Miễn phí nội thành</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2280,7 +2300,9 @@
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">🚚</span>
-                            <div><strong>Giao hàng:</strong> <span>Miễn phí nội thành</span></div>
+                            <div>
+                                <strong>Giao hàng:</strong> <span>Miễn phí nội thành</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2299,9 +2321,7 @@
                 <div class="footer-section">
                     <h4>Liên Hệ</h4>
                     <p>📞 0799.040.616</p>
-                    <p>
-                        📍 Thôn Hợp Giáp, Xã Xuân Yên, Huyện Nghi Xuân, Tỉnh Hà Tĩnh
-                    </p>
+                    <p>📍 Thôn Hợp Giáp, Xã Xuân Yên, Huyện Nghi Xuân, Tỉnh Hà Tĩnh</p>
                 </div>
                 <div class="footer-section">
                     <h4>Dịch Vụ</h4>
@@ -2322,7 +2342,7 @@
                     name: "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
                     price: "55,600,000",
                     image: "assets/images/cc/cc001.jpg",
-                    description: `Cửa thủy lực nhôm OWIN thiết kế tinh tế, bền bỉ với phụ kiện chất lượng, an toàn và sang trọng, phù hợp mọi không gian hiện đại.`,
+                    description: "Tác phẩm nghệ thuật của sự tinh tế, mang đến vẻ đẹp vượt thời gian cho không gian sống.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2348,7 +2368,7 @@
                     name: "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
                     price: "54,600,000",
                     image: "assets/images/cc/cc002.jpg",
-                    description: `Cửa thủy lực nhôm OWIN thiết kế tinh tế, bền bỉ với phụ kiện chất lượng gồm bản lề sàn alder, ngỗng trên dưới, tay nắm KOLN, khóa đồng Owin và chốt cánh phụ. Sản phẩm an toàn, chịu lực, sang trọng với 4 màu nhôm, phù hợp mọi không gian hiện đại.`,
+                    description: "Biểu tượng của phong cách đẳng cấp, hòa quyện giữa nét sang trọng và sự hiện đại.",
                     specs: {
                         "Chất liệu phụ": "Tấm liền nguyên khối + kính cl 10mm",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2373,7 +2393,7 @@
                     name: "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
                     price: "41,000,000",
                     image: "assets/images/cc/cc003.jpg",
-                    description: `Cửa thủy lực nhôm OWIN thiết kế tinh tế, bền bỉ với phụ kiện chất lượng gồm bản lề sàn alder, ngỗng trên dưới, tay nắm KOLN, khóa đồng Owin, chốt cánh phụ và góc đồng cá chép. Sản phẩm an toàn, chịu lực, sang trọng với 4 màu nhôm, phù hợp mọi không gian hiện đại.`,
+                    description: "Thiết kế tối giản nhưng đầy tinh tế, tôn vinh giá trị thẩm mỹ vượt trội.",
                     specs: {
                         "Chất liệu phụ": "Kính cl 10mm",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2399,7 +2419,7 @@
                     name: "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
                     price: "49,700,000",
                     image: "assets/images/cc/cc004.jpg",
-                    description: `Cửa thủy lực nhôm OWIN thiết kế tinh tế, bền bỉ với phụ kiện chất lượng gồm bản lề sàn alder, ngỗng trên dưới, tay nắm KOLN, khóa đồng Owin và chốt cánh phụ. Sản phẩm an toàn, chịu lực, sang trọng với 4 màu nhôm, phù hợp mọi không gian hiện đại.`,
+                    description: "Điểm nhấn hoàn hảo, nâng tầm không gian bằng vẻ đẹp thanh lịch và tinh xảo.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2424,7 +2444,7 @@
                     name: "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
                     price: "44,200,000",
                     image: "assets/images/cc/cc005.jpg",
-                    description: `Cửa thủy lực nhôm OWIN thiết kế tinh tế, bền bỉ với phụ kiện chất lượng gồm bản lề sàn alder, ngỗng trên dưới, tay nắm KOLN, khóa đồng Owin và chốt cánh phụ. Sản phẩm an toàn, chịu lực, sang trọng với 4 màu nhôm, phù hợp mọi không gian hiện đại.`,
+                    description: "Sự lựa chọn của những ai yêu cái đẹp, đề cao tính bền vững và phong cách.",
                     specs: {
                         "Chất liệu phụ": "Tấm liền nguyên khối",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2450,7 +2470,7 @@
                     name: "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
                     price: "49,200,000",
                     image: "assets/images/cc/cc006.jpg",
-                    description: `Cửa thủy lực nhôm OWIN thiết kế hiện đại, bền bỉ với phụ kiện chất lượng gồm bản lề sàn alder, ngỗng trên dưới, tay nắm KOLN, khóa đồng Owin và chốt cánh phụ. Sản phẩm an toàn, chịu lực, sang trọng với 4 màu nhôm đa dạng.`,
+                    description: "Vẻ đẹp tinh tế hội tụ trong từng đường nét, tạo dấu ấn riêng cho ngôi nhà.",
                     specs: {
                         "Chất liệu phụ": "Tấm liền nguyên khối",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2475,7 +2495,7 @@
                     name: "Cửa 2 Cánh Nhôm OWIN hệ khuôn phào kép",
                     price: "55,700,000",
                     image: "assets/images/cc/cc007.jpg",
-                    description: `Cửa nhôm OWIN hệ khuôn phào kép cao cấp, sử dụng kính cường lực và phụ kiện Daishin chính hãng, đảm bảo an toàn, bền bỉ và thẩm mỹ sang trọng với 4 màu nhôm.`,
+                    description: "Sự kết hợp hài hòa giữa phong cách kiến trúc hiện đại và cảm hứng nghệ thuật.",
                     specs: {
                         "Chất liệu phụ": "Tấm liền nguyên khối + kính cl 8mm",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2498,7 +2518,7 @@
                     name: "Cửa thủy lực 2 Cánh Nhôm OWIN",
                     price: "42,200,000",
                     image: "assets/images/cc/cc008.jpg",
-                    description: `Cửa thủy lực nhôm OWIN kết hợp kính hộp hoa nan mạ đồng, phụ kiện đồng bộ, an toàn, chịu lực, sang trọng và bền bỉ với 4 màu nhôm đa dạng.`,
+                    description: "Lời khẳng định cho gu thẩm mỹ sang trọng và tinh tế của gia chủ.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp hoa nan mạ đồng",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2523,7 +2543,7 @@
                     name: "Cửa 4 Cánh Nhôm OWIN hệ khuôn phào kép",
                     price: "57,900,000",
                     image: "assets/images/cc/cc009.jpg",
-                    description: `Cửa nhôm OWIN hệ khuôn phào kép với kính hộp hoa nan mạ đồng, phụ kiện Daishin chính hãng, vận hành êm ái và khóa an toàn, bền đẹp với 4 màu nhôm.`,
+                    description: "Thiết kế thanh thoát, mang đến cảm giác rộng mở và thoáng đãng cho không gian.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp hoa nan mạ đồng",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2546,7 +2566,7 @@
                     name: "Cửa 4 Cánh Nhôm OWIN hệ khuôn phào kép",
                     price: "47,700,000",
                     image: "assets/images/cc/cc010.jpg",
-                    description: `Cửa nhôm OWIN hệ khuôn phào kép, kính cường lực 10mm, thiết kế mạnh mẽ, bản cánh lớn và phụ kiện cao cấp, phù hợp không gian rộng cần chắc chắn và thẩm mỹ.`,
+                    description: "Tạo nên điểm nhấn sang trọng, biến mỗi góc nhà thành một tác phẩm nghệ thuật.",
                     specs: {
                         "Chất liệu phụ": "Kính cl 10mm",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2569,7 +2589,7 @@
                     name: "Cửa 2 Cánh Nhôm OWIN hệ khuôn phào kép",
                     price: "39,000,000",
                     image: "assets/images/cc/cc011.jpg",
-                    description: `Cửa nhôm OWIN hệ khuôn phào kép hiện đại, kính cường lực 8mm, phụ kiện Daishin cao cấp, an toàn, cách âm, bền đẹp.`,
+                    description: "Sự lựa chọn hoàn hảo cho không gian sống đẳng cấp và hiện đại.",
                     specs: {
                         "Chất liệu phụ": "Kính cl 8mm",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2592,7 +2612,7 @@
                     name: "Cửa thủy lực 2 Cánh Nhôm OWIN",
                     price: "50,200,000",
                     image: "assets/images/cc/cc012.jpg",
-                    description: `Cửa thủy lực hiện đại tích hợp khóa thông minh, an toàn, tiện lợi và đẳng cấp với phụ kiện đồng bộ.`,
+                    description: "Hơi thở của phong cách kiến trúc tinh tế, bền bỉ cùng thời gian.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2614,7 +2634,7 @@
                     name: "Cửa thủy lực 2 Cánh Nhôm OWIN",
                     price: "35,200,000",
                     image: "assets/images/cc/cc013.jpg",
-                    description: `Cửa thiết kế gọn gàng, an toàn, thẩm mỹ, phù hợp không gian vừa và nhỏ với phụ kiện đồng bộ.`,
+                    description: "Vẻ đẹp sang trọng ẩn chứa trong từng chi tiết tinh xảo và hài hòa.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2637,7 +2657,7 @@
                     name: "Cửa thủy lực 2 Cánh Nhôm OWIN",
                     price: "55,200,000",
                     image: "assets/images/cc/cc014.jpg",
-                    description: `Cửa tấm liền cao cấp, phụ kiện đồng bộ, đẳng cấp và sang trọng cho không gian biệt thự.`,
+                    description: "Mang lại ấn tượng mạnh mẽ ngay từ ánh nhìn đầu tiên.",
                     specs: {
                         "Chất liệu phụ": "Tấm liền nguyên khối",
                         "Màu sắc": "Vân gỗ trắc",
@@ -2661,7 +2681,7 @@
                     name: "Cửa thủy lực 2 Cánh Nhôm OWIN",
                     price: "56,000,000",
                     image: "assets/images/cc/cc015.jpg",
-                    description: `Cửa thủy lực cao cấp màu vân gỗ lim, sang trọng, bền bỉ và đồng bộ phụ kiện chất lượng cao.`,
+                    description: "Tái hiện sự sang trọng qua những đường nét thanh lịch và cuốn hút.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
                         "Màu sắc": "Vân gỗ lim",
@@ -2686,7 +2706,7 @@
                     name: "Cửa 4 Cánh Nhôm OWIN hệ khuôn phào kép",
                     price: "57,900,000",
                     image: "assets/images/cc/cc016.jpg",
-                    description: `Cửa nhôm OWIN màu vân gỗ lim, kính hộp trang trí, phụ kiện Daishin chính hãng, chắc chắn, khóa an toàn và đồng bộ.`,
+                    description: "Đỉnh cao của thiết kế hiện đại, bền bỉ với thời gian và xu hướng.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
                         "Màu sắc": "Vân gỗ lim",
@@ -2708,7 +2728,7 @@
                     name: "Cửa thủy lực 2 Cánh Nhôm OWIN",
                     price: "52,200,000",
                     image: "assets/images/cc/cc017.jpg",
-                    description: `Cửa thủy lực màu ghi tinh tế, kính hộp nan hoa, thiết kế sang trọng, an toàn và cách âm tốt.`,
+                    description: "Mỗi chi tiết đều được trau chuốt để tạo nên tổng thể hoàn hảo.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
                         "Màu sắc": "Ghi",
@@ -2732,8 +2752,7 @@
                     name: "Cửa thủy lực 2 Cánh Nhôm OWIN",
                     price: "48.200.000",
                     image: "assets/images/cc/cc018.jpg",
-                    description:
-                        "Phiên bản cửa nhỏ gọn với thiết kế tối ưu, đảm bảo chất lượng bền bỉ và trang bị đầy đủ phụ kiện cao cấp. Sản phẩm cách nhiệt hiệu quả, phù hợp không gian cần sự tiện nghi và thẩm mỹ cao.",
+                    description: "Kiểu dáng tinh gọn, sang trọng, phù hợp với mọi không gian kiến trúc.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
                         "Màu sắc": "Ghi",
@@ -2758,8 +2777,7 @@
                     name: "Cửa thủy lực 2 Cánh Nhôm OWIN",
                     price: "50.800.000",
                     image: "assets/images/cc/cc019.jpg",
-                    description:
-                        "Cửa kính cường lực dày với khổ lớn, thiết kế vững chắc, mang đến không gian rộng rãi, chịu lực cao và thẩm mỹ ấn tượng cho mọi công trình.",
+                    description: "Gợi mở sự tinh tế, khẳng định phong cách sống thời thượng.",
                     specs: {
                         "Chất liệu phụ": "Kính cl 10mm",
                         "Màu sắc": "Ghi",
@@ -2783,8 +2801,7 @@
                     name: "Cửa thủy lực 1 Cánh Nhôm OWIN",
                     price: "29.200.000",
                     image: "assets/images/cc/cc020.jpg",
-                    description:
-                        "Mẫu cửa nhỏ gọn, thiết kế phù hợp cho lối đi riêng hoặc không gian hạn chế, đảm bảo tính năng an toàn và tiện nghi với phụ kiện đồng bộ.",
+                    description: "Sự hòa quyện giữa nghệ thuật thiết kế và giá trị sử dụng bền lâu.",
                     specs: {
                         "Chất liệu phụ": "Kính cl 10mm",
                         "Màu sắc": "Ghi",
@@ -2808,8 +2825,7 @@
                     name: "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
                     price: "40.500.000",
                     image: "assets/images/cc/cc021.jpg",
-                    description:
-                        "Thiết kế nguyên khối sang trọng, đảm bảo độ an toàn và tính thẩm mỹ cao, phù hợp các công trình cao cấp với phụ kiện chất lượng đồng bộ.",
+                    description: "Vẻ đẹp đương đại, thanh lịch và đầy cuốn hút.",
                     specs: {
                         "Chất liệu phụ": "Tấm liền nguyên khối",
                         "Màu sắc": "Ghi",
@@ -2834,8 +2850,7 @@
                     name: "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
                     price: "43.000.000",
                     image: "assets/images/cc/cc022.jpg",
-                    description:
-                        "Cửa thủy lực kính hộp nan hoa mạ đồng nổi bật, kết hợp góc đồng cá chép tạo điểm nhấn nghệ thuật, tăng thẩm mỹ và cách âm tốt cho mặt tiền.",
+                    description: "Biểu trưng của sự đẳng cấp và cá tính riêng biệt.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
                         "Màu sắc": "Ghi",
@@ -2860,8 +2875,7 @@
                     name: "Cửa 4 Cánh Nhôm OWIN hệ khuôn phào kép",
                     price: "43.200.000",
                     image: "assets/images/cc/cc023.jpg",
-                    description:
-                        "Cửa hệ khuôn phào kép tạo khung viền nổi bật, kết hợp kính cường lực bền bỉ, an toàn và phù hợp cho biệt thự với phụ kiện chất lượng cao.",
+                    description: "Tôn vinh giá trị thẩm mỹ và phong cách sống tinh tế.",
                     specs: {
                         "Chất liệu phụ": "Kính cl 8mm",
                         "Màu sắc": "Ghi",
@@ -2883,8 +2897,7 @@
                     name: "Cửa 2 Cánh Nhôm OWIN hệ xingfa",
                     price: "19.400.000",
                     image: "assets/images/cc/cc024.jpg",
-                    description:
-                        "Cửa nhôm Xingfa với thiết kế hiện đại, phù hợp nhà phố và văn phòng, đảm bảo chất lượng với chi phí hợp lý, kết cấu chắc chắn và vận hành bền bỉ.",
+                    description: "Mang lại không gian sống sang trọng và đầy cảm hứng.",
                     specs: {
                         "Chất liệu phụ": "Kính cl 8mm",
                         "Màu sắc": "Ghi",
@@ -2905,8 +2918,7 @@
                     name: "Cửa 4 Cánh Nhôm OWIN hệ trượt quay",
                     price: "36.000.000",
                     image: "assets/images/cc/cc025.jpg",
-                    description:
-                        "Cửa trượt quay đa năng giúp mở rộng tối đa không gian đi lại với thiết kế 4 cánh, phù hợp mặt tiền rộng và vận hành êm ái, bền bỉ.",
+                    description: "Tinh tế trong từng đường nét, tạo dấu ấn riêng biệt cho ngôi nhà.",
                     specs: {
                         "Chất liệu phụ": "Kính cl 8mm",
                         "Màu sắc": "Ghi",
@@ -2930,8 +2942,7 @@
                     name: "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
                     price: "34.600.000",
                     image: "assets/images/cc/cc026.jpg",
-                    description:
-                        "Cửa thiết kế nhỏ gọn với kính hộp trang trí, thích hợp cho công trình yêu cầu cách âm tốt và thẩm mỹ cao, dễ dàng lắp đặt và sử dụng.",
+                    description: "Hài hòa giữa tính thẩm mỹ và sự tiện nghi vượt trội.",
                     specs: {
                         "Chất liệu phụ": "Kính hộp nan hoa mạ đồng",
                         "Màu sắc": "Ghi",
@@ -2956,8 +2967,7 @@
                     name: "Cửa Thủy Lực 2 Cánh Nhôm OWIN",
                     price: "33.500.000",
                     image: "assets/images/cc/cc027.jpg",
-                    description:
-                        "Cửa sử dụng kính cường lực 10mm giúp tăng độ cứng, bền chắc, khả năng chịu lực cao, thích hợp nhiều không gian với thiết kế hiện đại và tối giản.",
+                    description: "Khơi nguồn cảm hứng sáng tạo cho không gian sống hoàn hảo.",
                     specs: {
                         "Chất liệu phụ": "Kính cl 10mm",
                         "Màu sắc": "Ghi",
@@ -2981,8 +2991,7 @@
                     name: "Cửa 4 Cánh Nhôm OWIN hệ vát cạnh",
                     price: "10.000.000",
                     image: "assets/images/cc/cc028.jpg",
-                    description:
-                        "Cửa quay 4 cánh kính an toàn thích hợp nhà cấp 4 hoặc khu dân cư, mang lại không gian rộng rãi với thiết kế đơn giản, bền bỉ và giá thành hợp lý.",
+                    description: "Sự lựa chọn xứng tầm cho những không gian đẳng cấp.",
                     specs: {
                         "Chất liệu phụ": "Kính an toàn 6.38 xanh đen",
                         "Màu sắc": "Ghi",
@@ -3003,7 +3012,7 @@
                     name: "Cửa Sổ Mở Quay 4 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "32,800,000",
                     image: "assets/images/cs/cs029.jpg",
-                    description: `Cửa sổ mở quay 4 cánh nhôm OWIN hệ khuôn phào kép, màu vân gỗ lim, kính hộp nan hoa mạ đồng, có song nhôm bảo vệ, thiết kế sang trọng và độ bền cao.`,
+                    description: "Điểm nhấn hoàn hảo, nâng tầm không gian bằng vẻ đẹp thanh lịch và tinh xảo.",
                     specs: {
                         "Màu sắc": "Vân gỗ lim",
                         "Độ dày": "1.4 mm",
@@ -3024,7 +3033,7 @@
                     name: "Cửa Sổ Mở Quay 2 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "16,400,000",
                     image: "assets/images/cs/cs030.jpg",
-                    description: `Cửa sổ mở quay 2 cánh nhôm OWIN hệ khuôn phào kép, màu vân gỗ lim, kính hộp nan hoa mạ đồng, có song nhôm bảo vệ. Thiết kế chắc chắn, bền đẹp, phù hợp không gian vừa và nhỏ.`,
+                    description: "Sự lựa chọn của những ai yêu cái đẹp, đề cao tính bền vững và phong cách.",
                     specs: {
                         "Màu sắc": "Vân gỗ lim",
                         "Độ dày": "1.4 mm",
@@ -3045,7 +3054,7 @@
                     name: "Cửa Sổ Mở Quay 3 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "22,000,000",
                     image: "assets/images/cs/cs031.jpg",
-                    description: `Cửa sổ mở quay 3 cánh nhôm OWIN hệ khuôn phào kép, màu vân gỗ lim, kính hộp nan hoa mạ đồng, có song nhôm bảo vệ. Thiết kế sang trọng, bền bỉ và đảm bảo an toàn.`,
+                    description: "Vẻ đẹp tinh tế hội tụ trong từng đường nét, tạo dấu ấn riêng cho ngôi nhà.",
                     specs: {
                         "Màu sắc": "Vân gỗ lim",
                         "Độ dày": "1.4 mm",
@@ -3066,7 +3075,7 @@
                     name: "Cửa Sổ Mở Quay 3 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "22,000,000",
                     image: "assets/images/cs/cs032.jpg",
-                    description: `Cửa sổ mở quay 3 cánh nhôm OWIN hệ khuôn phào kép, màu vân gỗ trắc, kính hộp nan hoa mạ đồng, có song nhôm bảo vệ. Thiết kế sang trọng, chắc chắn, đảm bảo độ bền và an toàn.`,
+                    description: "Sự kết hợp hài hòa giữa phong cách kiến trúc hiện đại và cảm hứng nghệ thuật.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 mm",
@@ -3087,7 +3096,7 @@
                     name: "Cửa Sổ Mở Quay 4 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "27,800,000",
                     image: "assets/images/cs/cs033.jpg",
-                    description: `Cửa sổ mở quay 4 cánh nhôm OWIN hệ khuôn phào kép, màu vân gỗ trắc, kính cường lực 8mm, có song nhôm bảo vệ. Phong cách tinh tế, bền bỉ và an toàn.`,
+                    description: "Lời khẳng định cho gu thẩm mỹ sang trọng và tinh tế của gia chủ.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 mm",
@@ -3108,7 +3117,7 @@
                     name: "Cửa Sổ Mở Quay 4 Cánh Nhôm OWIN Hệ Khuôn Phào Tiết Kiệm",
                     price: "20,800,000",
                     image: "assets/images/cs/cs034.jpg",
-                    description: `Cửa sổ mở quay 4 cánh nhôm OWIN hệ khuôn phào tiết kiệm, màu vân gỗ trắc, kính an toàn 6.38 trắng trong, có song nhôm bảo vệ. Giải pháp tiết kiệm chi phí nhưng vẫn đảm bảo thẩm mỹ và độ bền.`,
+                    description: "Tạo nên điểm nhấn sang trọng, biến mỗi góc nhà thành một tác phẩm nghệ thuật.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 mm",
@@ -3129,7 +3138,7 @@
                     name: "Cửa Sổ Mở Quay 2 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "13,800,000",
                     image: "assets/images/cs/cs035.jpg",
-                    description: `Cửa sổ mở quay 2 cánh nhôm OWIN hệ khuôn phào kép, màu vân gỗ trắc, kính an toàn 6.38 xanh đen, có song nhôm bảo vệ. Thích hợp cho không gian vừa và nhỏ, đảm bảo an toàn và bền bỉ.`,
+                    description: "Sự lựa chọn hoàn hảo cho không gian sống đẳng cấp và hiện đại.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 mm",
@@ -3150,7 +3159,7 @@
                     name: "Cửa Sổ Mở Quay 3 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "21,700,000",
                     image: "assets/images/cs/cs036.jpg",
-                    description: `Cửa sổ mở quay 3 cánh nhôm OWIN hệ khuôn phào kép, màu ghi, kính hộp nan hoa mạ đồng, có song nhôm bảo vệ. Phù hợp cho không gian sang trọng, đảm bảo độ bền và an toàn.`,
+                    description: "Hơi thở của phong cách kiến trúc tinh tế, bền bỉ cùng thời gian.",
                     specs: {
                         "Màu sắc": "Ghi",
                         "Độ dày": "1.4 mm",
@@ -3171,7 +3180,7 @@
                     name: "Cửa Sổ Mở Quay 3 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "22,000,000",
                     image: "assets/images/cs/cs037.jpg",
-                    description: `Cửa sổ mở quay 3 cánh nhôm OWIN hệ khuôn phào kép, màu vân gỗ trắc, tấm liền nguyên khối, có song nhôm bảo vệ. Thiết kế chắc chắn, kín khít và độ bền cao.`,
+                    description: "Vẻ đẹp sang trọng ẩn chứa trong từng chi tiết tinh xảo và hài hòa.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 mm",
@@ -3192,7 +3201,7 @@
                     name: "Cửa Sổ Mở Quay 2 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "12,200,000",
                     image: "assets/images/cs/cs038.jpg",
-                    description: `Cửa sổ mở quay 2 cánh nhôm OWIN hệ khuôn phào kép, màu vân gỗ trắc, tấm liền nguyên khối, có song nhôm bảo vệ. Giải pháp bền bỉ, chống ồn và kín khít tốt.`,
+                    description: "Mang lại ấn tượng mạnh mẽ ngay từ ánh nhìn đầu tiên.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 – 1.6 mm",
@@ -3213,7 +3222,7 @@
                     name: "Cửa Sổ Mở Quay 2 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "16,400,000",
                     image: "assets/images/cs/cs039.jpg",
-                    description: `Cửa sổ mở quay 2 cánh nhôm OWIN hệ khuôn phào kép, màu vân gỗ lim, kính hộp nan hoa mạ đồng, có song nhôm bảo vệ. Phong cách sang trọng, độ bền và an toàn cao.`,
+                    description: "Tái hiện sự sang trọng qua những đường nét thanh lịch và cuốn hút.",
                     specs: {
                         "Màu sắc": "Vân gỗ lim",
                         "Độ dày": "1.4 mm",
@@ -3234,7 +3243,7 @@
                     name: "Cửa Sổ Mở Quay 1 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "10,800,000",
                     image: "assets/images/cs/cs040.jpg",
-                    description: `Cửa sổ mở quay 1 cánh nhôm OWIN hệ khuôn phào kép, màu vân gỗ trắc, kính hộp nan hoa mạ đồng, có song nhôm bảo vệ. Phù hợp cho các vị trí lấy sáng nhỏ, bền bỉ và an toàn.`,
+                    description: "Đỉnh cao của thiết kế hiện đại, bền bỉ với thời gian và xu hướng.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 mm",
@@ -3255,7 +3264,7 @@
                     name: "Cửa Sổ Mở Quay 4 Cánh Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "20,800,000",
                     image: "assets/images/cs/cs041.jpg",
-                    description: `Cửa sổ mở quay 4 cánh nhôm OWIN hệ khuôn phào kép, màu ghi, kính hộp nan hoa mạ đồng, có song nhôm bảo vệ. Thiết kế sang trọng, bền bỉ và an toàn.`,
+                    description: "Mỗi chi tiết đều được trau chuốt để tạo nên tổng thể hoàn hảo.",
                     specs: {
                         "Màu sắc": "Ghi",
                         "Độ dày": "1.4 mm",
@@ -3276,7 +3285,7 @@
                     name: "Cửa Sổ Mở Quay 4 Cánh Nhôm OWIN Hệ Vát Cạnh",
                     price: "6,400,000",
                     image: "assets/images/cs/cs042.jpg",
-                    description: `Cửa sổ mở quay 4 cánh nhôm OWIN hệ vát cạnh, màu ghi, kính an toàn 6.38 xanh đen. Thiết kế hiện đại, giá thành tiết kiệm, phù hợp cho các công trình dân dụng.`,
+                    description: "Kiểu dáng tinh gọn, sang trọng, phù hợp với mọi không gian kiến trúc.",
                     specs: {
                         "Màu sắc": "Ghi",
                         "Độ dày": "1 – 1.2 mm",
@@ -3296,7 +3305,7 @@
                     name: "Cửa Sổ Mở Quay 2 Cánh Nhôm OWIN Hệ Xingfa",
                     price: "5,750,000",
                     image: "assets/images/cs/cs043.jpg",
-                    description: `Cửa sổ mở quay 2 cánh nhôm OWIN hệ Xingfa, màu vân gỗ trắc, kính an toàn 6.38 xanh đen. Kiểu dáng bền chắc, khả năng cách âm và cách nhiệt tốt.`,
+                    description: "Gợi mở sự tinh tế, khẳng định phong cách sống thời thượng.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 mm",
@@ -3316,7 +3325,7 @@
                     name: "Cửa Sổ Mở Quay 2 Cánh Nhôm OWIN Hệ Vát Cạnh",
                     price: "7,200,000",
                     image: "assets/images/cs/cs044.jpg",
-                    description: `Cửa sổ mở quay 2 cánh nhôm OWIN hệ vát cạnh, màu ghi, kính an toàn 6.38 xanh đen, có song nhôm bảo vệ dày 1.8mm. Sản phẩm bền bỉ, đảm bảo an ninh.`,
+                    description: "Sự hòa quyện giữa nghệ thuật thiết kế và giá trị sử dụng bền lâu.",
                     specs: {
                         "Màu sắc": "Ghi",
                         "Độ dày": "1 – 1.2 mm",
@@ -3332,7 +3341,7 @@
                         "Bản lề chữ A": "",
                         "Vật tư phụ": ""
                     }
-                }
+                },
             ],
             "cua-phu": [
                 {
@@ -3340,7 +3349,7 @@
                     name: "Cửa phụ Quay 2 Cánh Ofix Trên Nhôm OWIN Hệ Xingfa",
                     price: "20,200,000",
                     image: "assets/images/cp/cp045.jpg",
-                    description: `Cửa phụ quay 2 cánh Ofix trên nhôm OWIN hệ Xingfa, màu vân gỗ trắc, kính hộp nan hoa mạ đồng, bản cánh 140, phào 1 mặt ngoài, phào trong cánh. Độ dày nhôm 1.4 - 2 mm, bền đẹp, sang trọng.`,
+                    description: "Tác phẩm nghệ thuật, hòa quyện cổ điển và hiện đại, nâng tầm không gian sống.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 - 2 mm",
@@ -3351,10 +3360,9 @@
                         "Kích thước": "1.6m x 2.8m"
                     },
                     accessories: {
-
                         "Khóa": "Khóa đa điểm",
                         "Bản lề": "Bản lề bi đũa x6",
-                        "Vật tư phụ": "",
+                        "Vật tư phụ": ""
                     }
                 },
                 {
@@ -3362,7 +3370,7 @@
                     name: "Cửa phụ Quay 2 Cánh Nhôm OWIN Hệ Xingfa",
                     price: "13,600,000",
                     image: "assets/images/cp/cp046.jpg",
-                    description: `Cửa phụ quay 2 cánh nhôm OWIN hệ Xingfa, màu vân gỗ trắc, kính an toàn 6.38 trắng trong, bản cánh 100, phào 1 mặt ngoài, phào trong cánh. Độ dày nhôm 1.4 - 2 mm, bền đẹp, hiện đại.`,
+                    description: "Phong cách thời thượng, thanh lịch, tôn vinh không gian sống hiện đại.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 - 2 mm",
@@ -3373,10 +3381,9 @@
                         "Kích thước": "1.4m x 2.6m"
                     },
                     accessories: {
-
                         "Khóa": "Khóa đa điểm",
                         "Bản lề": "Bản lề bi đũa x6",
-                        "Vật tư phụ": "",
+                        "Vật tư phụ": ""
                     }
                 },
                 {
@@ -3384,7 +3391,7 @@
                     name: "Cửa phụ Quay 2 Cánh Nhôm OWIN Hệ Xingfa - Tấm Liền Nguyên Khối",
                     price: "17,000,000",
                     image: "assets/images/cp/cp047.jpg",
-                    description: `Cửa phụ quay 2 cánh nhôm OWIN hệ Xingfa, màu vân gỗ trắc, tấm liền nguyên khối, bản cánh 100, phào 1 mặt ngoài, phào trong cánh. Độ dày nhôm 1.4 - 2 mm, chắc chắn và sang trọng.`,
+                    description: "Đỉnh cao sang trọng, thiết kế chắc chắn, tạo dấu ấn tinh tế cho ngôi nhà.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 - 2 mm",
@@ -3395,10 +3402,9 @@
                         "Kích thước": "1.4m x 2.6m"
                     },
                     accessories: {
-
                         "Khóa": "Khóa đa điểm",
                         "Bản lề": "Bản lề bi đũa x6",
-                        "Vật tư phụ": "",
+                        "Vật tư phụ": ""
                     }
                 },
                 {
@@ -3406,7 +3412,7 @@
                     name: "Cửa phụ Quay 2 Cánh Nhôm OWIN Hệ Xingfa - Pano Nhôm OWIN",
                     price: "13,100,000",
                     image: "assets/images/cp/cp048.jpg",
-                    description: `Cửa phụ quay 2 cánh nhôm OWIN hệ Xingfa, màu vân gỗ trắc, pano nhôm OWIN, bản cánh 100. Độ dày nhôm 1.4 - 2 mm, thiết kế bền đẹp.`,
+                    description: "Tinh gọn và đẳng cấp, biến không gian thành điểm nhấn sang trọng.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 - 2 mm",
@@ -3415,10 +3421,9 @@
                         "Kích thước": "1.4m x 2.6m"
                     },
                     accessories: {
-
                         "Khóa": "Khóa đa điểm",
                         "Bản lề": "Bản lề bi đũa x6",
-                        "Vật tư phụ": "",
+                        "Vật tư phụ": ""
                     }
                 },
                 {
@@ -3426,7 +3431,7 @@
                     name: "Cửa phụ Quay 2 Cánh Nhôm OWIN Hệ Xingfa - Pano Nhôm OWIN, Bản Cánh 140",
                     price: "20,200,000",
                     image: "assets/images/cp/cp049.jpg",
-                    description: `Cửa phụ quay 2 cánh nhôm OWIN hệ Xingfa, màu vân gỗ trắc, pano nhôm OWIN, bản cánh 140, phào 1 mặt. Độ dày nhôm 1.4 - 2 mm.`,
+                    description: "Sự lựa chọn hoàn hảo, mang đến không gian sống hiện đại và tinh xảo.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 - 2 mm",
@@ -3446,7 +3451,7 @@
                     name: "Cửa phụ Quay 2 Cánh Nhôm OWIN Hệ Khuôn Phào Kép - Kính Hộp Nan Hoa Mạ Đồng",
                     price: "27,500,000",
                     image: "assets/images/cp/cp050.jpg",
-                    description: `Cửa phụ quay 2 cánh nhôm OWIN hệ khuôn phào kép, màu ghi, kính hộp nan hoa mạ đồng, bản cánh 140, phào 2 mặt. Độ dày nhôm 1.4 - 2 mm.`,
+                    description: "Hơi thở nghệ thuật, tạo nên không gian sống sang trọng và cuốn hút.",
                     specs: {
                         "Màu sắc": "Ghi",
                         "Độ dày": "1.4 - 2 mm",
@@ -3458,7 +3463,7 @@
                     accessories: {
                         "Khóa": "Khóa đa điểm",
                         "Bản lề": "Bản lề bi đũa x6",
-                        "Vật tư phụ": "",
+                        "Vật tư phụ": ""
                     }
                 },
                 {
@@ -3466,7 +3471,7 @@
                     name: "Cửa phụ Quay 2 Cánh Nhôm OWIN Hệ Khuôn Phào Kép - Kính An Toàn 6.38 Xanh Đen",
                     price: "22,600,000",
                     image: "assets/images/cp/cp051.jpg",
-                    description: `Cửa phụ quay 2 cánh nhôm OWIN hệ khuôn phào kép, màu ghi, kính an toàn 6.38 xanh đen, bản cánh 140, phào 2 mặt. Độ dày nhôm 1.4 - 2 mm.`,
+                    description: "Thanh lịch và hiện đại, mang đến không gian sống đầy cảm hứng.",
                     specs: {
                         "Màu sắc": "Ghi",
                         "Độ dày": "1.4 - 2 mm",
@@ -3478,7 +3483,7 @@
                     accessories: {
                         "Khóa": "Khóa đa điểm",
                         "Bản lề": "Bản lề bi đũa x6",
-                        "Vật tư phụ": "",
+                        "Vật tư phụ": ""
                     }
                 },
                 {
@@ -3486,7 +3491,7 @@
                     name: "Cửa phụ Quay 1 Cánh Ofix Trên Nhôm OWIN Hệ Xingfa",
                     price: "7,600,000",
                     image: "assets/images/cp/cp052.jpg",
-                    description: `Cửa phụ quay 1 cánh Ofix trên nhôm OWIN hệ Xingfa, màu vân gỗ trắc, kính an toàn 6.38 trắng trong, bản cánh 100, phào 1 mặt ngoài. Độ dày nhôm 1.2 - 1.6 mm.`,
+                    description: "Tinh tế trong từng đường nét, tạo điểm nhấn hiện đại cho không gian.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.2 - 1.6 mm",
@@ -3498,7 +3503,7 @@
                     accessories: {
                         "Khóa": "Khóa đơn điểm",
                         "Bản lề": "Bản lề x3",
-                        "Vật tư phụ": "",
+                        "Vật tư phụ": ""
                     }
                 },
                 {
@@ -3506,7 +3511,7 @@
                     name: "Cửa phụ Quay 1 Cánh Nhôm OWIN Hệ Xingfa - Kính An Toàn 6.38 Xanh Đen",
                     price: "6,300,000",
                     image: "assets/images/cp/cp053.jpg",
-                    description: `Cửa phụ quay 1 cánh nhôm OWIN hệ Xingfa, màu vân gỗ trắc, kính an toàn 6.38 xanh đen, bản cánh 100. Độ dày nhôm 1.2 - 1.6 mm.`,
+                    description: "Đơn giản nhưng cuốn hút, mang lại sự thanh lịch cho mọi không gian.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.2 - 1.6 mm",
@@ -3517,7 +3522,7 @@
                     accessories: {
                         "Khóa": "Khóa đơn điểm",
                         "Bản lề": "Bản lề bi đũa x3",
-                        "Vật tư phụ": "",
+                        "Vật tư phụ": ""
                     }
                 },
                 {
@@ -3525,7 +3530,7 @@
                     name: "Cửa phụ Quay 1 Cánh Nhôm OWIN Hệ Xingfa - Tấm Liền Nguyên Khối",
                     price: "8,900,000",
                     image: "assets/images/cp/cp054.jpg",
-                    description: `Cửa phụ quay 1 cánh nhôm OWIN hệ Xingfa, màu vân gỗ trắc, tấm liền nguyên khối, bản cánh 100, phào trong cánh. Độ dày nhôm 1.2 - 1.6 mm.`,
+                    description: "Vẻ đẹp bền bỉ, tạo nên không gian sống tinh tế và đẳng cấp.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.2 - 1.6 mm",
@@ -3537,7 +3542,7 @@
                     accessories: {
                         "Khóa": "Khóa đơn điểm",
                         "Bản lề": "Bản lề bi đũa x3",
-                        "Vật tư phụ": "",
+                        "Vật tư phụ": ""
                     }
                 },
                 {
@@ -3545,7 +3550,7 @@
                     name: "Cửa phụ Quay 1 Cánh Nhôm OWIN Hệ Xingfa Tiết Kiệm - Tấm Liền Nguyên Khối",
                     price: "9,100,000",
                     image: "assets/images/cp/cp055.jpg",
-                    description: `Cửa phụ quay 1 cánh nhôm OWIN hệ Xingfa tiết kiệm, màu vân gỗ trắc, tấm liền nguyên khối, bản cánh 100, phào 2 mặt, phào trong cánh. Độ dày nhôm 1.2 - 1.6 mm.`,
+                    description: "Phong cách tối giản, mang đến không gian sống hiện đại và thanh thoát.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.2 - 1.6 mm",
@@ -3558,7 +3563,7 @@
                     accessories: {
                         "Khóa": "Khóa đa điểm",
                         "Bản lề": "Bản lề bi đũa x3",
-                        "Vật tư phụ": "",
+                        "Vật tư phụ": ""
                     }
                 },
                 {
@@ -3566,7 +3571,7 @@
                     name: "Cửa phụ Quay 1 Cánh Nhôm OWIN Hệ Khuôn Phào",
                     price: "14,100,000",
                     image: "assets/images/cp/cp056.jpg",
-                    description: `Cửa phụ quay 1 cánh nhôm OWIN hệ khuôn phào, màu vân gỗ trắc, tấm liền nguyên khối, bản cánh 140, phào 2 mặt, phào trong cánh. Độ dày nhôm 1.4 - 2 mm, thiết kế chắc chắn, sang trọng.`,
+                    description: "Sự kết hợp hoàn hảo giữa nghệ thuật và công năng, nâng tầm không gian.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.4 - 2 mm",
@@ -3587,7 +3592,7 @@
                     name: "Cửa phụ Quay 1 Cánh Nhôm OWIN Hệ Xingfa",
                     price: "4,400,000",
                     image: "assets/images/cp/cp057.jpg",
-                    description: `Cửa phụ quay 1 cánh nhôm OWIN hệ Xingfa, màu vân gỗ trắc, kính an toàn 6.38, bản cánh 87. Độ dày nhôm 1.2 - 1.6 mm, thiết kế hiện đại, bền bỉ.`,
+                    description: "Thiết kế hiện đại, tạo điểm nhấn thanh lịch cho không gian sống.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1.2 - 1.6 mm",
@@ -3606,7 +3611,7 @@
                     name: "Cửa phụ Quay 1 Cánh Ofix Trên Nhôm OWIN Hệ Khuôn Phào",
                     price: "15,000,000",
                     image: "assets/images/cp/cp058.jpg",
-                    description: `Cửa phụ quay 1 cánh Ofix trên nhôm OWIN hệ khuôn phào, màu vân gỗ lim, tấm liền nguyên khối, bản cánh 100, phào 2 mặt, phào trong cánh. Độ dày nhôm 1.4 - 2 mm, thiết kế sang trọng.`,
+                    description: "Vẻ đẹp sang trọng, khẳng định gu thẩm mỹ tinh tế của gia chủ.",
                     specs: {
                         "Màu sắc": "Vân gỗ lim",
                         "Độ dày": "1.4 - 2 mm",
@@ -3627,7 +3632,7 @@
                     name: "Cửa phụ Quay 1 Cánh Ofix Trên Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "17,300,000",
                     image: "assets/images/cp/cp059.jpg",
-                    description: `Cửa phụ quay 1 cánh Ofix trên nhôm OWIN hệ khuôn phào kép, màu vân gỗ lim, tấm liền nguyên khối, bản cánh 140, phào 2 mặt, phào trong cánh. Độ dày nhôm 1.4 - 2 mm.`,
+                    description: "Đỉnh cao thiết kế, mang đến không gian sống sang trọng và tinh xảo.",
                     specs: {
                         "Màu sắc": "Vân gỗ lim",
                         "Độ dày": "1.4 - 2 mm",
@@ -3648,7 +3653,7 @@
                     name: "Cửa phụ Quay 1 Cánh Ofix Trên Nhôm OWIN Hệ Xingfa",
                     price: "8,500,000",
                     image: "assets/images/cp/cp060.jpg",
-                    description: `Cửa phụ quay 1 cánh Ofix trên nhôm OWIN hệ Xingfa, màu vân gỗ lim, kính an toàn 6.38 trắng đục, bản cánh 140, phào 1 mặt. Độ dày nhôm 1.4 - 2 mm.`,
+                    description: "Thanh lịch và hiện đại, tạo nên không gian sống đầy cảm hứng.",
                     specs: {
                         "Màu sắc": "Vân gỗ lim",
                         "Độ dày": "1.4 - 2 mm",
@@ -3668,7 +3673,7 @@
                     name: "Cửa phụ Quay 1 Cánh Ofix Trên Nhôm OWIN Hệ Xingfa",
                     price: "8,100,000",
                     image: "assets/images/cp/cp061.jpg",
-                    description: `Cửa phụ quay 1 cánh Ofix trên nhôm OWIN hệ Xingfa, màu ghi, kính an toàn 6.38 xám khói, bản cánh 140, phào 1 mặt. Độ dày nhôm 1.4 - 2 mm.`,
+                    description: "Tinh tế và cuốn hút, mang lại vẻ đẹp hiện đại cho mọi không gian.",
                     specs: {
                         "Màu sắc": "Ghi",
                         "Độ dày": "1.4 - 2 mm",
@@ -3688,7 +3693,7 @@
                     name: "Cửa phụ Quay 1 Cánh Nhôm OWIN Hệ Khuôn Phào",
                     price: "22,900,000",
                     image: "assets/images/cp/cp062.jpg",
-                    description: `Cửa phụ quay 1 cánh nhôm OWIN hệ khuôn phào, màu ghi, tấm liền nguyên khối, bản cánh 140, phào 1 mặt, phào trong cánh. Độ dày nhôm 1.4 - 2 mm, tích hợp khóa vân tay nhận diện khuôn mặt.`,
+                    description: "Sự hòa quyện hoàn hảo giữa công nghệ và nghệ thuật, nâng tầm không gian.",
                     specs: {
                         "Màu sắc": "Ghi",
                         "Độ dày": "1.4 - 2 mm",
@@ -3709,7 +3714,7 @@
                     name: "Cửa phụ Quay 1 Cánh Nhôm OWIN Hệ Khuôn Phào",
                     price: "14,200,000",
                     image: "assets/images/cp/cp063.jpg",
-                    description: `Cửa phụ quay 1 cánh nhôm OWIN hệ khuôn phào, màu vân gỗ lim, tấm liền nguyên khối, bản cánh 140, phào 2 mặt, phào trong cánh. Độ dày nhôm 1.4 - 2 mm.`,
+                    description: "Vẻ đẹp tinh xảo, khẳng định phong cách sống đẳng cấp và hiện đại.",
                     specs: {
                         "Màu sắc": "Vân gỗ lim",
                         "Độ dày": "1.4 - 2 mm",
@@ -3730,7 +3735,7 @@
                     name: "Cửa phụ Quay 1 Cánh Ofix Trên Nhôm OWIN Hệ Khuôn Phào Kép",
                     price: "17,800,000",
                     image: "assets/images/cp/cp064.jpg",
-                    description: `Cửa phụ quay 1 cánh Ofix trên nhôm OWIN hệ khuôn phào kép, màu vân gỗ lim, tấm liền nguyên khối, bản cánh 160, phào 2 mặt, phào trong cánh. Độ dày nhôm 1.4 - 2 mm.`,
+                    description: "Điểm nhấn sang trọng, biến không gian thành tác phẩm nghệ thuật.",
                     specs: {
                         "Màu sắc": "Vân gỗ lim",
                         "Độ dày": "1.4 - 2 mm",
@@ -3751,7 +3756,7 @@
                     name: "Cửa phụ Quay 1 Cánh Nhôm Tấm Tổ Ong",
                     price: "7,500,000",
                     image: "assets/images/cp/cp065.jpg",
-                    description: `Cửa phụ quay 1 cánh nhôm tấm tổ ong, màu xám - bạc, phào 2 mặt, độ dày cánh 40 mm, độ dày nhôm 2 mm. Thiết kế chắc chắn, cách âm và cách nhiệt tốt.`,
+                    description: "Thiết kế chắc chắn, mang đến không gian sống hiện đại và tiện nghi.",
                     specs: {
                         "Màu sắc": "Xám - Bạc",
                         "Độ dày": "2 mm",
@@ -3771,7 +3776,7 @@
                     name: "Cửa phụ Quay 1 Cánh Nhôm OWIN Hệ Vát Cạnh",
                     price: "3,900,000",
                     image: "assets/images/cp/cp066.jpg",
-                    description: `Cửa phụ quay 1 cánh nhôm OWIN hệ vát cạnh, màu ghi, pano nhôm, bản cánh 87. Độ dày nhôm 1 - 1.2 mm, thiết kế gọn nhẹ, hiện đại.`,
+                    description: "Gọn nhẹ và hiện đại, tạo nên không gian sống tinh tế và thanh thoát.",
                     specs: {
                         "Màu sắc": "Ghi",
                         "Độ dày": "1 - 1.2 mm",
@@ -3780,7 +3785,6 @@
                         "Kích thước": "0.9m x 2.4m"
                     },
                     accessories: {
-
                         "Khóa": "Khóa đa điểm",
                         "Bản lề": "Bản lề bi đũa x3",
                         "Vật tư phụ": ""
@@ -3791,7 +3795,7 @@
                     name: "Cửa phụ Quay 1 Cánh Nhôm OWIN Hệ Vát Cạnh",
                     price: "3,400,000",
                     image: "assets/images/cp/cp067.jpg",
-                    description: `Cửa phụ quay 1 cánh nhôm OWIN hệ vát cạnh, màu ghi, kính an toàn 6.38 trắng đục, bản cánh 87. Độ dày nhôm 1 - 1.2 mm.`,
+                    description: "Thiết kế tối giản, mang lại vẻ đẹp hiện đại và tinh tế cho ngôi nhà.",
                     specs: {
                         "Màu sắc": "Ghi",
                         "Độ dày": "1 - 1.2 mm",
@@ -3800,7 +3804,6 @@
                         "Kích thước": "0.8m x 2.2m"
                     },
                     accessories: {
-
                         "Khóa": "Khóa đơn điểm",
                         "Bản lề": "Bản lề x3",
                         "Vật tư phụ": ""
@@ -3811,7 +3814,7 @@
                     name: "Cửa phụ Quay 1 Cánh Nhôm OWIN Hệ Vát Cạnh",
                     price: "3,700,000",
                     image: "assets/images/cp/cp068.jpg",
-                    description: `Cửa phụ quay 1 cánh nhôm OWIN hệ vát cạnh, màu vân gỗ trắc, kính an toàn 6.38 trắng đục, bản cánh 87. Độ dày nhôm 1 - 1.2 mm.`,
+                    description: "Vẻ đẹp thanh lịch, khơi nguồn cảm hứng cho không gian sống hiện đại.",
                     specs: {
                         "Màu sắc": "Vân gỗ trắc",
                         "Độ dày": "1 - 1.2 mm",
@@ -3820,15 +3823,12 @@
                         "Kích thước": "0.8m x 2.2m"
                     },
                     accessories: {
-
                         "Khóa": "Khóa đơn điểm",
                         "Bản lề": "Bản lề x3",
                         "Vật tư phụ": ""
                     }
                 }
-            ],
-            tu: [],
-
+            ]
         };
 
         // Pagination state for each category
@@ -4024,17 +4024,17 @@
             });
 
             card.innerHTML = `
-        <div class="product-image">
-            <span style="font-size: 4rem;" aria-hidden="true">
-                <img src="${product.image}" alt="${product.name}" style="max-height: 200px; width: auto; height: auto; border-radius: 10px; display: block; margin: 0 auto;">
-            </span>
-        </div>
-        <div class="product-info">
-            <h3 class="product-name">${product.name}</h3>
-            <div class="product-price">
-                <span class="current-price">${product.price} VNĐ</span>
-        </div>
-    `;
+              <div class="product-image">
+                  <span style="font-size: 4rem;" aria-hidden="true">
+                      <img src="${product.image}" alt="${product.name}" style="max-height: 200px; width: auto; height: auto; border-radius: 10px; display: block; margin: 0 auto;">
+                  </span>
+              </div>
+              <div class="product-info">
+                  <h3 class="product-name">${product.name}</h3>
+                  <div class="product-price">
+                      <span class="current-price">${product.price} VNĐ</span>
+              </div>
+          `;
 
             return card;
         }
@@ -4098,29 +4098,29 @@
             // Tạo overlay full màn hình
             const overlay = document.createElement("div");
             overlay.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0,0,0,0.9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            cursor: zoom-out;
-        `;
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  width: 100vw;
+                  height: 100vh;
+                  background: rgba(0,0,0,0.9);
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  z-index: 9999;
+                  cursor: zoom-out;
+              `;
 
             // Tạo ảnh full size
             const fullImg = document.createElement("img");
             fullImg.src = img.src;
             fullImg.alt = img.alt;
             fullImg.style.cssText = `
-            max-width: 90vw;
-            max-height: 90vh;
-            object-fit: contain;
-            border-radius: 10px;
-        `;
+                  max-width: 90vw;
+                  max-height: 90vh;
+                  object-fit: contain;
+                  border-radius: 10px;
+              `;
 
             overlay.appendChild(fullImg);
             document.body.appendChild(overlay);
@@ -4157,9 +4157,9 @@
                 const specItem = document.createElement("div");
                 specItem.className = "spec-item";
                 specItem.innerHTML = `
-                <div class="spec-label">${key}</div>
-                <div class="spec-value">${value}</div>
-            `;
+                      <div class="spec-label">${key}</div>
+                      <div class="spec-value">${value}</div>
+                  `;
                 specsContainer.appendChild(specItem);
             });
 
@@ -4176,9 +4176,9 @@
                         const accessoryItem = document.createElement("div");
                         accessoryItem.className = "spec-item";
                         accessoryItem.innerHTML = `
-                        <div class="spec-label">${key}</div>
-                        <div class="spec-value">${value}</div>
-                    `;
+                              <div class="spec-label">${key}</div>
+                              <div class="spec-value">${value}</div>
+                          `;
                         accessoriesContainer.appendChild(accessoryItem);
                     });
                     // Hiển thị section accessories
@@ -4221,9 +4221,9 @@
                     const specItem = document.createElement("div");
                     specItem.className = "mobile-spec-item";
                     specItem.innerHTML = `
-                    <div class="mobile-spec-label">${key}</div>
-                    <div class="mobile-spec-value">${value}</div>
-                `;
+                          <div class="mobile-spec-label">${key}</div>
+                          <div class="mobile-spec-value">${value}</div>
+                      `;
                     mobileSpecsContainer.appendChild(specItem);
                 });
             }
@@ -4237,9 +4237,9 @@
                         const accessoryItem = document.createElement("div");
                         accessoryItem.className = "mobile-spec-item";
                         accessoryItem.innerHTML = `
-                        <div class="mobile-spec-label">${key}</div>
-                        <div class="mobile-spec-value">${value}</div>
-                    `;
+                              <div class="mobile-spec-label">${key}</div>
+                              <div class="mobile-spec-value">${value}</div>
+                          `;
                         mobileAccessoriesContainer.appendChild(accessoryItem);
                     });
                     // Hiển thị section accessories trên mobile
@@ -4552,23 +4552,23 @@
                     const resultItem = document.createElement("div");
                     resultItem.className = "search-result-item";
                     resultItem.style.cssText = `
-                padding: 12px 16px;
-                border-bottom: 1px solid #e5e7eb;
-                cursor: pointer;
-                transition: background-color 0.2s ease;
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                min-height: 48px;
-            `;
+                      padding: 12px 16px;
+                      border-bottom: 1px solid #e5e7eb;
+                      cursor: pointer;
+                      transition: background-color 0.2s ease;
+                      display: flex;
+                      align-items: center;
+                      gap: 12px;
+                      min-height: 48px;
+                  `;
 
                     resultItem.innerHTML = `
-                <span style="font-size: 1.5rem;"><img src="${product.image}" alt="${product.name}" style="max-height: 40px; width: auto; height: auto; border-radius: 6px; display: block;"></span>
-                <div style="flex: 1;">
-                    <div style="font-weight: 500; color: #374151; margin-bottom: 4px;">${product.name}</div>
-                    <div style="font-size: 0.9rem; color: #6b7280;">${product.price} VNĐ</div>
-                </div>
-            `;
+                      <span style="font-size: 1.5rem;"><img src="${product.image}" alt="${product.name}" style="max-height: 40px; width: auto; height: auto; border-radius: 6px; display: block;"></span>
+                      <div style="flex: 1;">
+                          <div style="font-weight: 500; color: #374151; margin-bottom: 4px;">${product.name}</div>
+                          <div style="font-size: 0.9rem; color: #6b7280;">${product.price} VNĐ</div>
+                      </div>
+                  `;
 
                     resultItem.addEventListener("click", () => {
                         openProductModal(product);
@@ -4599,10 +4599,10 @@
                 noResults.style.cssText =
                     "padding: 20px; text-align: center; color: #6b7280;";
                 noResults.innerHTML = `
-            <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
-            <div>Không tìm thấy sản phẩm nào</div>
-            <div style="font-size: 0.9rem; margin-top: 4px;">Thử tìm kiếm với từ khóa khác</div>
-        `;
+                  <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
+                  <div>Không tìm thấy sản phẩm nào</div>
+                  <div style="font-size: 0.9rem; margin-top: 4px;">Thử tìm kiếm với từ khóa khác</div>
+              `;
                 searchResults.appendChild(noResults);
             }
 
@@ -4778,7 +4778,6 @@
                 closeModal();
             }
         });
-
     </script>
 </body>
 
