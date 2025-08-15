@@ -128,8 +128,6 @@
             right: 0;
             z-index: 1000;
             transition: var(--transition-normal);
-            min-height: 80px;
-            /* Đảm bảo header có chiều cao tối thiểu */
         }
 
         .nav-container {
@@ -140,11 +138,8 @@
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
-            min-height: 70px;
-            /* Đảm bảo chiều cao tối thiểu */
         }
 
-        /* Logo luôn ở giữa trên desktop */
         .logo {
             position: absolute;
             left: 50%;
@@ -152,41 +147,31 @@
         }
 
         .logo img {
-            height: 60px;
-            /* Tăng từ 50px lên 60px cho desktop */
+            height: 50px;
             width: auto;
             object-fit: contain;
         }
 
-        /* Desktop Search Box - DÀI HỌN */
         .search-box {
             position: relative;
-            width: 300px;
-            /* Tăng từ 150px lên 300px */
-            flex-shrink: 0;
-            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
             background: rgba(255, 255, 255, 0.9);
             border-radius: var(--radius-full);
             padding: var(--space-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid transparent;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            display: flex;
-            align-items: center;
             margin-left: auto;
-            /* Đẩy search box về phía phải */
-            transform-origin: right center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         .search-box:focus-within {
-            width: 350px;
-            /* Tăng từ 175px lên 350px */
             background: white;
-            border-color: var(--primary-color);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
                 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--primary-color);
             transform: translateY(-2px) scale(1.02);
-            transform-origin: right center;
         }
 
         .search-box:hover:not(:focus-within) {
@@ -196,21 +181,23 @@
         }
 
         #search-input {
-            width: 100% !important;
             border: none;
             background: transparent;
-            padding: var(--space-md) var(--space-lg);
-            /* Tăng padding */
-            font-size: 15px;
-            /* Tăng từ 14px lên 15px */
+            padding: var(--space-sm) var(--space-md);
+            font-size: 14px;
             outline: none;
-            color: var(--gray-800);
+            width: 250px;
             transition: all 0.3s ease;
+            color: var(--gray-800);
         }
 
         #search-input::placeholder {
             color: var(--gray-400);
             transition: all 0.3s ease;
+        }
+
+        #search-input:focus {
+            width: 280px;
         }
 
         #search-input:focus::placeholder {
@@ -224,24 +211,17 @@
                     var(--primary-dark));
             border: none;
             border-radius: var(--radius-full);
-            padding: var(--space-md) var(--space-lg);
-            /* Tăng padding */
+            padding: var(--space-sm) var(--space-md);
             color: white;
             cursor: pointer;
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
             justify-content: center;
-            min-width: 60px;
-            /* Tăng từ 50px lên 60px */
-            height: 40px;
-            /* Tăng từ 36px lên 40px */
+            min-width: 50px;
+            height: 36px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             font-family: var(--font-primary);
-            font-size: 14px;
-            /* Đảm bảo text đủ lớn */
-            font-weight: 600;
-            /* Tăng độ đậm */
         }
 
         .search-btn:hover {
@@ -275,184 +255,18 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        /* Hide mobile search trigger on desktop */
-        .mobile-search-trigger {
-            display: none;
-        }
-
-        /* Mobile Header Styles - FIXED */
+        /* Responsive search box */
         @media (max-width: 768px) {
-            .main-header {
-                padding: var(--space-sm) 0;
-                min-height: 90px;
-                /* Tăng chiều cao header mobile */
-            }
-
-            .nav-container {
-                padding: var(--space-lg) var(--space-lg);
-                /* Tăng padding */
-                min-height: 90px;
-                /* Tăng chiều cao container */
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                position: relative;
-            }
-
-            .logo {
-                position: static;
-                left: auto;
-                transform: none;
-                flex-shrink: 0;
-            }
-
-            .logo img {
-                height: 70px;
-                /* Tăng từ 60px lên 70px */
-                width: auto;
-                object-fit: contain;
-            }
-
-            /* Hide desktop search box on mobile */
             .search-box {
-                display: none;
+                margin: 0 auto;
             }
 
-            /* Show mobile search trigger on mobile */
-            .mobile-search-trigger {
-                position: static;
-                right: auto;
-                flex-shrink: 0;
-                margin-left: auto;
-                width: 50px;
-                /* Tăng từ 40px lên 50px */
-                height: 50px;
-                /* Tăng từ 40px lên 50px */
-                font-size: 18px;
-                /* Tăng font size */
-                background: linear-gradient(135deg,
-                        var(--primary-color),
-                        var(--primary-dark));
-                border: none;
-                border-radius: var(--radius-full);
-                color: white;
-                cursor: pointer;
-                transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                font-family: var(--font-primary);
+            #search-input {
+                width: 200px;
             }
 
-            .mobile-search-trigger:hover {
-                background: linear-gradient(135deg,
-                        var(--primary-dark),
-                        var(--primary-color));
-                transform: scale(1.1);
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            }
-
-            /* Mobile search overlay */
-            .search-box.mobile-active {
-                display: flex;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                background: white;
-                z-index: 1001;
-                margin: 0;
-                border-radius: 0;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                padding: var(--space-xl);
-                /* Tăng padding */
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                border-bottom: 2px solid var(--gray-200);
-                width: auto;
-                align-items: center;
-                gap: var(--space-md);
-            }
-
-            .search-box.mobile-active #search-input {
-                width: 100%;
-                max-width: none;
-                font-size: 18px;
-                /* Tăng font size input */
-                padding: var(--space-lg);
-                /* Tăng padding input */
-                min-height: 50px;
-                /* Đảm bảo input đủ cao */
-            }
-
-            .search-box.mobile-active .search-btn {
-                min-width: 60px;
-                /* Tăng width button */
-                height: 50px;
-                /* T��ng height button */
-                font-size: 16px;
-                /* Tăng font size text trong button */
-            }
-
-            .search-box.mobile-active .search-results {
-                position: fixed;
-                top: 100px;
-                left: 0;
-                right: 0;
-                max-height: calc(100vh - 120px);
-                margin-top: 0;
-            }
-        }
-
-        /* Tablet responsive */
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .nav-container {
-                padding: var(--space-lg) var(--space-xl);
-                /* Tăng padding */
-                min-height: 80px;
-                /* Tăng chiều cao */
-            }
-
-            .logo img {
-                height: 65px;
-                /* Tăng từ 55px lên 65px */
-            }
-
-            .search-box {
-                width: 250px;
-                /* Tablet: nhỏ hơn desktop */
-            }
-
-            .search-box:focus-within {
-                width: 300px;
-                /* Tablet: nhỏ hơn desktop */
-            }
-        }
-
-        /* Enhanced mobile layout - điện thoại nhỏ */
-        @media (max-width: 480px) {
-            .nav-container {
-                padding: var(--space-md) var(--space-lg);
-                /* Tăng padding */
-                min-height: 80px;
-                /* Tăng chiều cao */
-            }
-
-            .logo img {
-                height: 65px;
-                /* Tăng từ 50px lên 65px */
-            }
-
-            .mobile-search-trigger {
-                width: 45px;
-                /* Tăng từ 40px */
-                height: 45px;
-                /* Tăng từ 40px */
-                font-size: 18px;
-                /* Tăng từ 16px */
+            #search-input:focus {
+                width: 220px;
             }
         }
 
@@ -1908,10 +1722,6 @@
                 </button>
                 <div class="search-results" id="search-results"></div>
             </div>
-            <!-- Mobile Search Trigger Button -->
-            <button class="mobile-search-trigger" id="mobile-search-trigger">
-                🔍
-            </button>
         </div>
     </header>
 
