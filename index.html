@@ -33,6 +33,17 @@
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap");
 
         :root {
+            --primary-color: #3B82F6;
+            --primary-dark: #2563EB;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-800: #1F2937;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --radius-full: 9999px;
+            --radius-xl: 16px;
             /* Modern Color Palette - Muted Red Theme for Elderly */
             --primary-color: #b91c1c;
             --primary-dark: #991b1b;
@@ -256,17 +267,178 @@
         }
 
         /* Responsive search box */
+        /* Mobile search trigger button */
+        .mobile-search-trigger {
+            display: none;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border: none;
+            border-radius: var(--radius-full);
+            width: 44px;
+            height: 44px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            z-index: 1001;
+        }
+
+        .mobile-search-trigger:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .mobile-search-trigger:active {
+            transform: scale(0.95);
+        }
+
+        .mobile-search-trigger svg {
+            transition: all 0.3s ease;
+        }
+
+        .mobile-search-trigger.active svg {
+            transform: rotate(90deg);
+        }
+
+        /* Mobile search overlay */
+        .mobile-search-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .mobile-search-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-search-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: var(--space-lg);
+            transform: translateY(-100%);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .mobile-search-container.active {
+            transform: translateY(0);
+        }
+
+        .mobile-search-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--space-md);
+            padding-top: 40px;
+        }
+
+        .mobile-search-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .mobile-close-btn {
+            background: var(--gray-200);
+            border: none;
+            border-radius: var(--radius-full);
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-close-btn:hover {
+            background: var(--gray-300);
+            transform: scale(1.1);
+        }
+
+        .mobile-search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: var(--gray-200);
+            border-radius: var(--radius-xl);
+            padding: var(--space-sm);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .mobile-search-box:focus-within {
+            background: white;
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+        }
+
+        .mobile-search-input {
+            border: none;
+            background: transparent;
+            padding: var(--space-md);
+            font-size: 16px;
+            outline: none;
+            flex: 1;
+            color: var(--gray-800);
+        }
+
+        .mobile-search-input::placeholder {
+            color: var(--gray-400);
+        }
+
+        .mobile-search-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border: none;
+            border-radius: var(--radius-full);
+            padding: var(--space-md);
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 50px;
+            height: 50px;
+        }
+
+        .mobile-search-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Responsive styles */
         @media (max-width: 768px) {
             .search-box {
-                margin: 0 auto;
+                display: none;
             }
 
-            #search-input {
-                width: 200px;
+            .mobile-search-trigger {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mobile-search-container {
+                padding: var(--space-md);
             }
 
-            #search-input:focus {
-                width: 220px;
+            .mobile-search-header {
+                padding-top: 50px;
             }
         }
 
@@ -281,6 +453,7 @@
                 transform: translateY(0);
             }
         }
+
 
         /* Hero Section */
         .hero {
@@ -1722,9 +1895,40 @@
                 </button>
                 <div class="search-results" id="search-results"></div>
             </div>
+            <button class="mobile-search-trigger" id="mobileSearchTrigger">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m21 21-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
+                </svg>
+            </button>
         </div>
     </header>
+    <!-- Mobile search overlay -->
+    <div class="mobile-search-overlay" id="mobileSearchOverlay"></div>
 
+    <!-- Mobile search container -->
+    <div class="mobile-search-container" id="mobileSearchContainer">
+        <div class="mobile-search-header">
+            <h3 class="mobile-search-title">Tìm kiếm</h3>
+            <button class="mobile-close-btn" id="mobileCloseBtn">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mobile-search-box">
+            <input type="text" class="mobile-search-input" placeholder="Nhập từ khóa tìm kiếm..."
+                id="mobileSearchInput">
+            <button class="mobile-search-btn" type="button" id="mobileSearchBtn">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m21 21-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
     <!-- Home Section -->
     <div id="home" class="page-section">
         <!-- Hero Section -->
@@ -3776,7 +3980,7 @@
             card.innerHTML = `
         <div class="product-image">
             <span style="font-size: 4rem;" aria-hidden="true">
-                <img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">
+                <img src="${product.image}" alt="${product.name}" style="max-height: 200px; width: auto; height: auto; border-radius: 10px; display: block; margin: 0 auto;">
             </span>
         </div>
         <div class="product-info">
@@ -3900,7 +4104,7 @@
                 product.price + " VNĐ";
             document.getElementById(
                 "modal-image"
-            ).innerHTML = `<span style="font-size: 6rem;"><img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px; transition: transform 0.3s ease; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="openFullscreen(this)"></span>`; // Populate specs
+            ).innerHTML = `<span style="font-size: 6rem;"><img src="${product.image}" alt="${product.name}" style="max-height: 400px; width: auto; height: auto; border-radius: 10px; transition: transform 0.3s ease; cursor: zoom-in; display: block; margin: 0 auto;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="openFullscreen(this)"></span>`; // Populate specs
             const specsContainer = document.getElementById("modal-specs");
             specsContainer.innerHTML = "";
             Object.entries(product.specs).forEach(([key, value]) => {
@@ -3955,7 +4159,7 @@
             document.getElementById("mobile-product-name").textContent = product.name;
 
             // 2. Mobile Product Image
-            document.getElementById("mobile-image").innerHTML = `<span style="font-size: 4rem;"><img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px; cursor: zoom-in;" onclick="openFullscreen(this)"></span>`;
+            document.getElementById("mobile-image").innerHTML = `<span style="font-size: 4rem;"><img src="${product.image}" alt="${product.name}" style="max-height: 300px; width: auto; height: auto; border-radius: 10px; cursor: zoom-in; display: block; margin: 0 auto;" onclick="openFullscreen(this)"></span>`;
 
             // 3. Mobile Price
             document.getElementById("mobile-price").textContent = product.price + " VNĐ";
@@ -4240,7 +4444,7 @@
                         `;
 
                     resultItem.innerHTML = `
-                            <span style="font-size: 1.5rem;"><img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;"></span>
+                            <span style="font-size: 1.5rem;"><img src="${product.image}" alt="${product.name}" style="max-height: 200px; width: auto; height: auto; border-radius: 10px; display: block; margin: 0 auto;"></span>
                             <div style="flex: 1;">
                                 <div style="font-weight: 500; color: #374151; margin-bottom: 4px;">${product.name}</div>
                                 <div style="font-size: 0.9rem; color: #6b7280;">${product.price} VNĐ</div>
@@ -4453,6 +4657,93 @@
             ) {
                 closeModal();
             }
+        });
+        class MobileSearch {
+            constructor() {
+                this.trigger = document.getElementById('mobileSearchTrigger');
+                this.overlay = document.getElementById('mobileSearchOverlay');
+                this.container = document.getElementById('mobileSearchContainer');
+                this.closeBtn = document.getElementById('mobileCloseBtn');
+                this.input = document.getElementById('mobileSearchInput');
+                this.searchBtn = document.getElementById('mobileSearchBtn');
+
+                this.isOpen = false;
+                this.init();
+            }
+
+            init() {
+                // Event listeners
+                this.trigger.addEventListener('click', () => this.open());
+                this.closeBtn.addEventListener('click', () => this.close());
+                this.overlay.addEventListener('click', () => this.close());
+                this.searchBtn.addEventListener('click', () => this.performSearch());
+
+                // Handle Enter key in search input
+                this.input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        this.performSearch();
+                    }
+                });
+
+                // Handle escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && this.isOpen) {
+                        this.close();
+                    }
+                });
+
+                // Prevent body scroll when search is open
+                this.preventBodyScroll();
+            }
+
+            open() {
+                this.isOpen = true;
+                this.trigger.classList.add('active');
+                this.overlay.classList.add('active');
+                this.container.classList.add('active');
+                document.body.style.overflow = 'hidden';
+
+                // Focus on input after animation
+                setTimeout(() => {
+                    this.input.focus();
+                }, 400);
+            }
+
+            close() {
+                this.isOpen = false;
+                this.trigger.classList.remove('active');
+                this.overlay.classList.remove('active');
+                this.container.classList.remove('active');
+                document.body.style.overflow = '';
+
+                // Clear input
+                this.input.value = '';
+            }
+
+            performSearch() {
+                const query = this.input.value.trim();
+                if (query) {
+                    // Thay đổi logic search theo nhu cầu của bạn
+                    console.log('Searching for:', query);
+                    // Có thể gọi function search hiện tại của bạn
+                    // yourExistingSearchFunction(query);
+                    this.close();
+                }
+            }
+
+            preventBodyScroll() {
+                // Prevent scroll when overlay is active
+                this.overlay.addEventListener('touchmove', (e) => {
+                    if (this.isOpen) {
+                        e.preventDefault();
+                    }
+                }, { passive: false });
+            }
+        }
+
+        // Initialize mobile search when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new MobileSearch();
         });
     </script>
 </body>
