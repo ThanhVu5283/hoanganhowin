@@ -1,0 +1,44 @@
+.page-info-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--space-xl);
+  gap: var(--space-md);
+}
+
+.page-indicator {
+  font-weight: 600;
+  color: var(--gray-700);
+  font-size: 1rem;
+  padding: var(--space-sm) var(--space-lg);
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid #8b5a3c;
+  min-width: 120px;
+  text-align: center;
+}
+
+.page-dots {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.page-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--gray-300);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-dot.active {
+  background: #8b5a3c;
+  transform: scale(1.2);
+}
+
+.page-dot:hover {
+  background: #6b4423;
+  transform: scale(1.1);
+}

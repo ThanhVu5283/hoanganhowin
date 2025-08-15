@@ -1,0 +1,21 @@
+.accessories-section {
+  margin: var(--space-lg) 0;
+  padding: var(--space-lg);
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+}
+
+.accessories-section .section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.accessories-section .section-title::after {
+  width: 40px;
+  height: 2px;
+  bottom: -5px;
+}

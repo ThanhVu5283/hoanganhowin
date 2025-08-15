@@ -1,0 +1,180 @@
+.company-info-boxes {
+  padding: var(--space-3xl) 0;
+  background: linear-gradient(
+    135deg,
+    var(--gray-50) 0%,
+    white 50%,
+    var(--gray-50) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.company-info-boxes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(37, 99, 235, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(16, 185, 129, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.info-boxes-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  margin-top: var(--space-xl);
+  position: relative;
+  z-index: 2;
+}
+
+.info-box {
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: 0;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+}
+
+.info-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #8b5a3c, #6b4423);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.info-box:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 35px 70px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.box-image {
+  width: 100%;
+  height: 250px;
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+}
+
+.box-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.1) contrast(1.1);
+}
+
+.info-box:hover .box-image img {
+  transform: scale(1.1);
+}
+
+.box-header {
+  padding: var(--space-xl) var(--space-xl) var(--space-lg);
+  position: relative;
+}
+
+.box-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gray-800);
+  margin: 0;
+  position: relative;
+  background: linear-gradient(135deg, var(--gray-800), #8b5a3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.box-content {
+  padding: 0 var(--space-xl) var(--space-xl);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.box-content p {
+  color: var(--gray-700);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+  flex: 1;
+}
+
+.box-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: linear-gradient(135deg, var(--gray-50), var(--gray-100));
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item:hover {
+  transform: translateX(8px);
+  background: linear-gradient(135deg, white, var(--gray-50));
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #8b5a3c, #6b4423);
+  color: white;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 12px rgba(139, 90, 60, 0.3);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(139, 90, 60, 0.4);
+}
+
+.feature-item span:last-child {
+  font-weight: 600;
+  color: var(--gray-800);
+  font-size: 0.95rem;
+}

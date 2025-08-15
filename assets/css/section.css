@@ -1,0 +1,85 @@
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  color: var(--gray-800);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #8b5a3c, #6b4423);
+  border-radius: var(--radius-full);
+}
+.products {
+  padding: var(--space-3xl) 0;
+  background: var(--gray-50);
+}
+.mobile-price-section {
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+  padding: var(--space-lg);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.mobile-price-section .current-price {
+  font-size: 2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #8b5a3c, #6b4423);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+
+.mobile-description-section,
+.mobile-specs-section,
+.mobile-accessories-section {
+  background: var(--gray-50);
+  padding: var(--space-lg);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--gray-200);
+  margin-bottom: var(--space-md);
+}
+
+.mobile-description-section h4,
+.mobile-specs-section h4,
+.mobile-accessories-section h4 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: var(--space-md);
+  position: relative;
+  padding-left: var(--space-lg);
+}
+
+.mobile-description-section h4::before,
+.mobile-specs-section h4::before,
+.mobile-accessories-section h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(135deg, #8b5a3c, #6b4423);
+  border-radius: var(--radius-full);
+}
+
+.mobile-description-section p {
+  color: var(--gray-700);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
