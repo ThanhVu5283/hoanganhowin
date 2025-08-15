@@ -268,6 +268,38 @@
         }
 
         /* Responsive search box */
+        /* Mobile search results - giống desktop */
+        .mobile-search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-xl);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+            margin-top: 8px;
+            animation: searchResultsSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-search-box {
+            position: relative;
+            /* Thêm để mobile-search-results có thể position absolute */
+            display: flex;
+            align-items: center;
+            background: var(--gray-200);
+            border-radius: var(--radius-xl);
+            padding: var(--space-sm);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
         /* Mobile search trigger button */
         .mobile-search-trigger {
             display: none;
@@ -1939,6 +1971,8 @@
                         d="m21 21-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
                 </svg>
             </button>
+            <!-- THÊM DIV NÀY -->
+            <div class="mobile-search-results" id="mobile-search-results"></div>
         </div>
     </div>
     <!-- Home Section -->
@@ -4286,16 +4320,20 @@
             const searchInput = document.getElementById("search-input");
             const searchBtn = document.getElementById("search-btn");
             const searchResults = document.getElementById("search-results");
-            const searchBox = document.getElementById("search-box");
-            const mobileSearchTrigger = document.getElementById("mobile-search-trigger");
+            const mobileSearchTrigger = document.getElementById("mobileSearchTrigger");
+            const mobileSearchInput = document.getElementById("mobileSearchInput");
+            const mobileSearchBtn = document.getElementById("mobileSearchBtn");
+            const mobileSearchResults = document.getElementById("mobile-search-results");
+            const mobileCloseBtn = document.getElementById("mobileCloseBtn");
+            const mobileOverlay = document.getElementById("mobileSearchOverlay");
 
             if (!searchInput || !searchBtn || !searchResults) return;
 
             let searchTimeout;
 
+            // DESKTOP SEARCH
             searchInput.addEventListener("input", function () {
                 const query = this.value.trim();
-
                 clearTimeout(searchTimeout);
 
                 if (query.length >= 1) {
@@ -4304,7 +4342,7 @@
                     searchResults.style.display = "block";
 
                     searchTimeout = setTimeout(() => {
-                        performSearch(query);
+                        performSearch(query, searchResults);
                     }, 300);
                 } else {
                     searchResults.innerHTML = "";
@@ -4315,83 +4353,147 @@
             searchBtn.addEventListener("click", function () {
                 const query = searchInput.value.trim();
                 if (query) {
-                    performSearch(query);
+                    performSearch(query, searchResults);
                 }
             });
 
-            // Close search results when clicking outside
-            document.addEventListener("click", function (event) {
-                const searchBox = document.querySelector(".search-box");
-                if (!searchBox.contains(event.target) && !event.target.closest('#mobile-search-trigger')) {
-                    searchResults.style.display = "none";
-                    closeMobileSearch();
-                }
-            });
-
-            // Handle keyboard navigation
             searchInput.addEventListener("keydown", function (event) {
-                if (event.key === "Escape") {
-                    searchResults.style.display = "none";
-                    closeMobileSearch();
-                    this.blur();
-                }
                 if (event.key === "Enter") {
                     event.preventDefault();
                     const query = this.value.trim();
                     if (query) {
-                        performSearch(query);
+                        performSearch(query, searchResults);
                     }
+                }
+                if (event.key === "Escape") {
+                    searchResults.style.display = "none";
+                    this.blur();
                 }
             });
 
-            // Mobile search functionality
-            if (mobileSearchTrigger && searchBox) {
-                mobileSearchTrigger.addEventListener("click", function () {
-                    openMobileSearch();
+            // MOBILE SEARCH - GIỐNG DESKTOP
+            if (mobileSearchInput && mobileSearchResults) {
+                mobileSearchInput.addEventListener("input", function () {
+                    const query = this.value.trim();
+                    clearTimeout(searchTimeout);
+
+                    if (query.length >= 1) {
+                        mobileSearchResults.innerHTML =
+                            '<div style="padding: 10px; text-align: center; color: #6b7280;">Đang tìm kiếm...</div>';
+                        mobileSearchResults.style.display = "block";
+
+                        searchTimeout = setTimeout(() => {
+                            performSearch(query, mobileSearchResults);
+                        }, 300);
+                    } else {
+                        mobileSearchResults.innerHTML = "";
+                        mobileSearchResults.style.display = "none";
+                    }
                 });
 
-                // Add close button functionality for mobile search
-                searchBox.addEventListener("click", function (event) {
-                    // Check if clicked on the close area (right side of search box)
-                    if (searchBox.classList.contains('mobile-active')) {
-                        const rect = searchBox.getBoundingClientRect();
-                        const clickX = event.clientX - rect.left;
-                        // If clicked on the right 60px area, close the search
-                        if (clickX > rect.width - 60) {
-                            closeMobileSearch();
+                mobileSearchInput.addEventListener("keydown", function (event) {
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        const query = this.value.trim();
+                        if (query) {
+                            performSearch(query, mobileSearchResults);
                         }
+                    }
+                    if (event.key === "Escape") {
+                        mobileSearchResults.style.display = "none";
+                        this.blur();
                     }
                 });
             }
+
+            // Mobile search trigger
+            if (mobileSearchTrigger) {
+                mobileSearchTrigger.addEventListener("click", openMobileSearch);
+            }
+
+            if (mobileCloseBtn) {
+                mobileCloseBtn.addEventListener("click", closeMobileSearch);
+            }
+
+            if (mobileOverlay) {
+                mobileOverlay.addEventListener("click", closeMobileSearch);
+            }
+
+            if (mobileSearchBtn) {
+                mobileSearchBtn.addEventListener("click", performMobileSearch);
+            }
+
+            // Click outside to close
+            document.addEventListener("click", function (event) {
+                const searchBox = document.querySelector(".search-box");
+                const mobileSearchBox = document.querySelector(".mobile-search-box");
+
+                if (!searchBox?.contains(event.target) && !event.target.closest('#mobileSearchTrigger')) {
+                    searchResults.style.display = "none";
+                }
+
+                if (!mobileSearchBox?.contains(event.target)) {
+                    if (mobileSearchResults) {
+                        mobileSearchResults.style.display = "none";
+                    }
+                }
+            });
         }
-
+        // Mobile Search Functions
         function openMobileSearch() {
-            const searchBox = document.getElementById("search-box");
-            const searchInput = document.getElementById("search-input");
+            const overlay = document.getElementById('mobileSearchOverlay');
+            const container = document.getElementById('mobileSearchContainer');
+            const trigger = document.getElementById('mobileSearchTrigger');
+            const input = document.getElementById('mobileSearchInput');
 
-            if (searchBox && searchInput) {
-                searchBox.classList.add("mobile-active");
-                // Focus on input after animation completes
+            if (overlay && container && trigger && input) {
+                trigger.classList.add('active');
+                overlay.classList.add('active');
+                container.classList.add('active');
+                document.body.style.overflow = 'hidden';
+
+                // Focus on input after animation
                 setTimeout(() => {
-                    searchInput.focus();
-                }, 100);
+                    input.focus();
+                }, 400);
             }
         }
 
         function closeMobileSearch() {
-            const searchBox = document.getElementById("search-box");
-            const searchResults = document.getElementById("search-results");
+            const overlay = document.getElementById('mobileSearchOverlay');
+            const container = document.getElementById('mobileSearchContainer');
+            const trigger = document.getElementById('mobileSearchTrigger');
+            const input = document.getElementById('mobileSearchInput');
+            const mobileResults = document.getElementById('mobile-search-results');
 
-            if (searchBox) {
-                searchBox.classList.remove("mobile-active");
-                if (searchResults) {
-                    searchResults.style.display = "none";
+            if (overlay && container && trigger && input) {
+                trigger.classList.remove('active');
+                overlay.classList.remove('active');
+                container.classList.remove('active');
+                document.body.style.overflow = '';
+
+                // Clear input and hide results
+                input.value = '';
+                if (mobileResults) {
+                    mobileResults.innerHTML = '';
+                    mobileResults.style.display = 'none';
                 }
             }
         }
-        function performSearch(query) {
+
+        function performMobileSearch() {
+            const input = document.getElementById('mobileSearchInput');
+            const mobileResults = document.getElementById('mobile-search-results');
+            const query = input ? input.value.trim() : '';
+
+            if (query) {
+                // Sử dụng function search chung với mobile results container
+                performSearch(query, mobileResults);
+            }
+        }
+        function performSearch(query, resultsContainer = null) {
             const allProducts = Object.values(productsData).flat();
-            const searchResults = document.getElementById("search-results");
+            const searchResults = resultsContainer || document.getElementById("search-results");
 
             // Normalize Vietnamese text for better search
             function normalizeVietnamese(str) {
@@ -4441,31 +4543,37 @@
             searchResults.innerHTML = "";
 
             if (results.length > 0) {
+                // Nếu có kết quả, scroll to products và highlight
+                setTimeout(() => {
+                    scrollToProducts();
+                }, 500);
+
                 results.slice(0, 8).forEach((product) => {
                     const resultItem = document.createElement("div");
                     resultItem.className = "search-result-item";
                     resultItem.style.cssText = `
-                            padding: 12px 16px;
-                            border-bottom: 1px solid #e5e7eb;
-                            cursor: pointer;
-                            transition: background-color 0.2s ease;
-                            display: flex;
-                            align-items: center;
-                            gap: 12px;
-                            min-height: 48px;
-                        `;
+                padding: 12px 16px;
+                border-bottom: 1px solid #e5e7eb;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                min-height: 48px;
+            `;
 
                     resultItem.innerHTML = `
-                            <span style="font-size: 1.5rem;"><img src="${product.image}" alt="${product.name}" style="max-height: 200px; width: auto; height: auto; border-radius: 10px; display: block; margin: 0 auto;"></span>
-                            <div style="flex: 1;">
-                                <div style="font-weight: 500; color: #374151; margin-bottom: 4px;">${product.name}</div>
-                                <div style="font-size: 0.9rem; color: #6b7280;">${product.price} VNĐ</div>
-                            </div>
-                        `;
+                <span style="font-size: 1.5rem;"><img src="${product.image}" alt="${product.name}" style="max-height: 40px; width: auto; height: auto; border-radius: 6px; display: block;"></span>
+                <div style="flex: 1;">
+                    <div style="font-weight: 500; color: #374151; margin-bottom: 4px;">${product.name}</div>
+                    <div style="font-size: 0.9rem; color: #6b7280;">${product.price} VNĐ</div>
+                </div>
+            `;
 
                     resultItem.addEventListener("click", () => {
                         openProductModal(product);
                         searchResults.style.display = "none";
+                        closeMobileSearch(); // Close mobile search if open
                     });
 
                     resultItem.addEventListener("mouseenter", () => {
@@ -4491,10 +4599,10 @@
                 noResults.style.cssText =
                     "padding: 20px; text-align: center; color: #6b7280;";
                 noResults.innerHTML = `
-                        <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
-                        <div>Không tìm thấy sản phẩm nào</div>
-                        <div style="font-size: 0.9rem; margin-top: 4px;">Thử tìm kiếm với từ khóa khác</div>
-                    `;
+            <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
+            <div>Không tìm thấy sản phẩm nào</div>
+            <div style="font-size: 0.9rem; margin-top: 4px;">Thử tìm kiếm với từ khóa khác</div>
+        `;
                 searchResults.appendChild(noResults);
             }
 
@@ -4670,93 +4778,7 @@
                 closeModal();
             }
         });
-        class MobileSearch {
-            constructor() {
-                this.trigger = document.getElementById('mobileSearchTrigger');
-                this.overlay = document.getElementById('mobileSearchOverlay');
-                this.container = document.getElementById('mobileSearchContainer');
-                this.closeBtn = document.getElementById('mobileCloseBtn');
-                this.input = document.getElementById('mobileSearchInput');
-                this.searchBtn = document.getElementById('mobileSearchBtn');
 
-                this.isOpen = false;
-                this.init();
-            }
-
-            init() {
-                // Event listeners
-                this.trigger.addEventListener('click', () => this.open());
-                this.closeBtn.addEventListener('click', () => this.close());
-                this.overlay.addEventListener('click', () => this.close());
-                this.searchBtn.addEventListener('click', () => this.performSearch());
-
-                // Handle Enter key in search input
-                this.input.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter') {
-                        this.performSearch();
-                    }
-                });
-
-                // Handle escape key
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape' && this.isOpen) {
-                        this.close();
-                    }
-                });
-
-                // Prevent body scroll when search is open
-                this.preventBodyScroll();
-            }
-
-            open() {
-                this.isOpen = true;
-                this.trigger.classList.add('active');
-                this.overlay.classList.add('active');
-                this.container.classList.add('active');
-                document.body.style.overflow = 'hidden';
-
-                // Focus on input after animation
-                setTimeout(() => {
-                    this.input.focus();
-                }, 400);
-            }
-
-            close() {
-                this.isOpen = false;
-                this.trigger.classList.remove('active');
-                this.overlay.classList.remove('active');
-                this.container.classList.remove('active');
-                document.body.style.overflow = '';
-
-                // Clear input
-                this.input.value = '';
-            }
-
-            performSearch() {
-                const query = this.input.value.trim();
-                if (query) {
-                    // Thay đổi logic search theo nhu cầu của bạn
-                    console.log('Searching for:', query);
-                    // Có thể gọi function search hiện tại của bạn
-                    // yourExistingSearchFunction(query);
-                    this.close();
-                }
-            }
-
-            preventBodyScroll() {
-                // Prevent scroll when overlay is active
-                this.overlay.addEventListener('touchmove', (e) => {
-                    if (this.isOpen) {
-                        e.preventDefault();
-                    }
-                }, { passive: false });
-            }
-        }
-
-        // Initialize mobile search when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            new MobileSearch();
-        });
     </script>
 </body>
 
