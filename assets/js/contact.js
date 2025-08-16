@@ -2,7 +2,13 @@ function toggleContactMenu() {
   const menu = document.getElementById("contact-menu");
   if (!menu) return;
 
-  menu.classList.toggle("active");
+  const isActive = menu.classList.toggle("active");
+  
+  // Update ARIA attribute
+  const contactBtn = document.querySelector(".contact-main-btn");
+  if (contactBtn) {
+    contactBtn.setAttribute("aria-expanded", isActive.toString());
+  }
 }
 
 function initializeContactMenu() {
@@ -17,6 +23,12 @@ function initializeContactMenu() {
   contactBtn.setAttribute("aria-expanded", "false");
   contactMenu.setAttribute("role", "menu");
 
+  // Click event for toggle button
+  contactBtn.addEventListener("click", function(event) {
+    event.stopPropagation();
+    toggleContactMenu();
+  });
+
   // Add keyboard support
   contactBtn.addEventListener("keydown", function (event) {
     if (event.key === "Enter" || event.key === " ") {
@@ -25,11 +37,31 @@ function initializeContactMenu() {
     }
   });
 
+  // Close menu when clicking outside
+  document.addEventListener("click", function (event) {
+    if (contactMenu.classList.contains("active")) {
+      // Check if click is outside both button and menu
+      if (!contactBtn.contains(event.target) && !contactMenu.contains(event.target)) {
+        contactMenu.classList.remove("active");
+        contactBtn.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
+
+  // Prevent menu from closing when clicking inside it
+  contactMenu.addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+
   // Close menu on escape key
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && contactMenu.classList.contains("active")) {
-      toggleContactMenu();
+      contactMenu.classList.remove("active");
+      contactBtn.setAttribute("aria-expanded", "false");
       contactBtn.focus();
     }
   });
 }
+
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", initializeContactMenu);
